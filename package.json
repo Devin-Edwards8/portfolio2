@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A developer portfolio showing off sweet projects.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devin-Edwards8/portfolio.git"
+  },
+  "author": "Devin and Carlos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devin-Edwards8/portfolio/issues"
+  },
+  "homepage": "https://github.com/Devin-Edwards8/portfolio#readme"
+}
