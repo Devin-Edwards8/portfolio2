@@ -7,10 +7,20 @@
     "type": "git",
     "url": "git+https://github.com/Devin-Edwards8/portfolio.git"
   },
+  "scripts": {
+    "start": "nodemon server.js",
+    "watch": "nodemon server.js --ext html,js,scss"
+  },
   "author": "Devin and Carlos",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Devin-Edwards8/portfolio/issues"
   },
-  "homepage": "https://github.com/Devin-Edwards8/portfolio#readme"
+  "homepage": "https://github.com/Devin-Edwards8/portfolio#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }

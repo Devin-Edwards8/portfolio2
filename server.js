@@ -1,15 +1,10 @@
-var http = require('http');
-var fs = require('fs');
+const express = require('express')
+const app = express()
 
-const PORT=8080; 
+const PORT = process.env.PORT || 8080
 
-fs.readFile('./src/index.html', function (err, html) {
+app.get('/', (req, res) => {
+    res.sendFile('./index.html', {root: './src/'})
+})
 
-    if (err) throw err;    
-
-    http.createServer(function(request, response) {  
-        response.writeHeader(200, {"Content-Type": "text/html"});  
-        response.write(html);  
-        response.end();  
-    }).listen(PORT);
-});
+app.listen(8080, () => console.log(`Server running on port ${PORT}`))
