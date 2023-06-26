@@ -1,168 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Carlos Lawler</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.scss" />
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
     <!-- adds page refresh every t ms -->
-    <script type = "text/JavaScript">
-        function AutoRefresh(t){
-            setTimeout("location.reload(true);",t);
-        }
-    </script>
+    <!-- <script type="text/JavaScript">
+      function AutoRefresh(t){
+          setTimeout("location.reload(true);",t);
+      }
+    </script> -->
     <!--Let's look into these tags-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-        body {
-        font-family: 'Source Code Pro', monospace;
-        background: rgb(255,0,106);
-        background: linear-gradient(90deg, rgba(255,0,106,1) 0%, rgba(72,9,121,1) 5%, rgba(56,0,102,1) 15%, rgba(4,4,55,1) 45%, rgba(2,0,36,1) 50%, rgba(4,4,55,1) 55%, rgba(56,0,102,1) 86%, rgba(72,9,121,1) 95%, rgba(255,0,106,1) 100%);
-        font-size: 16px;
-        margin: 0;
-        padding: 20px;
-        }
-        
-        h1 {
-        text-align: center;
-        font-size: 24px;
-        font-weight: bold;
-        }
-        
-        h2 {
-        margin-top: 0;
-        font-size: 20px;
-        font-weight: bold;
-        }
-        
-        h3 {
-        margin-bottom: 10px;
-        font-size: 18px;
-        font-weight: bold;
-        }
-        
-        p {
-        line-height: 1.5;
-        }
-        
-        u {
-        text-decoration: underline;
-        color: #fc82b5
-        }
+  </head>
+  <!-- onload="JavaScript:AutoRefresh(5000);" -->
+  <body>
+    <div class="greeting section">
+      <div class="text">
+        <h1 class="header">carlos lawler</h1>
+        <h2>a full-stack developer</h2>
+        <p class="test">
+          welcome to my portfolio! I'm excited to showcase my work and skills.
+        </p>
+        <div class="button-container">
+          <div class="button"><p><a href="#contact">contact</a></p></div>
+          <div class="button"><p><a href="./assets/Devin Edwards - Resume.pdf" target="_blank" rel="noreferrer">resume</a></p></div>
+        </div>
+      </div>
+      <img src="./assets/images/portrait-placeholder.png" class="portrait">
+    </div>
 
-        .section {
-        margin-bottom: 30px;
-        }
-        
-        .section:last-child {
-        margin-bottom: 0;
-        }
-        
-        .section h2 {
-        text-align: center;
-        }
-        
-        .section-content {
-        max-width: 800px;
-        margin: 0 auto;
-        }
-        
-        .project {
-        margin-bottom: 30px;
-        }
-        
-        .project h3 {
-        margin-top: 0;
-        }
-        
-        .project img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-        }
-        .header{
-            color: #d8c2ff;
-        }
-        .words{
-            color: #b8f2e6
-        }
-        ul li{
-            color: #fc82b5
-        }
-    </style>
-</head>
-<body onload = "JavaScript:AutoRefresh(5000);"background-color: #0b032d;>
-  <div class="section">
-    <div class="section-content">
-      <h2 class="header">Greeting</h2>
-      <p class="words">Welcome to my portfolio! I'm excited to showcase my work and skills.</p>
-    </div>
-  </div>
-  
-  <div class="section">
-    <div class="section-content">
-      <h2 class="header">Experience / Bio</h2>
-      <p class="words">I have several hours of experience in web development and a strong passion for doing things lol.</p>
-      <p class="words">I have worked with <u>HTML</u>, 
-        <u>CSS</u>, <u>JavaScript</u>, and am currently learning a variety of frameworks and libraries such as <u>React</u> and <u>Angular</u>.</p>
-    </div>
-  </div>
-  
-  <div class="section">
-    <div class="section-content">
-      <h2 class="header">Tech Used</h2>
-      <p class="words">Here are some of the technologies I'm proficient in:</p>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript?</li>
-        <li>React?</li>
-        <li>Something</li>
-        <li>Something else</li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="section">
-    <div class="section-content">
-      <h2 class="header">Projects</h2>
-      
-      <div class="project">
-        <h3 class="words">Project 1</h3>
-        <img src="project1.jpg" alt="Project 1">
-        <p class="words">Description of Project 1</p>
-      </div>
-      
-      <div class="project">
-        <h3 class="words">Project 2</h3>
-        <img src="project2.jpg" alt="Project 2">
-        <p class="words">Description of Project 2</p>
-      </div>
-      
-      <div class="project">
-        <h3 class="words">Project 3</h3>
-        <img src="project3.jpg" alt="Project 3">
-        <p class="words">Description of Project 3</p>
+    <div class="section">
+      <div class="section-content">
+        <h2 class="header">Experience / Bio</h2>
+        <p class="words">
+          I have several hours of experience in web development and a strong
+          passion for doing things lol.
+        </p>
+        <p class="words">
+          I have worked with <u>HTML</u>, <u>CSS</u>, <u>JavaScript</u>, and am
+          currently learning a variety of frameworks and libraries such as
+          <u>React</u> and <u>Angular</u>.
+        </p>
       </div>
     </div>
-  </div>
-  
-  <div class="section">
-    <div class="section-content">
-      <h2 class="header">Contact</h2>
-      <p class="words">Feel free to reach out to me:</p>
-      <ul>
-        <li class="words">Email: example@example.com</li>
-        <li class="words">Phone: 123-456-7890</li>
-      </ul>
+
+    <div class="section">
+      <div class="section-content">
+        <h2 class="header">Tech Used</h2>
+        <p class="words">
+          Here are some of the technologies I'm proficient in:
+        </p>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript?</li>
+          <li>React?</li>
+          <li>Something</li>
+          <li>Something else</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</body>
+
+    <div class="section">
+      <div class="section-content">
+        <h2 class="header">Projects</h2>
+
+        <div class="project">
+          <h3 class="words">Project 1</h3>
+          <img src="project1.jpg" alt="Project 1" />
+          <p class="words">Description of Project 1</p>
+        </div>
+
+        <div class="project">
+          <h3 class="words">Project 2</h3>
+          <img src="project2.jpg" alt="Project 2" />
+          <p class="words">Description of Project 2</p>
+        </div>
+
+        <div class="project">
+          <h3 class="words">Project 3</h3>
+          <img src="project3.jpg" alt="Project 3" />
+          <p class="words">Description of Project 3</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <div class="section-content">
+        <h2 class="header">Contact</h2>
+        <p class="words">Feel free to reach out to me:</p>
+        <ul>
+          <li class="words">Email: example@example.com</li>
+          <li class="words">Phone: 123-456-7890</li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
