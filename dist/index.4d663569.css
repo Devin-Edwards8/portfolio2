@@ -1,8 +1,8 @@
 .greeting {
-  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  display: flex;
 }
 
 .text h1 {
@@ -12,47 +12,48 @@
 }
 
 .text h2 {
-  color: #ffffff;
+  color: #fff;
   font-size: 2.5rem;
 }
 
 .text p {
-  color: #ffffff;
+  color: #fff;
   font-size: 1.5rem;
 }
 
 .button-container {
-  display: flex;
-  flex-direction: row;
   cursor: pointer;
+  flex-direction: row;
   gap: 3vw;
+  display: flex;
 }
 
 .button {
   background-color: #d8c2ff;
-  border-radius: 3px;
+  border-radius: .3rem;
   width: 10vw;
-  padding: 0 1rem 0 1rem;
+  padding: .5rem 1rem;
 }
 
 .button:hover {
   background-color: #711fff;
-  transition: 1s;
+  transition: all 1s;
 }
+
 .button:hover a {
-  color: white;
-  transition: 1s;
+  color: #fff;
+  transition: all 1s;
 }
 
 .button p {
   text-align: center;
+  margin: 0;
   font-size: 1.5rem;
-  line-height: 1.5rem;
 }
 
 .button a {
-  text-decoration: none;
   color: #191919;
+  text-decoration: none;
 }
 
 .portrait {
@@ -61,12 +62,12 @@
 }
 
 body {
-  font-family: "Source Code Pro", monospace;
+  scroll-behavior: smooth;
   background: #191919;
-  font-size: 16px;
   margin: 0;
   padding: 20px;
-  scroll-behavior: smooth;
+  font-family: Source Code Pro, monospace;
+  font-size: 16px;
 }
 
 h1 {
@@ -92,12 +93,12 @@ p {
 }
 
 u {
-  text-decoration: underline;
   color: #fc82b5;
+  text-decoration: underline;
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section:last-child {
@@ -139,4 +140,4 @@ ul li {
   color: #fc82b5;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=index.4d663569.css.map */
