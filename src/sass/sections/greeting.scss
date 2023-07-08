@@ -5,13 +5,19 @@
     align-items: center;
 }
 
-.text .big-name {
+.greeting-text {
+    display: block;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.greeting-text .big-name {
     color: #711fff;
     font-size: 5rem;
     font-weight: bold;
 }
 
-.text .role-title {
+.greeting-text .role-title {
     color: #ffffff;
     font-size: 2.5rem;
 }
@@ -21,7 +27,7 @@
     font-size: 2.5rem;
 }
 
-.text p {
+.greeting-text p {
     color: #ffffff;
     font-size: 1.5rem;
 }
