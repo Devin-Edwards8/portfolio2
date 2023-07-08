@@ -12,43 +12,45 @@
 }
 
 .greeting-text .big-name {
-  color: #711fff;
+  color: #e0b071;
   font-size: 5rem;
   font-weight: bold;
 }
 
 .greeting-text .role-title, #typewrite {
-  color: #fff;
+  color: #f1e6f9;
   font-size: 2.5rem;
 }
 
 .greeting-text p {
-  color: #fff;
+  color: #f1e6f9;
   font-size: 1.5rem;
 }
 
-.button-container {
+.greeting .button-container {
   cursor: pointer;
   flex-direction: row;
   gap: 3vw;
   display: flex;
 }
 
+.greeting img {
+  flex-shrink: 1;
+  width: 70vh;
+  height: 80vh;
+}
+
+.project {
+  flex-direction: row;
+  justify-content: space-evenly;
+  display: flex;
+}
+
 .button {
-  background-color: #d8c2ff;
+  cursor: pointer;
   border-radius: .3rem;
   width: 10vw;
   padding: .5rem 1rem;
-}
-
-.button:hover {
-  background-color: #711fff;
-  transition: all 1s;
-}
-
-.button:hover a {
-  color: #fff;
-  transition: all 1s;
 }
 
 .button p {
@@ -58,92 +60,37 @@
 }
 
 .button a {
-  color: #191919;
+  color: #160721;
   text-decoration: none;
 }
 
-.portrait {
-  width: 70vh;
-  height: 80vh;
+.primary-button {
+  background-color: #e0b071;
 }
 
-body {
+.secondary-button {
+  background-color: #160721;
+}
+
+.secondary-button a {
+  color: #f1e6f9;
+}
+
+.accent-button {
+  background-color: #71e0b0;
+}
+
+body, html {
   scroll-behavior: smooth;
-  background: #191919;
+  background: #160721;
   margin: 0;
   padding: 20px;
   font-family: Source Code Pro, monospace;
   font-size: 16px;
 }
 
-h1 {
-  text-align: left;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-p {
-  line-height: 1.5;
-}
-
-u {
-  color: #fc82b5;
-  text-decoration: underline;
-}
-
 .section {
   height: 100vh;
-}
-
-.section:last-child {
-  margin-bottom: 0;
-}
-
-.section h2 {
-  text-align: left;
-}
-
-.section-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.project {
-  margin-bottom: 30px;
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.header {
-  color: #d8c2ff;
-}
-
-.words {
-  color: #b8f2e6;
-}
-
-ul li {
-  color: #fc82b5;
 }
 
 /*# sourceMappingURL=index.ce1d6491.css.map */
