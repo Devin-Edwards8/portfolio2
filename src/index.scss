@@ -1,77 +1,17 @@
 @import './sass/sections/greeting.scss';
+@import './sass/sections/project.scss';
+@import './sass/shared/colors';
+@import './sass/shared/elements';
 
-body {
+body, html {
   font-family: "Source Code Pro", monospace;
-  background: #191919;
+  background: $background;
   font-size: 16px;
   margin: 0;
   padding: 20px;
   scroll-behavior: smooth;
 }
 
-h1 {
-  text-align: left;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-h2 {
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-p {
-  line-height: 1.5;
-}
-
-u {
-  text-decoration: underline;
-  color: #fc82b5;
-}
-
 .section {
   height: 100vh;
-}
-
-.section:last-child {
-  margin-bottom: 0;
-}
-
-.section h2 {
-  text-align: left;
-}
-
-.section-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.project {
-  margin-bottom: 30px;
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 10px;
-}
-.header {
-  color: #d8c2ff;
-}
-.words {
-  color: #b8f2e6;
-}
-ul li {
-  color: #fc82b5;
 }

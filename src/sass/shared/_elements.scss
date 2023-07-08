@@ -1,0 +1,33 @@
+.button {
+    border-radius: .3rem;
+    width: 10vw;
+    padding: .5rem 1rem .5rem 1rem;
+    cursor: pointer;
+    
+    p {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $background;
+    }
+}
+
+.primary-button {
+    background-color: $primary;
+}
+
+.secondary-button {
+    background-color: $secondary;
+
+    a {
+        color: $text;
+    }
+}
+
+.accent-button {
+    background-color: $accent;
+}
