@@ -43,13 +43,33 @@
 .project {
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: flex-start;
+  height: 90vh;
   display: flex;
+}
+
+.project-text {
+  max-width: 40vw;
+}
+
+.project .button-container {
+  cursor: pointer;
+  flex-direction: row;
+  gap: 3vw;
+  display: flex;
+}
+
+.project h1 {
+  color: #e0b071;
+}
+
+.project p {
+  color: #f1e6f9;
 }
 
 .button {
   cursor: pointer;
   border-radius: .3rem;
-  width: 10vw;
   padding: .5rem 1rem;
 }
 
@@ -61,7 +81,17 @@
 
 .button a {
   color: #160721;
+  margin: 0;
   text-decoration: none;
+}
+
+.small-button {
+  border-radius: .75rem;
+  padding: .3rem .6rem;
+}
+
+.small-button p {
+  font-size: 1.2rem;
 }
 
 .primary-button {

@@ -1,7 +1,6 @@
 .button {
     border-radius: .3rem;
-    width: 10vw;
-    padding: .5rem 1rem .5rem 1rem;
+    padding: .5rem 1rem;
     cursor: pointer;
     
     p {
@@ -13,6 +12,16 @@
     a {
         text-decoration: none;
         color: $background;
+        margin: 0;
+    }
+}
+
+.small-button {
+    padding: .3rem .6rem;
+    border-radius: .75rem;
+
+    p {
+        font-size: 1.2rem;
     }
 }
 
@@ -31,3 +40,5 @@
 .accent-button {
     background-color: $accent;
 }
+
+
