@@ -1,0 +1,37 @@
+@use '../shared/colors' as c;
+
+.navbar {
+    width: 90vw;
+    height: 9vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: c.$secondary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    a {
+        color: c.$text;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .navbar-name {
+        font-family: cursive;
+    }
+}
+
+.navbar .section-links {
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+
+    a:hover {
+        text-decoration: solid underline 1px;
+        text-underline-offset: 2px;
+    }
+}

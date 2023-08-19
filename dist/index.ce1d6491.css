@@ -99,7 +99,7 @@
 }
 
 .secondary-button {
-  background-color: #160721;
+  background-color: #000;
 }
 
 .secondary-button a {
@@ -108,6 +108,43 @@
 
 .accent-button {
   background-color: #71e0b0;
+}
+
+.navbar {
+  background-color: #000;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 9vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar a {
+  color: #f1e6f9;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar .navbar-name {
+  font-family: cursive;
+}
+
+.navbar .section-links {
+  flex-direction: row;
+  gap: 5vw;
+  display: flex;
+}
+
+.navbar .section-links a:hover {
+  text-underline-offset: 2px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
 
 body, html {
@@ -120,7 +157,11 @@ body, html {
 }
 
 .section {
-  height: 100vh;
+  height: 91vh;
+}
+
+.section-gap {
+  height: 9vh;
 }
 
 /*# sourceMappingURL=index.ce1d6491.css.map */
