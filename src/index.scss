@@ -5,11 +5,11 @@
 @use './sass/sections/navbar';
 
 body, html, :root {
-  --background: #160721;
-  --primary: #E0B071;
-  --secondary: #000000;
-  --accent: #71E0B0;
-  --text: #F1E6F9;
+  --background: #f0f0f0;
+  --primary: #b2b2b3;
+  --secondary: #e3e3e3;
+  --accent: #7e7d7c;
+  --text: #0f0f0f;
 
   font-family: "Source Code Pro", monospace;
   font-size: 16px;
@@ -28,12 +28,12 @@ body, html, :root {
 }
 
 .dark-theme {
-  background-color: #160721;
-  --background: #160721;
-  --primary: #E0B071;
-  --secondary: #000000;
-  --accent: #71E0B0;
-  --text: #F1E6F9;
+  background-color: #030104;
+  --background: #030104;
+  --primary: #a1d883;
+  --secondary: #0a1f0d;
+  --accent: #a7ba3b;
+  --text: #f2e8f8;
 }
 
 .section {

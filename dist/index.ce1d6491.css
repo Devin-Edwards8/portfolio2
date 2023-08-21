@@ -178,11 +178,11 @@
 }
 
 body, html, :root {
-  --background: #160721;
-  --primary: #e0b071;
-  --secondary: #000;
-  --accent: #71e0b0;
-  --text: #f1e6f9;
+  --background: #f0f0f0;
+  --primary: #b2b2b3;
+  --secondary: #e3e3e3;
+  --accent: #7e7d7c;
+  --text: #0f0f0f;
   scroll-behavior: smooth;
   margin: 0;
   padding: 20px;
@@ -200,12 +200,12 @@ body, html, :root {
 }
 
 .dark-theme {
-  --background: #160721;
-  --primary: #e0b071;
-  --secondary: #000;
-  --accent: #71e0b0;
-  --text: #f1e6f9;
-  background-color: #160721;
+  --background: #030104;
+  --primary: #a1d883;
+  --secondary: #0a1f0d;
+  --accent: #a7ba3b;
+  --text: #f2e8f8;
+  background-color: #030104;
 }
 
 .section {
