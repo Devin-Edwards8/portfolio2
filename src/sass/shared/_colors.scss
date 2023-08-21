@@ -1,7 +1,7 @@
 // dark theme
 
-$background: #160721;
-$primary :#E0B071;
-$secondary: #000000;
-$accent: #71E0B0;
-$text: #F1E6F9;
+$background: var(--background);
+$primary: var(--primary);
+$secondary: var(--secondary);
+$accent: var(--accent);
+$text: var(--text);

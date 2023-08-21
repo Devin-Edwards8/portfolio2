@@ -12,18 +12,18 @@
 }
 
 .greeting-text .big-name {
-  color: #e0b071;
+  color: var(--primary);
   font-size: 5rem;
   font-weight: bold;
 }
 
 .greeting-text .role-title, #typewrite {
-  color: #f1e6f9;
+  color: var(--text);
   font-size: 2.5rem;
 }
 
 .greeting-text p {
-  color: #f1e6f9;
+  color: var(--text);
   font-size: 1.5rem;
 }
 
@@ -60,11 +60,11 @@
 }
 
 .project h1 {
-  color: #e0b071;
+  color: var(--primary);
 }
 
 .project p {
-  color: #f1e6f9;
+  color: var(--text);
 }
 
 .button {
@@ -80,7 +80,7 @@
 }
 
 .button a {
-  color: #160721;
+  color: var(--background);
   margin: 0;
   text-decoration: none;
 }
@@ -95,23 +95,23 @@
 }
 
 .primary-button {
-  background-color: #e0b071;
+  background-color: var(--primary);
 }
 
 .secondary-button {
-  background-color: #000;
+  background-color: var(--secondary);
 }
 
 .secondary-button a {
-  color: #f1e6f9;
+  color: var(--text);
 }
 
 .accent-button {
-  background-color: #71e0b0;
+  background-color: var(--accent);
 }
 
 .navbar {
-  background-color: #000;
+  background-color: var(--secondary);
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -125,9 +125,10 @@
   left: 0;
 }
 
-.navbar a {
-  color: #f1e6f9;
+.navbar a, .navbar p {
+  color: var(--text);
   cursor: pointer;
+  margin: 0;
   text-decoration: none;
 }
 
@@ -147,13 +148,35 @@
   text-decoration-thickness: 1px;
 }
 
-body, html {
+body, html, :root {
+  --background: #160721;
+  --primary: #e0b071;
+  --secondary: #000;
+  --accent: #71e0b0;
+  --text: #f1e6f9;
   scroll-behavior: smooth;
-  background: #160721;
   margin: 0;
   padding: 20px;
   font-family: Source Code Pro, monospace;
   font-size: 16px;
+}
+
+.light-theme {
+  --background: #f0f0f0;
+  --primary: #b2b2b3;
+  --secondary: #e3e3e3;
+  --accent: #7e7d7c;
+  --text: #0f0f0f;
+  background-color: #f0f0f0;
+}
+
+.dark-theme {
+  --background: #160721;
+  --primary: #e0b071;
+  --secondary: #000;
+  --accent: #71e0b0;
+  --text: #f1e6f9;
+  background-color: #160721;
 }
 
 .section {
