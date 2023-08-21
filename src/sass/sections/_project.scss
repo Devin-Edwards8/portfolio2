@@ -1,4 +1,4 @@
-@import '../shared/colors';
+@use '../shared/colors' as c;
 
 .project {
     display: flex;
@@ -20,9 +20,9 @@
 }
 
 .project h1 {
-    color: $primary;
+    color: c.$primary;
 }
 
 .project p {
-    color: $text;
+    color: c.$text;
 }

@@ -12,18 +12,18 @@
 }
 
 .greeting-text .big-name {
-  color: #e0b071;
+  color: var(--primary);
   font-size: 5rem;
   font-weight: bold;
 }
 
 .greeting-text .role-title, #typewrite {
-  color: #f1e6f9;
+  color: var(--text);
   font-size: 2.5rem;
 }
 
 .greeting-text p {
-  color: #f1e6f9;
+  color: var(--text);
   font-size: 1.5rem;
 }
 
@@ -60,11 +60,11 @@
 }
 
 .project h1 {
-  color: #e0b071;
+  color: var(--primary);
 }
 
 .project p {
-  color: #f1e6f9;
+  color: var(--text);
 }
 
 .button {
@@ -80,7 +80,7 @@
 }
 
 .button a {
-  color: #160721;
+  color: var(--background);
   margin: 0;
   text-decoration: none;
 }
@@ -95,32 +95,125 @@
 }
 
 .primary-button {
-  background-color: #e0b071;
+  background-color: var(--primary);
 }
 
 .secondary-button {
-  background-color: #160721;
+  background-color: var(--secondary);
 }
 
 .secondary-button a {
-  color: #f1e6f9;
+  color: var(--text);
 }
 
 .accent-button {
-  background-color: #71e0b0;
+  background-color: var(--accent);
 }
 
-body, html {
+.navbar {
+  background-color: var(--secondary);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  height: 9vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar a, .navbar p {
+  color: var(--text);
+  cursor: pointer;
+  margin: 0;
+  text-decoration: none;
+}
+
+.navbar .navbar-name {
+  font-family: Courgette, cursive;
+  font-size: 2rem;
+}
+
+.navbar .section-links {
+  flex-direction: row;
+  align-items: center;
+  gap: 5vw;
+  display: flex;
+}
+
+.navbar .section-links a:hover {
+  text-underline-offset: 2px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+#toggle-color-scheme {
+  cursor: pointer;
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+}
+
+#toggle-shaft {
+  background-color: var(--background);
+  border-radius: 1rem;
+  width: 4rem;
+  height: 2rem;
+  position: absolute;
+}
+
+.toggle-knob-forward {
+  right: 0;
+}
+
+#toggle-knob {
+  background-color: var(--accent);
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+}
+
+body, html, :root {
+  --background: #f0f0f0;
+  --primary: #b2b2b3;
+  --secondary: #e3e3e3;
+  --accent: #7e7d7c;
+  --text: #0f0f0f;
   scroll-behavior: smooth;
-  background: #160721;
   margin: 0;
   padding: 20px;
   font-family: Source Code Pro, monospace;
   font-size: 16px;
 }
 
+.light-theme {
+  --background: #f0f0f0;
+  --primary: #b2b2b3;
+  --secondary: #e3e3e3;
+  --accent: #7e7d7c;
+  --text: #0f0f0f;
+  background-color: #f0f0f0;
+}
+
+.dark-theme {
+  --background: #030104;
+  --primary: #a1d883;
+  --secondary: #0a1f0d;
+  --accent: #a7ba3b;
+  --text: #f2e8f8;
+  background-color: #030104;
+}
+
 .section {
-  height: 100vh;
+  height: 91vh;
+}
+
+.section-gap {
+  height: 9vh;
 }
 
 /*# sourceMappingURL=index.ce1d6491.css.map */

@@ -1,17 +1,45 @@
-@import './sass/sections/greeting.scss';
-@import './sass/sections/project.scss';
-@import './sass/shared/colors';
-@import './sass/shared/elements';
+@use './sass/sections/greeting.scss';
+@use './sass/sections/project.scss';
+@use './sass/shared/colors' as c;
+@use './sass/shared/elements';
+@use './sass/sections/navbar';
 
-body, html {
+body, html, :root {
+  --background: #f0f0f0;
+  --primary: #b2b2b3;
+  --secondary: #e3e3e3;
+  --accent: #7e7d7c;
+  --text: #0f0f0f;
+
   font-family: "Source Code Pro", monospace;
-  background: $background;
   font-size: 16px;
   margin: 0;
   padding: 20px;
   scroll-behavior: smooth;
 }
 
+.light-theme {
+  background-color: #f0f0f0;
+  --background: #f0f0f0;
+  --primary: #b2b2b3;
+  --secondary: #e3e3e3;
+  --accent: #7e7d7c;
+  --text: #0f0f0f;
+}
+
+.dark-theme {
+  background-color: #030104;
+  --background: #030104;
+  --primary: #a1d883;
+  --secondary: #0a1f0d;
+  --accent: #a7ba3b;
+  --text: #f2e8f8;
+}
+
 .section {
-  height: 100vh;
+  height: 91vh;
+}
+
+.section-gap {
+  height: 9vh;
 }

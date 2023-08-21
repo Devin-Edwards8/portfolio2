@@ -577,9 +577,12 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _typewriter = require("./scripts/typewriter");
 var _typewriterDefault = parcelHelpers.interopDefault(_typewriter);
+var _toggleTheme = require("./scripts/toggle-theme");
+var _toggleThemeDefault = parcelHelpers.interopDefault(_toggleTheme);
 (0, _typewriterDefault.default)();
+(0, _toggleThemeDefault.default)();
 
-},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cZMBF":[function(require,module,exports) {
+},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR"}],"cZMBF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>typewrite);
@@ -1227,6 +1230,21 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire2041")
+},{}],"c7UWR":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>toggleTheme);
+function toggleTheme() {
+    let currentTheme = "dark";
+    const toggle = document.getElementById("toggle-knob");
+    document.getElementById("toggle-color-scheme").addEventListener("click", function() {
+        document.body.classList.toggle("dark-theme");
+        document.body.classList.toggle("light-theme");
+        toggle.classList.toggle("toggle-knob-forward");
+        currentTheme === "dark" ? currentTheme = "light" : currentTheme = "dark";
+    });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire2041")
 
 //# sourceMappingURL=index.975ef6c8.js.map

@@ -1,0 +1,74 @@
+@use '../shared/colors' as c;
+
+.navbar {
+    width: 90vw;
+    height: 9vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: c.$secondary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+    a {
+        color: c.$text;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    p {
+        color: c.$text;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .navbar-name {
+        font-family: 'Courgette', cursive;
+        font-size: 2rem;
+    }
+}
+
+.navbar .section-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+
+    a:hover {
+        text-decoration: solid underline 1px;
+        text-underline-offset: 2px;
+    }
+}
+
+#toggle-color-scheme {
+    cursor: pointer;
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+}
+
+#toggle-shaft {
+    position: absolute;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    background-color: c.$background;
+}
+
+.toggle-knob-forward {
+    right: 0;
+}
+
+#toggle-knob {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    background-color: c.$accent;
+}

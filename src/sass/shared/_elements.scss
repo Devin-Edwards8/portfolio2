@@ -1,3 +1,5 @@
+@use './colors' as c;
+
 .button {
     border-radius: .3rem;
     padding: .5rem 1rem;
@@ -11,7 +13,7 @@
     
     a {
         text-decoration: none;
-        color: $background;
+        color: c.$background;
         margin: 0;
     }
 }
@@ -26,19 +28,19 @@
 }
 
 .primary-button {
-    background-color: $primary;
+    background-color: c.$primary;
 }
 
 .secondary-button {
-    background-color: $secondary;
+    background-color: c.$secondary;
 
     a {
-        color: $text;
+        color: c.$text;
     }
 }
 
 .accent-button {
-    background-color: $accent;
+    background-color: c.$accent;
 }
 
 
