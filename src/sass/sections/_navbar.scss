@@ -29,17 +29,46 @@
     }
 
     .navbar-name {
-        font-family: cursive;
+        font-family: 'Courgette', cursive;
+        font-size: 2rem;
     }
 }
 
 .navbar .section-links {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 5vw;
 
     a:hover {
         text-decoration: solid underline 1px;
         text-underline-offset: 2px;
     }
+}
+
+#toggle-color-scheme {
+    cursor: pointer;
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+}
+
+#toggle-shaft {
+    position: absolute;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    background-color: c.$background;
+}
+
+.toggle-knob-forward {
+    right: 0;
+}
+
+#toggle-knob {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 1rem;
+    background-color: c.$accent;
 }

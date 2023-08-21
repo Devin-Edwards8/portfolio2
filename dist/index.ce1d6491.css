@@ -133,11 +133,13 @@
 }
 
 .navbar .navbar-name {
-  font-family: cursive;
+  font-family: Courgette, cursive;
+  font-size: 2rem;
 }
 
 .navbar .section-links {
   flex-direction: row;
+  align-items: center;
   gap: 5vw;
   display: flex;
 }
@@ -146,6 +148,33 @@
   text-underline-offset: 2px;
   text-decoration: underline;
   text-decoration-thickness: 1px;
+}
+
+#toggle-color-scheme {
+  cursor: pointer;
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+}
+
+#toggle-shaft {
+  background-color: var(--background);
+  border-radius: 1rem;
+  width: 4rem;
+  height: 2rem;
+  position: absolute;
+}
+
+.toggle-knob-forward {
+  right: 0;
+}
+
+#toggle-knob {
+  background-color: var(--accent);
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
 }
 
 body, html, :root {
