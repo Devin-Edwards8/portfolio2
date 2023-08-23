@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Carlos Lawler</title>
+    <title>Devin Edwards</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,9 +19,9 @@
     <script defer src="https://unpkg.com/typewriter-effect@latest/dist/core.js" type="module"></script>
   </head>
   <body class="light-theme">
-    <script src="index.js" type="module"></script>
+    <script src="index.js" type="module" defer></script>
     <nav class="navbar">
-      <a href="#top" class="navbar-name">Carlos Lawler</a>
+      <a href="#top" class="navbar-name">Devin Edwards</a>
       <div class="section-links">
         <a href="#top">Home</a>
         <a href="#projects">Projects</a>
@@ -45,10 +45,11 @@
           <div class="button accent-button"><p><a href="./assets/Devin Edwards - Resume.pdf" target="_blank" rel="noreferrer">resume</a></p></div>
         </div>
       </div>
-      <img src="./assets/images/portrait-placeholder.png" class="portrait">
+      <img src="./assets/images/programmer.png" id="programmer-image-light" alt="programmer">
+      <img src="./assets/images/programmer-dark.png" id="programmer-image-dark" alt="programmer" class="invisible">
     </div>
 
-    <div class="section-gap"></div>
+    <!-- <div class="section-gap"></div>
     <div class="section">
       <div class="section-content">
         <h2 class="header">Tech Used</h2>
@@ -64,12 +65,12 @@
           <li>Something else</li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
     <div class="section-gap" id="projects"></div>
     <div class="project section">
       <div class="project-text">
-        <h1>Project 1</h1>
+        <h1>DevFit</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div class="button-container">
           <div class="button small-button primary-button"><p><a href="" target="_blank" rel="noreferrer">source code</a></p></div>
@@ -83,21 +84,47 @@
     <div class="project section">
       <img alt="project image">
       <div class="project-text">
-        <h1>Project 2</h1>
+        <h1>The Legend of Zelda</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="button-container">
+          <div class="button small-button primary-button"><p><a href="" target="_blank" rel="noreferrer">source code</a></p></div>
+          <div class="button small-button primary-button"><p><a href="" target="_blank" rel="noreferrer">live demo</a></p></div>
+        </div>
       </div>
     </div>
 
     <div class="section-gap" id="contact"></div>
-    <div class="section">
-      <div class="section-content">
-        <h2 class="header">Contact</h2>
-        <p class="words">Feel free to reach out to me:</p>
-        <ul>
-          <li class="words">Email: example@example.com</li>
-          <li class="words">Phone: 123-456-7890</li>
-        </ul>
+    <div">
+      <h1 class="contact-header">Reach Out!</h1>
+      <div class="contact-content">
+        <form>
+          <input placeholder="Name *"></input>
+          <input placeholder="Email *"></input>
+          <textarea placeholder="Message *" rows="5"></textarea>
+          <button>send ➤</button>
+        </form>
+        <img src="./assets/images/portrait2.jpg" alt="Carlos Lawler" class="contact-portrait">
+        <div>
+          <a id="github-social-link" class="social-link" href="https://github.com/Devin-Edwards8" target="_blank">
+            <img id="github-icon-light" src="./assets/images/github-icon.png" alt="GitHub icon" class="social-icon">
+            <img id="github-icon-light-accent" src="./assets/images/github-icon-accent.png" alt="GitHub icon" class="social-icon invisible">
+            <img id="github-icon-dark" src="./assets/images/github-icon-dark.png" alt="GitHub icon" class="social-icon invisible">
+            <img id="github-icon-dark-accent" src="./assets/images/github-icon-dark-accent.png" alt="GitHub icon" class="social-icon invisible">
+            <p>GitHub</p>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+            <img id="linkedin-icon-light" src="./assets/images/linkedin-icon.png" alt="LinkedIn icon" class="social-icon">
+            <img id="linkedin-icon-dark" src="./assets/images/linkedin-icon-dark.png" alt="LinkedIn icon" class="social-icon invisible">
+            <p>LinkedIn</p>
+          </a>
+          <a class="social-link" href="mailto:edwards.1779@osu.edu" target="_blank">
+            <img id="email-icon-light" src="./assets/images/email-icon.png" alt="Email icon" class="social-icon">
+            <img id="email-icon-dark" src="./assets/images/email-icon-dark.png" alt="Email icon" class="social-icon invisible">
+            <p>edwards.1779@osu.edu</p>
+          </a>
+        </div>
       </div>
     </div>
+
   </body>
 </html>

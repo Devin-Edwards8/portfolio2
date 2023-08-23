@@ -3,37 +3,43 @@
 @use './sass/shared/colors' as c;
 @use './sass/shared/elements';
 @use './sass/sections/navbar';
+@use './sass/sections/contact';
 
 body, html, :root {
-  --background: #f0f0f0;
-  --primary: #b2b2b3;
-  --secondary: #e3e3e3;
-  --accent: #7e7d7c;
-  --text: #0f0f0f;
+  --background: #d5e6fb;
+  --primary: #f3be7c;
+  --secondary: #c3dafa;
+  --accent: #4f2f07;
+  --text: #020c17;
 
-  font-family: "Source Code Pro", monospace;
   font-size: 16px;
   margin: 0;
-  padding: 20px;
   scroll-behavior: smooth;
+  color: c.$text;
+  font-family: "Source Code Pro", monospace;
+
+  input, textarea, button {
+    color: c.$text;
+    font-family: "Source Code Pro", monospace;
+  }
 }
 
 .light-theme {
-  background-color: #f0f0f0;
-  --background: #f0f0f0;
-  --primary: #b2b2b3;
-  --secondary: #e3e3e3;
-  --accent: #7e7d7c;
-  --text: #0f0f0f;
+  background-color: #d5e6fb;
+  --background: #d5e6fb;
+  --primary: #f3be7c;
+  --secondary: #c3dafa;
+  --accent: #4f2f07;
+  --text: #020c17;
 }
 
 .dark-theme {
-  background-color: #030104;
-  --background: #030104;
-  --primary: #a1d883;
-  --secondary: #0a1f0d;
-  --accent: #a7ba3b;
-  --text: #f2e8f8;
+  background-color: #020c17;
+  --background: #020c17;
+  --primary: #f3be7c;
+  --secondary: #031022;
+  --accent: #dc8213;
+  --text: #d5e6fb;
 }
 
 .section {
@@ -43,3 +49,44 @@ body, html, :root {
 .section-gap {
   height: 9vh;
 }
+
+.invisible {
+  display: none;
+}
+
+// other schemes
+// pink
+
+// light
+
+// --background: #eef7ed;
+// --primary: #d5a6d8;
+// --secondary: #cce8ca;
+// --accent: #9a46a0;
+// --text: #0a1509;
+
+// dark
+
+// --background: #0a1509;
+// --primary: #d5a6d8;
+// --secondary: #091208;
+// --accent: #d5a7d8;
+// --text: #eef7ed;
+
+// red
+
+//light
+
+  // --background: #ffffff;
+  // --primary: #8d1157;
+  // --secondary: #f8c9cc;
+  // --accent: #db1a27;
+  // --text: #260529;
+
+//dark
+
+  // --background: #260529;
+  // --primary: #8d1157;
+  // --secondary: #240507;
+  // --accent: #f39ba1;
+  // --text: #ffffff;

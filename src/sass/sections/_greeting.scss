@@ -3,14 +3,17 @@
 .greeting {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .greeting-text {
     display: block;
     justify-content: center;
     min-height: 50vh;
+    max-width: 45vw;
 }
 
 .greeting-text .big-name {
@@ -37,12 +40,11 @@
 .greeting .button-container {
     display: flex;
     flex-direction: row;
-    cursor: pointer;
     gap: 3vw;
 }
 
-.greeting img {
+#programmer-image-light, #programmer-image-dark {
     flex-shrink: 1;
-    width: 70vh;
-    height: 80vh;
+    width: 35vw;
+    height: 35vw;
 }

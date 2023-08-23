@@ -579,10 +579,13 @@ var _typewriter = require("./scripts/typewriter");
 var _typewriterDefault = parcelHelpers.interopDefault(_typewriter);
 var _toggleTheme = require("./scripts/toggle-theme");
 var _toggleThemeDefault = parcelHelpers.interopDefault(_toggleTheme);
+var _highlightIcons = require("./scripts/highlight-icons");
+var _highlightIconsDefault = parcelHelpers.interopDefault(_highlightIcons);
 (0, _typewriterDefault.default)();
 (0, _toggleThemeDefault.default)();
+(0, _highlightIconsDefault.default)();
 
-},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR"}],"cZMBF":[function(require,module,exports) {
+},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR","./scripts/highlight-icons":"d5Ru0"}],"cZMBF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>typewrite);
@@ -594,7 +597,7 @@ function typewrite() {
         loop: false,
         delay: 75
     });
-    typewriter.pauseFor(1000).typeString('<span class="big-name">Carlos Lawler</span><br>').pauseFor(300).typeString('<span class="role-title">Dedicated Student<span/>').pauseFor(500).deleteChars(17).typeString('<span class="role-title">Passionate Learner<span/>').pauseFor(500).deleteChars(18).typeString('<span class="role-title">Full-Stack Developer<span/>').start();
+    typewriter.pauseFor(1000).typeString('<span class="big-name">Devin Edwards</span><br>').pauseFor(300).typeString('<span class="role-title">Dedicated Student<span/>').pauseFor(500).deleteChars(17).typeString('<span class="role-title">Passionate Learner<span/>').pauseFor(500).deleteChars(18).typeString('<span class="role-title">Full-Stack Developer<span/>').start();
 }
 
 },{"typewriter-effect/dist/core.js":"gppl0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gppl0":[function(require,module,exports) {
@@ -1236,13 +1239,62 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>toggleTheme);
 function toggleTheme() {
     let currentTheme = "dark";
-    const toggle = document.getElementById("toggle-knob");
+    var toggle = document.getElementById("toggle-knob");
+    var githubIconLight = document.getElementById("github-icon-light");
+    var githubIconDark = document.getElementById("github-icon-dark");
+    var linkedinIconLight = document.getElementById("linkedin-icon-light");
+    var linkedinIconDark = document.getElementById("linkedin-icon-dark");
+    var emailIconLight = document.getElementById("email-icon-light");
+    var emailIconDark = document.getElementById("email-icon-dark");
+    var programmerImageLight = document.getElementById("programmer-image-light");
+    var programmerImageDark = document.getElementById("programmer-image-dark");
     document.getElementById("toggle-color-scheme").addEventListener("click", function() {
         document.body.classList.toggle("dark-theme");
         document.body.classList.toggle("light-theme");
         toggle.classList.toggle("toggle-knob-forward");
+        programmerImageLight.classList.toggle("invisible");
+        programmerImageDark.classList.toggle("invisible");
+        emailIconDark.classList.toggle("invisible");
+        emailIconLight.classList.toggle("invisible");
+        githubIconDark.classList.toggle("invisible");
+        githubIconLight.classList.toggle("invisible");
+        linkedinIconDark.classList.toggle("invisible");
+        linkedinIconLight.classList.toggle("invisible");
         currentTheme === "dark" ? currentTheme = "light" : currentTheme = "dark";
     });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5Ru0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>highlighter);
+function highlighter() {
+    var gitSocialLink = document.getElementById("github-social-link");
+    var githubDarkIcon = document.getElementById("github-icon-dark");
+    var githubDarkIconAccent = document.getElementById("github-icon-dark-accent");
+    var githubLightIcon = document.getElementById("github-icon-light");
+    var githubLightIconAccent = document.getElementById("github-icon-light-accent");
+    if (document.body.classList.contains("light-theme") && gitSocialLink.matches(":hover")) {
+        githubLightIcon.classList.add("invisible");
+        githubLightIconAccent.classList.remove("invisible");
+        githubDarkIcon.classList.add("invisible");
+        githubDarkIconAccent.classList.add("invisible");
+    } else if (document.body.classList.contains("light-theme")) {
+        githubLightIcon.classList.remove("invisible");
+        githubLightIconAccent.classList.add("invisible");
+        githubDarkIcon.classList.add("invisible");
+        githubDarkIconAccent.classList.add("invisible");
+    } else if (document.body.classList.contains("dark-theme") && gitSocialLink.matches(":hover")) {
+        githubLightIcon.classList.add("invisible");
+        githubLightIconAccent.classList.add("invisible");
+        githubDarkIcon.classList.add("invisible");
+        githubDarkIconAccent.classList.remove("invisible");
+    } else {
+        githubLightIcon.classList.add("invisible");
+        githubLightIconAccent.classList.add("invisible");
+        githubDarkIcon.classList.remove("invisible");
+        githubDarkIconAccent.classList.add("invisible");
+    }
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire2041")

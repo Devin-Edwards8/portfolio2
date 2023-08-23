@@ -1,0 +1,96 @@
+@use '../shared/colors' as c;
+
+.contact {
+    height: 50vh;
+}
+
+.contact-header {
+    font-size: 3rem;
+    margin-left: 5rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem 5rem 5rem;
+
+    .social-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: c.$text;
+    }
+
+    .social-link:hover {
+        p {
+            color: c.$accent;
+        }
+
+        @if c.$background == #d5e6fb {
+            #github-icon-light, #github-icon-dark, #github-icon-dark-accent {
+                display: none;
+            }
+    
+            #github-icon-light-accent {
+                display: block;
+            }
+        } @else if c.$background == #020c17 {
+            #github-icon-light, #github-icon-dark, #github-icon-light-accent {
+                display: none;
+            }
+    
+            #github-icon-dark-accent {
+                display: block;
+            }
+        }
+    }
+
+    .social-icon {
+        width: 2rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .contact-portrait {
+        width: 20vw;
+        aspect-ratio: 1/1;
+        border-radius: 10vw;
+        border: .5rem solid c.$primary;
+    }
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    input, textarea {
+        background-color: c.$background;
+        color: c.$text;
+        font-size: 1rem;
+        border: 1px solid c.$accent;
+        border-radius: .3rem;
+        padding: .5rem;
+        width: 30vw;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: c.$accent;
+    }
+
+    button {
+        width: 6rem;
+        height: 3rem;
+        border-radius: .6rem;
+        border: 1px solid c.$accent;
+        color: c.$accent;
+        background-color: c.$secondary;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}
