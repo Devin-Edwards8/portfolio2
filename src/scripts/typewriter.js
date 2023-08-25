@@ -10,7 +10,7 @@ export default function typewrite() {
   
   typewriter
     .pauseFor(1000)
-    .typeString('<span class="big-name">Carlos Lawler</span><br>')
+    .typeString('<span class="big-name">Devin Edwards</span><br>')
     .pauseFor(300)
     .typeString('<span class="role-title">Dedicated Student<span/>')
     .pauseFor(500)

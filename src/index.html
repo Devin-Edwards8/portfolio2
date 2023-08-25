@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Carlos Lawler</title>
+    <title>Devin Edwards</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,20 +11,22 @@
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.scss"/>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+
     <!--Let's look into these tags-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script defer src="https://unpkg.com/typewriter-effect@latest/dist/core.js" type="module"></script>
   </head>
   <body class="light-theme">
-    <script src="index.js" type="module"></script>
+    <script src="index.js" type="module" defer></script>
     <nav class="navbar">
-      <a href="#top" class="navbar-name">Carlos Lawler</a>
+      <a href="#top" class="navbar-name">Devin Edwards</a>
       <div class="section-links">
         <a href="#top">Home</a>
-        <a href="#projects">Projects</a>
+        <a href="#devfit">Projects</a>
         <a href="#contact">Contact</a>
         <div id="toggle-color-scheme">
           <div id="toggle-shaft"></div>
@@ -41,14 +43,15 @@
           Welcome to my portfolio! I'm excited to showcase my work and skills.
         </p>
         <div class="button-container">
-          <div class="button primary-button"><p><a href="#contact">contact</a></p></div>
-          <div class="button accent-button"><p><a href="./assets/Devin Edwards - Resume.pdf" target="_blank" rel="noreferrer">resume</a></p></div>
+          <div class="button primary-button"><p><a href="#contact">Contact Me</a></p></div>
+          <div class="button accent-button"><p><a href="./assets/Devin Edwards - Resume.pdf" target="_blank" rel="noreferrer">See Resume</a></p></div>
         </div>
       </div>
-      <img src="./assets/images/portrait-placeholder.png" class="portrait">
+      <img src="./assets/images/programmer.png" id="programmer-image-light" alt="programmer">
+      <img src="./assets/images/programmer-dark.png" id="programmer-image-dark" alt="programmer" class="invisible">
     </div>
 
-    <div class="section-gap"></div>
+    <!-- <div class="section-gap"></div>
     <div class="section">
       <div class="section-content">
         <h2 class="header">Tech Used</h2>
@@ -64,40 +67,99 @@
           <li>Something else</li>
         </ul>
       </div>
-    </div>
+    </div> -->
 
-    <div class="section-gap" id="projects"></div>
-    <div class="project section">
+    <div class="section-gap light-wave-1" id="wave-gap-1"></div>
+    <div id="devfit" class="project section secondary-section">
       <div class="project-text">
-        <h1>Project 1</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h1>DevFit</h1>
+        <p>The goal of this project was to create a personalized fitness app for my needs. I wanted an app that
+        could help me track my workouts and my nutritional goals. Using the React Native framework, I designed
+        an interface to simplify my fitness journey.</p>
         <div class="button-container">
-          <div class="button small-button primary-button"><p><a href="" target="_blank" rel="noreferrer">source code</a></p></div>
-          <div class="button small-button primary-button"><p><a href="" target="_blank" rel="noreferrer">live demo</a></p></div>
+          <button class="project-button">
+            <a href="https://github.com/Devin-Edwards8/DevFit" target="_blank" 
+            rel="noreferrer">Source Code</a>
+            <img src="./assets/images/github-icon.png" alt="github icon">
+          </button>
+          <button class="project-button">
+            <a href="https://devfit-demo.netlify.app/" target="_blank" 
+            rel="noreferrer">Live Demo</a>
+            <img src="./assets/images/new-tab.png" alt="new tab">
+          </button>
         </div>
       </div>
-      <img alt="project image">
+      <img src='./assets/images/devfit-preview.png' alt="DevFit preview" id="devfit-preview">
     </div>
 
-    <div class="section-gap"></div>
+    <div class="section-gap light-wave-2" id="wave-gap-2"></div>
     <div class="project section">
-      <img alt="project image">
+      <video width="40%" height="auto" loop autoPlay muted>
+        <source src='./assets/videos/gameplay.mov' type="video/mov" />
+        <source src='./assets/videos/gameplay.mp4' type="video/mp4" />
+      </video>
       <div class="project-text">
-        <h1>Project 2</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h1>The Legend of Zelda</h1>
+        <p>A semester-long group project  was the purpose of one my Junior year courses. Our task? To recreate the dungeon level of
+        the Legend of Zelda (NES) in a series of two/three week sprints. The class promoted good code-quality and teamwork,
+        as we continually expanded on our product. Huge thanks to my teammates: Eugene Kim, Linran Wu, David-Benoit Tano, and 
+        Rand Singer!</p>
+        <div class="button-container">
+          <button class="project-button">
+            <a href="https://github.com/Devin-Edwards8/The-Legend-Of-Zelda" 
+            target="_blank" rel="noreferrer">Source Code</a>
+            <img src="./assets/images/github-icon.png" alt="github icon">
+          </button>
+        </div>
       </div>
     </div>
 
-    <div class="section-gap" id="contact"></div>
-    <div class="section">
-      <div class="section-content">
-        <h2 class="header">Contact</h2>
-        <p class="words">Feel free to reach out to me:</p>
-        <ul>
-          <li class="words">Email: example@example.com</li>
-          <li class="words">Phone: 123-456-7890</li>
-        </ul>
+    <div class="section-gap light-wave-1" id="wave-gap-3"></div>
+    <div class="contact secondary-section" id="contact">
+      <h1 class="contact-header">Reach Out!</h1>
+      <div class="contact-content">
+        <form>
+          <input placeholder="Name *"></input>
+          <input placeholder="Email *"></input>
+          <textarea placeholder="Message *" rows="5"></textarea>
+          <button>Send ➤</button>
+        </form>
+        <img src="./assets/images/portrait2.jpg" alt="Carlos Lawler" class="contact-portrait">
+        <div>
+          <a id="light-github-social" class="social-link" href="https://github.com/Devin-Edwards8" target="_blank">
+            <img id="github-icon-light" src="./assets/images/github-icon.png" alt="GitHub icon" class="social-icon">
+            <img id="github-icon-light-accent" src="./assets/images/github-icon-accent.png" alt="GitHub icon" class="social-icon invisible">
+            <p>GitHub</p>
+          </a>
+          <a id="dark-github-social" class="invisible" href="https://github.com/Devin-Edwards8" target="_blank">
+            <img id="github-icon-dark" src="./assets/images/github-icon-dark.png" alt="GitHub icon" class="social-icon">
+            <img id="github-icon-dark-accent" src="./assets/images/github-icon-dark-accent.png" alt="GitHub icon" class="social-icon invisible">
+            <p>GitHub</p>
+          </a>
+          <a id="light-linkedin-social" class="social-link" href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+            <img id="linkedin-icon-light" src="./assets/images/linkedin-icon.png" alt="LinkedIn icon" class="social-icon">
+            <img id="linkedin-icon-light-accent" src="./assets/images/linkedin-icon-accent.png" alt="LinkedIn icon" class="social-icon invisible">
+            <p>LinkedIn</p>
+          </a>
+          <a id="dark-linkedin-social" class="invisible" href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+            <img id="linkedin-icon-dark" src="./assets/images/linkedin-icon-dark.png" alt="LinkedIn icon" class="social-icon">
+            <img id="linkedin-icon-dark-accent" src="./assets/images/linkedin-icon-dark-accent.png" alt="LinkedIn icon" class="social-icon invisible">
+            <p>LinkedIn</p>
+          </a>
+          <a id="light-email-social" class="social-link" href="mailto:edwards.1779@osu.edu" target="_blank">
+            <img id="email-icon-light" src="./assets/images/email-icon.png" alt="Email icon" class="social-icon">
+            <img id="email-icon-light-accent" src="./assets/images/email-icon-accent.png" alt="Email icon" class="social-icon invisible">
+            <p>edwards.1779@osu.edu</p>
+          </a>
+          <a id="dark-email-social" class="invisible" href="mailto:edwards.1779@osu.edu" target="_blank">
+            <img id="email-icon-dark" src="./assets/images/email-icon-dark.png" alt="Email icon" class="social-icon">
+            <img id="email-icon-dark-accent" src="./assets/images/email-icon-dark-accent.png" alt="Email icon" class="social-icon invisible">
+            <p>edwards.1779@osu.edu</p>
+          </a>
+        </div>
       </div>
     </div>
+    <div id="bottom-waves" class="section-gap light-page-bottom"></div>
+
   </body>
 </html>

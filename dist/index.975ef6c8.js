@@ -594,7 +594,7 @@ function typewrite() {
         loop: false,
         delay: 75
     });
-    typewriter.pauseFor(1000).typeString('<span class="big-name">Carlos Lawler</span><br>').pauseFor(300).typeString('<span class="role-title">Dedicated Student<span/>').pauseFor(500).deleteChars(17).typeString('<span class="role-title">Passionate Learner<span/>').pauseFor(500).deleteChars(18).typeString('<span class="role-title">Full-Stack Developer<span/>').start();
+    typewriter.pauseFor(1000).typeString('<span class="big-name">Devin Edwards</span><br>').pauseFor(300).typeString('<span class="role-title">Dedicated Student<span/>').pauseFor(500).deleteChars(17).typeString('<span class="role-title">Passionate Learner<span/>').pauseFor(500).deleteChars(18).typeString('<span class="role-title">Full-Stack Developer<span/>').start();
 }
 
 },{"typewriter-effect/dist/core.js":"gppl0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gppl0":[function(require,module,exports) {
@@ -1236,12 +1236,50 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>toggleTheme);
 function toggleTheme() {
     let currentTheme = "dark";
-    const toggle = document.getElementById("toggle-knob");
+    var toggle = document.getElementById("toggle-knob");
+    var githubSocialLight = document.getElementById("light-github-social");
+    var githubSocialDark = document.getElementById("dark-github-social");
+    var linkedinSocialLight = document.getElementById("light-linkedin-social");
+    var linkedinSocialDark = document.getElementById("dark-linkedin-social");
+    var emailSocialLight = document.getElementById("light-email-social");
+    var emailSocialDark = document.getElementById("dark-email-social");
+    var programmerImageLight = document.getElementById("programmer-image-light");
+    var programmerImageDark = document.getElementById("programmer-image-dark");
+    var waveGap1 = document.getElementById("wave-gap-1");
+    var waveGap2 = document.getElementById("wave-gap-2");
+    var waveGap3 = document.getElementById("wave-gap-3");
+    var bottomWaves = document.getElementById("bottom-waves");
+    var projectButtons = document.getElementsByClassName("project-button");
     document.getElementById("toggle-color-scheme").addEventListener("click", function() {
+        // track current theme
+        currentTheme === "dark" ? currentTheme = "light" : currentTheme = "dark";
         document.body.classList.toggle("dark-theme");
         document.body.classList.toggle("light-theme");
+        // update UI
         toggle.classList.toggle("toggle-knob-forward");
-        currentTheme === "dark" ? currentTheme = "light" : currentTheme = "dark";
+        programmerImageLight.classList.toggle("invisible");
+        programmerImageDark.classList.toggle("invisible");
+        githubSocialDark.classList.toggle("invisible");
+        githubSocialLight.classList.toggle("invisible");
+        githubSocialDark.classList.toggle("social-link");
+        githubSocialLight.classList.toggle("social-link");
+        linkedinSocialDark.classList.toggle("invisible");
+        linkedinSocialLight.classList.toggle("invisible");
+        linkedinSocialDark.classList.toggle("social-link");
+        linkedinSocialLight.classList.toggle("social-link");
+        emailSocialDark.classList.toggle("invisible");
+        emailSocialLight.classList.toggle("invisible");
+        emailSocialDark.classList.toggle("social-link");
+        emailSocialLight.classList.toggle("social-link");
+        waveGap1.classList.toggle("light-wave-1");
+        waveGap1.classList.toggle("dark-wave-1");
+        waveGap2.classList.toggle("light-wave-2");
+        waveGap2.classList.toggle("dark-wave-2");
+        waveGap3.classList.toggle("light-wave-1");
+        waveGap3.classList.toggle("dark-wave-1");
+        bottomWaves.classList.toggle("light-page-bottom");
+        bottomWaves.classList.toggle("dark-page-bottom");
+        for(var i = 0; i < projectButtons.length; i++)projectButtons[i].classList.toggle("dark-project-button");
     });
 }
 

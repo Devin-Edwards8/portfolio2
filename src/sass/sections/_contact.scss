@@ -1,0 +1,158 @@
+@use '../shared/colors' as c;
+
+$theme: var(--theme);
+
+.contact {
+    padding-top: calc(100vw / 9);
+}
+
+.contact-header {
+    font-size: 3rem;
+    margin: 0 0 0 5rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem 5rem 5rem;
+
+    .social-link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        color: c.$text;
+    }
+
+    .social-icon {
+        width: 2rem;
+        aspect-ratio: 1 / 1;
+    }
+
+    .contact-portrait {
+        width: 20vw;
+        aspect-ratio: 1/1;
+        border-radius: 10vw;
+        border: .5rem solid c.$primary;
+    }
+
+    #dark-github-social:hover {
+        p {
+            color: c.$accent;
+        }
+
+        #github-icon-dark {
+            display: none;
+        }
+
+        #github-icon-dark-accent {
+            display: block;
+        }
+    }
+
+    #light-github-social:hover {
+        p {
+            color: c.$primary;
+        }
+
+        #github-icon-light {
+            display: none;
+        }
+
+        #github-icon-light-accent {
+            display: block;
+        }
+    }
+
+    #dark-linkedin-social:hover {
+        p {
+            color: c.$accent;
+        }
+
+        #linkedin-icon-dark {
+            display: none;
+        }
+
+        #linkedin-icon-dark-accent {
+            display: block;
+        }
+    }
+
+    #light-linkedin-social:hover {
+        p {
+            color: c.$primary;
+        }
+
+        #linkedin-icon-light {
+            display: none;
+        }
+
+        #linkedin-icon-light-accent {
+            display: block;
+        }
+    }
+
+    #dark-email-social:hover {
+        p {
+            color: c.$accent;
+        }
+
+        #email-icon-dark {
+            display: none;
+        }
+
+        #email-icon-dark-accent {
+            display: block;
+        }
+    }
+
+    #light-email-social:hover {
+        p {
+            color: c.$primary;
+        }
+
+        #email-icon-light {
+            display: none;
+        }
+
+        #email-icon-light-accent {
+            display: block;
+        }
+    }
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    input, textarea {
+        background-color: c.$background;
+        color: c.$text;
+        font-size: 1rem;
+        border: 1px solid c.$accent;
+        border-radius: .3rem;
+        padding: .5rem;
+        width: 30vw;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: c.$accent;
+    }
+
+    button {
+        width: 6rem;
+        height: 3rem;
+        border-radius: .6rem;
+        border: 1px solid c.$accent;
+        color: c.$accent;
+        background-color: c.$secondary;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}
