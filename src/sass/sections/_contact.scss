@@ -1,12 +1,14 @@
 @use '../shared/colors' as c;
 
+$theme: var(--theme);
+
 .contact {
-    height: 50vh;
+    padding-top: calc(100vw / 9);
 }
 
 .contact-header {
     font-size: 3rem;
-    margin-left: 5rem;
+    margin: 0 0 0 5rem;
 }
 
 .contact-content {
@@ -26,30 +28,6 @@
         color: c.$text;
     }
 
-    .social-link:hover {
-        p {
-            color: c.$accent;
-        }
-
-        @if c.$background == #d5e6fb {
-            #github-icon-light, #github-icon-dark, #github-icon-dark-accent {
-                display: none;
-            }
-    
-            #github-icon-light-accent {
-                display: block;
-            }
-        } @else if c.$background == #020c17 {
-            #github-icon-light, #github-icon-dark, #github-icon-light-accent {
-                display: none;
-            }
-    
-            #github-icon-dark-accent {
-                display: block;
-            }
-        }
-    }
-
     .social-icon {
         width: 2rem;
         aspect-ratio: 1 / 1;
@@ -60,6 +38,90 @@
         aspect-ratio: 1/1;
         border-radius: 10vw;
         border: .5rem solid c.$primary;
+    }
+
+    #dark-github-social:hover {
+        p {
+            color: c.$accent;
+        }
+
+        #github-icon-dark {
+            display: none;
+        }
+
+        #github-icon-dark-accent {
+            display: block;
+        }
+    }
+
+    #light-github-social:hover {
+        p {
+            color: c.$primary;
+        }
+
+        #github-icon-light {
+            display: none;
+        }
+
+        #github-icon-light-accent {
+            display: block;
+        }
+    }
+
+    #dark-linkedin-social:hover {
+        p {
+            color: c.$accent;
+        }
+
+        #linkedin-icon-dark {
+            display: none;
+        }
+
+        #linkedin-icon-dark-accent {
+            display: block;
+        }
+    }
+
+    #light-linkedin-social:hover {
+        p {
+            color: c.$primary;
+        }
+
+        #linkedin-icon-light {
+            display: none;
+        }
+
+        #linkedin-icon-light-accent {
+            display: block;
+        }
+    }
+
+    #dark-email-social:hover {
+        p {
+            color: c.$accent;
+        }
+
+        #email-icon-dark {
+            display: none;
+        }
+
+        #email-icon-dark-accent {
+            display: block;
+        }
+    }
+
+    #light-email-social:hover {
+        p {
+            color: c.$primary;
+        }
+
+        #email-icon-light {
+            display: none;
+        }
+
+        #email-icon-light-accent {
+            display: block;
+        }
     }
 }
 

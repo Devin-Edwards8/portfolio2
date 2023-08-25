@@ -579,13 +579,10 @@ var _typewriter = require("./scripts/typewriter");
 var _typewriterDefault = parcelHelpers.interopDefault(_typewriter);
 var _toggleTheme = require("./scripts/toggle-theme");
 var _toggleThemeDefault = parcelHelpers.interopDefault(_toggleTheme);
-var _highlightIcons = require("./scripts/highlight-icons");
-var _highlightIconsDefault = parcelHelpers.interopDefault(_highlightIcons);
 (0, _typewriterDefault.default)();
 (0, _toggleThemeDefault.default)();
-(0, _highlightIconsDefault.default)();
 
-},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR","./scripts/highlight-icons":"d5Ru0"}],"cZMBF":[function(require,module,exports) {
+},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR"}],"cZMBF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>typewrite);
@@ -1240,61 +1237,50 @@ parcelHelpers.export(exports, "default", ()=>toggleTheme);
 function toggleTheme() {
     let currentTheme = "dark";
     var toggle = document.getElementById("toggle-knob");
-    var githubIconLight = document.getElementById("github-icon-light");
-    var githubIconDark = document.getElementById("github-icon-dark");
-    var linkedinIconLight = document.getElementById("linkedin-icon-light");
-    var linkedinIconDark = document.getElementById("linkedin-icon-dark");
-    var emailIconLight = document.getElementById("email-icon-light");
-    var emailIconDark = document.getElementById("email-icon-dark");
+    var githubSocialLight = document.getElementById("light-github-social");
+    var githubSocialDark = document.getElementById("dark-github-social");
+    var linkedinSocialLight = document.getElementById("light-linkedin-social");
+    var linkedinSocialDark = document.getElementById("dark-linkedin-social");
+    var emailSocialLight = document.getElementById("light-email-social");
+    var emailSocialDark = document.getElementById("dark-email-social");
     var programmerImageLight = document.getElementById("programmer-image-light");
     var programmerImageDark = document.getElementById("programmer-image-dark");
+    var waveGap1 = document.getElementById("wave-gap-1");
+    var waveGap2 = document.getElementById("wave-gap-2");
+    var waveGap3 = document.getElementById("wave-gap-3");
+    var bottomWaves = document.getElementById("bottom-waves");
+    var projectButtons = document.getElementsByClassName("project-button");
     document.getElementById("toggle-color-scheme").addEventListener("click", function() {
+        // track current theme
+        currentTheme === "dark" ? currentTheme = "light" : currentTheme = "dark";
         document.body.classList.toggle("dark-theme");
         document.body.classList.toggle("light-theme");
+        // update UI
         toggle.classList.toggle("toggle-knob-forward");
         programmerImageLight.classList.toggle("invisible");
         programmerImageDark.classList.toggle("invisible");
-        emailIconDark.classList.toggle("invisible");
-        emailIconLight.classList.toggle("invisible");
-        githubIconDark.classList.toggle("invisible");
-        githubIconLight.classList.toggle("invisible");
-        linkedinIconDark.classList.toggle("invisible");
-        linkedinIconLight.classList.toggle("invisible");
-        currentTheme === "dark" ? currentTheme = "light" : currentTheme = "dark";
+        githubSocialDark.classList.toggle("invisible");
+        githubSocialLight.classList.toggle("invisible");
+        githubSocialDark.classList.toggle("social-link");
+        githubSocialLight.classList.toggle("social-link");
+        linkedinSocialDark.classList.toggle("invisible");
+        linkedinSocialLight.classList.toggle("invisible");
+        linkedinSocialDark.classList.toggle("social-link");
+        linkedinSocialLight.classList.toggle("social-link");
+        emailSocialDark.classList.toggle("invisible");
+        emailSocialLight.classList.toggle("invisible");
+        emailSocialDark.classList.toggle("social-link");
+        emailSocialLight.classList.toggle("social-link");
+        waveGap1.classList.toggle("light-wave-1");
+        waveGap1.classList.toggle("dark-wave-1");
+        waveGap2.classList.toggle("light-wave-2");
+        waveGap2.classList.toggle("dark-wave-2");
+        waveGap3.classList.toggle("light-wave-1");
+        waveGap3.classList.toggle("dark-wave-1");
+        bottomWaves.classList.toggle("light-page-bottom");
+        bottomWaves.classList.toggle("dark-page-bottom");
+        for(var i = 0; i < projectButtons.length; i++)projectButtons[i].classList.toggle("dark-project-button");
     });
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"d5Ru0":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>highlighter);
-function highlighter() {
-    var gitSocialLink = document.getElementById("github-social-link");
-    var githubDarkIcon = document.getElementById("github-icon-dark");
-    var githubDarkIconAccent = document.getElementById("github-icon-dark-accent");
-    var githubLightIcon = document.getElementById("github-icon-light");
-    var githubLightIconAccent = document.getElementById("github-icon-light-accent");
-    if (document.body.classList.contains("light-theme") && gitSocialLink.matches(":hover")) {
-        githubLightIcon.classList.add("invisible");
-        githubLightIconAccent.classList.remove("invisible");
-        githubDarkIcon.classList.add("invisible");
-        githubDarkIconAccent.classList.add("invisible");
-    } else if (document.body.classList.contains("light-theme")) {
-        githubLightIcon.classList.remove("invisible");
-        githubLightIconAccent.classList.add("invisible");
-        githubDarkIcon.classList.add("invisible");
-        githubDarkIconAccent.classList.add("invisible");
-    } else if (document.body.classList.contains("dark-theme") && gitSocialLink.matches(":hover")) {
-        githubLightIcon.classList.add("invisible");
-        githubLightIconAccent.classList.add("invisible");
-        githubDarkIcon.classList.add("invisible");
-        githubDarkIconAccent.classList.remove("invisible");
-    } else {
-        githubLightIcon.classList.add("invisible");
-        githubLightIconAccent.classList.add("invisible");
-        githubDarkIcon.classList.remove("invisible");
-        githubDarkIconAccent.classList.add("invisible");
-    }
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire2041")

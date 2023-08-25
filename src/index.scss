@@ -11,6 +11,7 @@ body, html, :root {
   --secondary: #c3dafa;
   --accent: #4f2f07;
   --text: #020c17;
+  --theme: "light-theme";
 
   font-size: 16px;
   margin: 0;
@@ -26,6 +27,7 @@ body, html, :root {
 
 .light-theme {
   background-color: #d5e6fb;
+  --theme: "light-theme";
   --background: #d5e6fb;
   --primary: #f3be7c;
   --secondary: #c3dafa;
@@ -35,6 +37,7 @@ body, html, :root {
 
 .dark-theme {
   background-color: #020c17;
+  --theme: "dark-theme";
   --background: #020c17;
   --primary: #f3be7c;
   --secondary: #031022;
@@ -42,12 +45,47 @@ body, html, :root {
   --text: #d5e6fb;
 }
 
+$gap-height: calc(100vw / 9);
+
 .section {
-  height: 91vh;
+  height: calc(100vh - $gap-height);
+}
+
+.secondary-section {
+  background-color: c.$secondary;
 }
 
 .section-gap {
-  height: 9vh;
+
+  width: 100vw;
+  height: $gap-height;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.light-wave-1 {
+  background-image: url('./assets/images/light-wave-1.svg');
+}
+
+.light-wave-2 {
+  background-image: url('./assets/images/light-wave-2.svg');
+}
+
+.light-page-bottom {
+  background-image: url('./assets/images/light-layered-waves.svg');
+}
+
+.dark-wave-2 {
+  background-image: url('./assets/images/dark-wave-1.svg');
+}
+
+.dark-wave-1 {
+  background-image: url('./assets/images/dark-wave-2.svg');
+}
+
+.dark-page-bottom {
+  background-image: url('./assets/images/dark-layered-waves.svg');
 }
 
 .invisible {

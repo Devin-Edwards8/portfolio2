@@ -50,8 +50,35 @@
   display: flex;
 }
 
+.project button {
+  background-color: var(--primary);
+  border: none;
+  border-radius: .75rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .4rem;
+  padding: .3rem .6rem;
+  display: flex;
+}
+
+.project button img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.project button a {
+  color: var(--text);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.project .dark-project-button a {
+  color: var(--background);
+}
+
 .project-text {
-  max-width: 40vw;
+  width: 35vw;
 }
 
 .project .button-container {
@@ -66,6 +93,11 @@
 
 .project p {
   color: var(--text);
+}
+
+#devfit-preview {
+  flex-shrink: 1;
+  width: 40vw;
 }
 
 .button {
@@ -138,7 +170,8 @@
 }
 
 .navbar .navbar-name {
-  font-family: Courgette, cursive;
+  color: var(--accent);
+  font-family: ADLaM Display, cursive;
   font-size: 2rem;
 }
 
@@ -183,11 +216,11 @@
 }
 
 .contact {
-  height: 50vh;
+  padding-top: 11.1111vw;
 }
 
 .contact-header {
-  margin-left: 5rem;
+  margin: 0 0 0 5rem;
   font-size: 3rem;
 }
 
@@ -209,10 +242,6 @@
   display: flex;
 }
 
-.contact-content .social-link:hover p {
-  color: var(--accent);
-}
-
 .contact-content .social-icon {
   aspect-ratio: 1;
   width: 2rem;
@@ -223,6 +252,78 @@
   border: .5rem solid var(--primary);
   border-radius: 10vw;
   width: 20vw;
+}
+
+.contact-content #dark-github-social:hover p {
+  color: var(--accent);
+}
+
+.contact-content #dark-github-social:hover #github-icon-dark {
+  display: none;
+}
+
+.contact-content #dark-github-social:hover #github-icon-dark-accent {
+  display: block;
+}
+
+.contact-content #light-github-social:hover p {
+  color: var(--primary);
+}
+
+.contact-content #light-github-social:hover #github-icon-light {
+  display: none;
+}
+
+.contact-content #light-github-social:hover #github-icon-light-accent {
+  display: block;
+}
+
+.contact-content #dark-linkedin-social:hover p {
+  color: var(--accent);
+}
+
+.contact-content #dark-linkedin-social:hover #linkedin-icon-dark {
+  display: none;
+}
+
+.contact-content #dark-linkedin-social:hover #linkedin-icon-dark-accent {
+  display: block;
+}
+
+.contact-content #light-linkedin-social:hover p {
+  color: var(--primary);
+}
+
+.contact-content #light-linkedin-social:hover #linkedin-icon-light {
+  display: none;
+}
+
+.contact-content #light-linkedin-social:hover #linkedin-icon-light-accent {
+  display: block;
+}
+
+.contact-content #dark-email-social:hover p {
+  color: var(--accent);
+}
+
+.contact-content #dark-email-social:hover #email-icon-dark {
+  display: none;
+}
+
+.contact-content #dark-email-social:hover #email-icon-dark-accent {
+  display: block;
+}
+
+.contact-content #light-email-social:hover p {
+  color: var(--primary);
+}
+
+.contact-content #light-email-social:hover #email-icon-light {
+  display: none;
+}
+
+.contact-content #light-email-social:hover #email-icon-light-accent {
+  display: block;
 }
 
 .contact-content form {
@@ -263,6 +364,7 @@ body, html, :root {
   --secondary: #c3dafa;
   --accent: #4f2f07;
   --text: #020c17;
+  --theme: "light-theme";
   scroll-behavior: smooth;
   color: var(--text);
   margin: 0;
@@ -276,6 +378,7 @@ body input, body textarea, body button, html input, html textarea, html button, 
 }
 
 .light-theme {
+  --theme: "light-theme";
   --background: #d5e6fb;
   --primary: #f3be7c;
   --secondary: #c3dafa;
@@ -285,6 +388,7 @@ body input, body textarea, body button, html input, html textarea, html button, 
 }
 
 .dark-theme {
+  --theme: "dark-theme";
   --background: #020c17;
   --primary: #f3be7c;
   --secondary: #031022;
@@ -294,11 +398,43 @@ body input, body textarea, body button, html input, html textarea, html button, 
 }
 
 .section {
-  height: 91vh;
+  height: calc(100vh - 11.1111vw);
+}
+
+.secondary-section {
+  background-color: var(--secondary);
 }
 
 .section-gap {
-  height: 9vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 11.1111vw;
+}
+
+.light-wave-1 {
+  background-image: url("light-wave-1.d368446b.svg");
+}
+
+.light-wave-2 {
+  background-image: url("light-wave-2.41bb2cdc.svg");
+}
+
+.light-page-bottom {
+  background-image: url("light-layered-waves.74d8cebb.svg");
+}
+
+.dark-wave-2 {
+  background-image: url("dark-wave-1.d7c8d815.svg");
+}
+
+.dark-wave-1 {
+  background-image: url("dark-wave-2.9543e37b.svg");
+}
+
+.dark-page-bottom {
+  background-image: url("dark-layered-waves.344e01a9.svg");
 }
 
 .invisible {
