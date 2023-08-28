@@ -48,3 +48,17 @@
     width: 35vw;
     height: 35vw;
 }
+
+@media only screen and (max-width: 600px) {
+    #programmer-image-light, #programmer-image-dark {
+        display: none;
+    }
+
+    .greeting-text {
+        max-width: 100vw;
+    }
+
+    .greeting {
+        padding: 1rem;
+    }
+}

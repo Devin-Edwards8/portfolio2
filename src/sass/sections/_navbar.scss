@@ -13,6 +13,7 @@
     align-items: center;
     padding-left: 5vw;
     padding-right: 5vw;
+    box-shadow: 0 1px 3px -3px c.$text;
 
     a {
         color: c.$text;
@@ -72,4 +73,14 @@
     width: 2rem;
     border-radius: 1rem;
     background-color: c.$accent;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar .section-links {
+        display: none;
+    }
+
+    .navbar .navbar-name {
+        font-size: 1.6rem;
+    }
 }

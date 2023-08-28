@@ -48,24 +48,6 @@
       <img src="/programmer-dark.39325b7f.png" id="programmer-image-dark" alt="programmer" class="invisible">
     </div>
 
-    <!-- <div class="section-gap"></div>
-    <div class="section">
-      <div class="section-content">
-        <h2 class="header">Tech Used</h2>
-        <p class="words">
-          Here are some of the technologies I'm proficient in:
-        </p>
-        <ul>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>JavaScript?</li>
-          <li>React?</li>
-          <li>Something</li>
-          <li>Something else</li>
-        </ul>
-      </div>
-    </div> -->
-
     <div class="section-gap light-wave-1" id="wave-gap-1"></div>
     <div id="devfit" class="project section secondary-section">
       <div class="project-text">
@@ -112,13 +94,14 @@
     <div class="contact secondary-section" id="contact">
       <h1 class="contact-header">Reach Out!</h1>
       <div class="contact-content">
-        <form>
-          <input placeholder="Name *">
-          <input placeholder="Email *">
-          <textarea placeholder="Message *" rows="5"></textarea>
-          <button>Send ➤</button>
+        <form id="message-form">
+          <input placeholder="Name *" type="text" name="name" id="name" required="">
+          <input placeholder="Email *" type="text" name="email" id="email" required="">
+          <textarea placeholder="Message *" rows="5" type="text" name="message" id="message" required=""></textarea>
+          <input id="email-message" type="submit" value="Send ➤">
         </form>
-        <img src="/portrait2.9f4d74be.jpg" alt="Carlos Lawler" class="contact-portrait">
+        <img id="light-portrait" src="/light-portrait.4bd0ee5a.png" alt="Carlos Lawler" class="contact-portrait">
+        <img id="dark-portrait" src="/dark-portrait.e622e76d.png" alt="Carlos Lawler" class="contact-portrait invisible">
         <div>
           <a id="light-github-social" class="social-link" href="https://github.com/Devin-Edwards8" target="_blank">
             <img id="github-icon-light" src="/github-icon.23e480f2.png" alt="GitHub icon" class="social-icon">
@@ -140,16 +123,16 @@
             <img id="linkedin-icon-dark-accent" src="/linkedin-icon-dark-accent.a2cedd03.png" alt="LinkedIn icon" class="social-icon invisible">
             <p>LinkedIn</p>
           </a>
-          <a id="light-email-social" class="social-link" href="mailto:edwards.1779@osu.edu" target="_blank">
+          <div id="light-email-social" class="social-link">
             <img id="email-icon-light" src="/email-icon.d51f42b8.png" alt="Email icon" class="social-icon">
             <img id="email-icon-light-accent" src="/email-icon-accent.99adc252.png" alt="Email icon" class="social-icon invisible">
             <p>edwards.1779@osu.edu</p>
-          </a>
-          <a id="dark-email-social" class="invisible" href="mailto:edwards.1779@osu.edu" target="_blank">
+          </div>
+          <div id="dark-email-social" class="invisible">
             <img id="email-icon-dark" src="/email-icon-dark.06ba88a0.png" alt="Email icon" class="social-icon">
             <img id="email-icon-dark-accent" src="/email-icon-dark-accent.e5575d2b.png" alt="Email icon" class="social-icon invisible">
             <p>edwards.1779@osu.edu</p>
-          </a>
+          </div>
         </div>
       </div>
     </div>

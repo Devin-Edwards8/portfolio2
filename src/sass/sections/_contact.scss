@@ -145,7 +145,7 @@ $theme: var(--theme);
         color: c.$accent;
     }
 
-    button {
+    #email-message {
         width: 6rem;
         height: 3rem;
         border-radius: .6rem;
@@ -154,5 +154,11 @@ $theme: var(--theme);
         background-color: c.$secondary;
         font-size: 1.2rem;
         cursor: pointer;
+        transition: 0.5s;
+    }
+
+    #email-message:hover {
+        background-color: c.$background;
+        transition: 0.5s;
     }
 }
