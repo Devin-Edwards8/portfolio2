@@ -84,7 +84,7 @@
 
 .project button a {
   color: var(--text);
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -113,6 +113,21 @@
 #devfit-preview {
   flex-shrink: 1;
   width: 40vw;
+}
+
+@media only screen and (width <= 600px) {
+  .project {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-text {
+    width: 80vw;
+  }
+
+  #devfit-preview, #zelda-gameplay {
+    width: 90vw;
+  }
 }
 
 .button {
@@ -168,10 +183,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 90vw;
+  width: 90%;
   height: 9vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   position: fixed;
   top: 0;
@@ -258,7 +273,15 @@
   display: flex;
 }
 
-.contact-content .social-link {
+.headshot-and-socials {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.headshot-and-socials .social-link {
   cursor: pointer;
   color: var(--text);
   flex-direction: row;
@@ -268,87 +291,87 @@
   display: flex;
 }
 
-.contact-content .social-icon {
+.headshot-and-socials .social-icon {
   aspect-ratio: 1;
   width: 2rem;
 }
 
-.contact-content .contact-portrait {
+.headshot-and-socials .contact-portrait {
   aspect-ratio: 1;
   border: .5rem solid var(--primary);
-  border-radius: 10vw;
-  width: 20vw;
+  border-radius: 100px;
+  width: 200px;
 }
 
-.contact-content #dark-github-social:hover p {
+.headshot-and-socials #dark-github-social:hover p {
   color: var(--accent);
 }
 
-.contact-content #dark-github-social:hover #github-icon-dark {
+.headshot-and-socials #dark-github-social:hover #github-icon-dark {
   display: none;
 }
 
-.contact-content #dark-github-social:hover #github-icon-dark-accent {
+.headshot-and-socials #dark-github-social:hover #github-icon-dark-accent {
   display: block;
 }
 
-.contact-content #light-github-social:hover p {
+.headshot-and-socials #light-github-social:hover p {
   color: var(--primary);
 }
 
-.contact-content #light-github-social:hover #github-icon-light {
+.headshot-and-socials #light-github-social:hover #github-icon-light {
   display: none;
 }
 
-.contact-content #light-github-social:hover #github-icon-light-accent {
+.headshot-and-socials #light-github-social:hover #github-icon-light-accent {
   display: block;
 }
 
-.contact-content #dark-linkedin-social:hover p {
+.headshot-and-socials #dark-linkedin-social:hover p {
   color: var(--accent);
 }
 
-.contact-content #dark-linkedin-social:hover #linkedin-icon-dark {
+.headshot-and-socials #dark-linkedin-social:hover #linkedin-icon-dark {
   display: none;
 }
 
-.contact-content #dark-linkedin-social:hover #linkedin-icon-dark-accent {
+.headshot-and-socials #dark-linkedin-social:hover #linkedin-icon-dark-accent {
   display: block;
 }
 
-.contact-content #light-linkedin-social:hover p {
+.headshot-and-socials #light-linkedin-social:hover p {
   color: var(--primary);
 }
 
-.contact-content #light-linkedin-social:hover #linkedin-icon-light {
+.headshot-and-socials #light-linkedin-social:hover #linkedin-icon-light {
   display: none;
 }
 
-.contact-content #light-linkedin-social:hover #linkedin-icon-light-accent {
+.headshot-and-socials #light-linkedin-social:hover #linkedin-icon-light-accent {
   display: block;
 }
 
-.contact-content #dark-email-social:hover p {
+.headshot-and-socials #dark-email-social:hover p {
   color: var(--accent);
 }
 
-.contact-content #dark-email-social:hover #email-icon-dark {
+.headshot-and-socials #dark-email-social:hover #email-icon-dark {
   display: none;
 }
 
-.contact-content #dark-email-social:hover #email-icon-dark-accent {
+.headshot-and-socials #dark-email-social:hover #email-icon-dark-accent {
   display: block;
 }
 
-.contact-content #light-email-social:hover p {
+.headshot-and-socials #light-email-social:hover p {
   color: var(--primary);
 }
 
-.contact-content #light-email-social:hover #email-icon-light {
+.headshot-and-socials #light-email-social:hover #email-icon-light {
   display: none;
 }
 
-.contact-content #light-email-social:hover #email-icon-light-accent {
+.headshot-and-socials #light-email-social:hover #email-icon-light-accent {
   display: block;
 }
 
@@ -388,6 +411,24 @@
 .contact-content form #email-message:hover {
   background-color: var(--background);
   transition: all .5s;
+}
+
+@media only screen and (width <= 600px) {
+  .contact-header {
+    text-align: center;
+    margin: 0 0 1rem;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem;
+    padding: 1rem;
+  }
+
+  .contact-content form input, .contact-content form textarea {
+    width: 90vw;
+  }
 }
 
 body, html, :root {
@@ -447,7 +488,7 @@ body input, body textarea, body button, html input, html textarea, html button, 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   height: 11.1111vw;
 }
 

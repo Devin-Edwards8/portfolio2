@@ -1,4 +1,5 @@
 @use '../shared/colors' as c;
+@use '../shared/breakpoints' as b;
 
 .greeting {
     display: flex;
@@ -49,7 +50,7 @@
     height: 35vw;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: b.$small-screen) {
     #programmer-image-light, #programmer-image-dark {
         display: none;
     }

@@ -1,6 +1,5 @@
 @use '../shared/colors' as c;
-
-$theme: var(--theme);
+@use '../shared/breakpoints' as b;
 
 .contact {
     padding-top: calc(100vw / 9);
@@ -17,6 +16,14 @@ $theme: var(--theme);
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5rem 5rem 5rem;
+}
+
+.headshot-and-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 
     .social-link {
         display: flex;
@@ -34,9 +41,9 @@ $theme: var(--theme);
     }
 
     .contact-portrait {
-        width: 20vw;
+        width: 200px;
         aspect-ratio: 1/1;
-        border-radius: 10vw;
+        border-radius: 100px;
         border: .5rem solid c.$primary;
     }
 
@@ -160,5 +167,23 @@ $theme: var(--theme);
     #email-message:hover {
         background-color: c.$background;
         transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: b.$small-screen) {
+    .contact-header {
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+    .contact-content form input, .contact-content form textarea {
+        width: 90vw;
     }
 }

@@ -1,4 +1,5 @@
 @use '../shared/colors' as c;
+@use '../shared/breakpoints' as b;
 
 .project {
     display: flex;
@@ -26,7 +27,7 @@
     }
 
     a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
         color: c.$text;
     }
@@ -57,4 +58,23 @@
 #devfit-preview {
     width: 40vw;
     flex-shrink: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project-text {
+        width: 80vw;
+    }
+
+    #devfit-preview {
+        width: 90vw;
+    }
+
+    #zelda-gameplay {
+        width: 90vw;
+    }
 }
