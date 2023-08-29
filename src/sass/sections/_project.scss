@@ -1,11 +1,19 @@
 @use '../shared/colors' as c;
+@use '../shared/breakpoints' as b;
+
+.project-title {
+    margin: 0;
+    margin-bottom: 2rem;
+    color: c.$primary;
+    text-align: center;
+    font-size: 3rem;
+}
 
 .project {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 90vh;
 }
 
 .project button {
@@ -18,6 +26,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: .4rem;
+    cursor: pointer;
     
     img {
         width: 1rem;
@@ -25,7 +34,7 @@
     }
 
     a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-decoration: none;
         color: c.$text;
     }
@@ -56,4 +65,27 @@
 #devfit-preview {
     width: 40vw;
     flex-shrink: 1;
+}
+
+@media only screen and (max-width: b.$tablet-screen) {
+    .project {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .reverse-project {
+        flex-direction: column-reverse;
+    }
+
+    .project-text {
+        width: 80vw;
+    }
+
+    #devfit-preview {
+        width: 90vw;
+    }
+
+    #zelda-gameplay {
+        width: 90vw;
+    }
 }

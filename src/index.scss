@@ -4,6 +4,7 @@
 @use './sass/shared/elements';
 @use './sass/sections/navbar';
 @use './sass/sections/contact';
+@use './sass/shared/breakpoints' as b;
 
 body, html, :root {
   --background: #d5e6fb;
@@ -17,12 +18,33 @@ body, html, :root {
   margin: 0;
   scroll-behavior: smooth;
   color: c.$text;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Raleway", Arial, sans-serif;
 
   input, textarea, button {
     color: c.$text;
-    font-family: "Source Code Pro", monospace;
+    font-family: "Raleway", Arial, sans-serif;
   }
+}
+
+@media only screen and (max-width: b.$small-screen) {
+  body, html, :root {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: b.$tablet-screen) {
+  body, html, :root {
+    font-size: 14px;
+  }
+}
+
+#project-header {
+  background-color: c.$secondary;
+  margin: 0;
+  padding: 0 0 6rem 2rem;
+  font-size: 4.5rem;
+  font-family: 'ADLaM Display', cursive;
+  color: c.$accent;
 }
 
 .light-theme {
@@ -56,8 +78,7 @@ $gap-height: calc(100vw / 9);
 }
 
 .section-gap {
-
-  width: 100vw;
+  width: 100%;
   height: $gap-height;
   background-repeat: no-repeat;
   background-position: center;

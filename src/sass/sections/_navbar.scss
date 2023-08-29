@@ -1,7 +1,8 @@
 @use '../shared/colors' as c;
+@use '../shared/breakpoints' as b;
 
 .navbar {
-    width: 90vw;
+    width: 90%;
     height: 9vh;
     position: fixed;
     top: 0;
@@ -11,8 +12,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-shadow: 0 1px 3px -3px c.$text;
 
     a {
         color: c.$text;
@@ -72,4 +74,14 @@
     width: 2rem;
     border-radius: 1rem;
     background-color: c.$accent;
+}
+
+@media only screen and (max-width: b.$tablet-screen) {
+    .navbar .section-links a {
+        display: none;
+    }
+
+    .navbar .navbar-name {
+        font-size: 1.6rem;
+    }
 }

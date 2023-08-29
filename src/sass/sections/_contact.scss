@@ -1,6 +1,5 @@
 @use '../shared/colors' as c;
-
-$theme: var(--theme);
+@use '../shared/breakpoints' as b;
 
 .contact {
     padding-top: calc(100vw / 9);
@@ -16,7 +15,16 @@ $theme: var(--theme);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem 5rem 5rem;
+    padding: 1rem 0 5rem 5rem;
+}
+
+.headshot-and-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
 
     .social-link {
         display: flex;
@@ -34,10 +42,11 @@ $theme: var(--theme);
     }
 
     .contact-portrait {
-        width: 20vw;
+        width: 250px;
         aspect-ratio: 1/1;
-        border-radius: 10vw;
+        border-radius: 125px;
         border: .5rem solid c.$primary;
+        flex-shrink: 1;
     }
 
     #dark-github-social:hover {
@@ -145,7 +154,7 @@ $theme: var(--theme);
         color: c.$accent;
     }
 
-    button {
+    #email-message {
         width: 6rem;
         height: 3rem;
         border-radius: .6rem;
@@ -154,5 +163,62 @@ $theme: var(--theme);
         background-color: c.$secondary;
         font-size: 1.2rem;
         cursor: pointer;
+        transition: 0.5s;
+    }
+
+    #email-message:hover {
+        background-color: c.$background;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (max-width: b.$laptop-screen) {
+    .contact-header {
+        margin: 0 0 1rem 0;
+        text-align: center;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        padding: 1rem;
+        align-items: flex-start;
+        gap: 5rem;
+    }
+
+    .contact-content form input, .contact-content form textarea {
+        width: 90vw;
+    }
+
+    .headshot-and-socials .contact-portrait {
+        width: 130px;
+        border-radius: 65px;
+    }
+}
+
+@media only screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 250px;
+        border-radius: 125px;
+    }
+}
+
+@media only screen and (min-width: b.$tablet-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 350px;
+        border-radius: 175px;
+    }
+}
+
+@media only screen and (min-width: b.$laptop-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 300px;
+        border-radius: 175px;
+    }
+}
+
+@media only screen and (min-width: b.$large-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 400px;
+        border-radius: 200px;
     }
 }

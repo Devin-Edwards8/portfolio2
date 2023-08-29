@@ -14,6 +14,8 @@ export default function toggleTheme() {
     var waveGap3 = document.getElementById('wave-gap-3');
     var bottomWaves = document.getElementById('bottom-waves');
     var projectButtons = document.getElementsByClassName('project-button');
+    var lightPortrait = document.getElementById('light-portrait');
+    var darkPortrait = document.getElementById('dark-portrait');
 
     document.getElementById('toggle-color-scheme').addEventListener('click', function() {
         // track current theme
@@ -53,6 +55,9 @@ export default function toggleTheme() {
 
         bottomWaves.classList.toggle('light-page-bottom');
         bottomWaves.classList.toggle('dark-page-bottom');
+
+        lightPortrait.classList.toggle('invisible');
+        darkPortrait.classList.toggle('invisible');
 
         for (var i = 0; i < projectButtons.length; i++) {
             projectButtons[i].classList.toggle('dark-project-button');

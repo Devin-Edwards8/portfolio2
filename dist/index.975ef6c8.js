@@ -579,10 +579,13 @@ var _typewriter = require("./scripts/typewriter");
 var _typewriterDefault = parcelHelpers.interopDefault(_typewriter);
 var _toggleTheme = require("./scripts/toggle-theme");
 var _toggleThemeDefault = parcelHelpers.interopDefault(_toggleTheme);
+var _copyEmail = require("./scripts/copy-email");
+var _copyEmailDefault = parcelHelpers.interopDefault(_copyEmail);
 (0, _typewriterDefault.default)();
 (0, _toggleThemeDefault.default)();
+(0, _copyEmailDefault.default)();
 
-},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR"}],"cZMBF":[function(require,module,exports) {
+},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR","./scripts/copy-email":"htHpk"}],"cZMBF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>typewrite);
@@ -1250,6 +1253,8 @@ function toggleTheme() {
     var waveGap3 = document.getElementById("wave-gap-3");
     var bottomWaves = document.getElementById("bottom-waves");
     var projectButtons = document.getElementsByClassName("project-button");
+    var lightPortrait = document.getElementById("light-portrait");
+    var darkPortrait = document.getElementById("dark-portrait");
     document.getElementById("toggle-color-scheme").addEventListener("click", function() {
         // track current theme
         currentTheme === "dark" ? currentTheme = "light" : currentTheme = "dark";
@@ -1279,7 +1284,22 @@ function toggleTheme() {
         waveGap3.classList.toggle("dark-wave-1");
         bottomWaves.classList.toggle("light-page-bottom");
         bottomWaves.classList.toggle("dark-page-bottom");
+        lightPortrait.classList.toggle("invisible");
+        darkPortrait.classList.toggle("invisible");
         for(var i = 0; i < projectButtons.length; i++)projectButtons[i].classList.toggle("dark-project-button");
+    });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"htHpk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>copyEmail);
+function copyEmail() {
+    document.getElementById("dark-email-social").addEventListener("click", function() {
+        navigator.clipboard.writeText("edwards.1779@osu.edu");
+    });
+    document.getElementById("light-email-social").addEventListener("click", function() {
+        navigator.clipboard.writeText("edwards.1779@osu.edu");
     });
 }
 
