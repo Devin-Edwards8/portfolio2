@@ -15,13 +15,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5rem 5rem 5rem;
+    padding: 1rem 0 5rem 5rem;
 }
 
 .headshot-and-socials {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem;
     align-items: center;
     width: 100%;
 
@@ -41,10 +42,11 @@
     }
 
     .contact-portrait {
-        width: 200px;
+        width: 250px;
         aspect-ratio: 1/1;
-        border-radius: 100px;
+        border-radius: 125px;
         border: .5rem solid c.$primary;
+        flex-shrink: 1;
     }
 
     #dark-github-social:hover {
@@ -170,7 +172,7 @@
     }
 }
 
-@media only screen and (max-width: b.$small-screen) {
+@media only screen and (max-width: b.$laptop-screen) {
     .contact-header {
         margin: 0 0 1rem 0;
         text-align: center;
@@ -185,5 +187,38 @@
 
     .contact-content form input, .contact-content form textarea {
         width: 90vw;
+    }
+
+    .headshot-and-socials .contact-portrait {
+        width: 130px;
+        border-radius: 65px;
+    }
+}
+
+@media only screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 250px;
+        border-radius: 125px;
+    }
+}
+
+@media only screen and (min-width: b.$tablet-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 350px;
+        border-radius: 175px;
+    }
+}
+
+@media only screen and (min-width: b.$laptop-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 300px;
+        border-radius: 175px;
+    }
+}
+
+@media only screen and (min-width: b.$large-screen) {
+    .headshot-and-socials .contact-portrait {
+        width: 400px;
+        border-radius: 200px;
     }
 }

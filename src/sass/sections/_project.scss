@@ -1,12 +1,19 @@
 @use '../shared/colors' as c;
 @use '../shared/breakpoints' as b;
 
+.project-title {
+    margin: 0;
+    margin-bottom: 2rem;
+    color: c.$primary;
+    text-align: center;
+    font-size: 3rem;
+}
+
 .project {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 90vh;
 }
 
 .project button {
@@ -60,10 +67,14 @@
     flex-shrink: 1;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: b.$tablet-screen) {
     .project {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+    }
+
+    .reverse-project {
+        flex-direction: column-reverse;
     }
 
     .project-text {

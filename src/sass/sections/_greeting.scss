@@ -63,3 +63,17 @@
         padding: 1rem;
     }
 }
+
+@media only screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
+    #programmer-image-light, #programmer-image-dark {
+        display: none;
+    }
+
+    .greeting-text {
+        max-width: 100%;
+    }
+
+    .greeting {
+        padding: 1rem;
+    }
+}
