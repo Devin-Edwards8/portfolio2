@@ -12,6 +12,8 @@ export default function toggleTheme() {
     var waveGap1 = document.getElementById('wave-gap-1');
     var waveGap2 = document.getElementById('wave-gap-2');
     var waveGap3 = document.getElementById('wave-gap-3');
+    var waveGap4 = document.getElementById('wave-gap-4');
+    var waveGap5 = document.getElementById('wave-gap-5');
     var bottomWaves = document.getElementById('bottom-waves');
     var projectButtons = document.getElementsByClassName('project-button');
     var lightPortrait = document.getElementById('light-portrait');
@@ -52,6 +54,12 @@ export default function toggleTheme() {
 
         waveGap3.classList.toggle('light-wave-1');
         waveGap3.classList.toggle('dark-wave-1');
+
+        waveGap4.classList.toggle('light-wave-1');
+        waveGap4.classList.toggle('dark-wave-1');
+
+        waveGap5.classList.toggle('light-wave-2');
+        waveGap5.classList.toggle('dark-wave-2');
 
         bottomWaves.classList.toggle('light-page-bottom');
         bottomWaves.classList.toggle('dark-page-bottom');
