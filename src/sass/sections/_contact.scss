@@ -172,7 +172,7 @@
     }
 }
 
-@media only screen and (max-width: b.$laptop-screen) {
+@media screen and (max-width: b.$laptop-screen) {
     .contact-header {
         margin: 0 0 1rem 0;
         text-align: center;
@@ -195,7 +195,7 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .contact-content {
         padding: 0;
         align-items: center;
@@ -206,28 +206,28 @@
     }
 }
 
-@media only screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
+@media screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
     .headshot-and-socials .contact-portrait {
         width: 250px;
         border-radius: 125px;
     }
 }
 
-@media only screen and (min-width: b.$tablet-screen) {
+@media screen and (min-width: b.$tablet-screen) {
     .headshot-and-socials .contact-portrait {
         width: 350px;
         border-radius: 175px;
     }
 }
 
-@media only screen and (min-width: b.$laptop-screen) {
+@media screen and (min-width: b.$laptop-screen) {
     .headshot-and-socials .contact-portrait {
         width: 300px;
         border-radius: 175px;
     }
 }
 
-@media only screen and (min-width: b.$large-screen) {
+@media screen and (min-width: b.$large-screen) {
     .headshot-and-socials .contact-portrait {
         width: 400px;
         border-radius: 200px;

@@ -77,7 +77,7 @@
     background-color: c.$accent;
 }
 
-@media only screen and (max-width: b.$tablet-screen) {
+@media screen and (max-width: b.$tablet-screen) {
     .navbar .section-links a {
         display: none;
     }

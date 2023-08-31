@@ -51,7 +51,7 @@
     height: 35vw;
 }
 
-@media only screen and (max-width: b.$small-screen) {
+@media screen and (max-width: b.$small-screen) {
     #programmer-image-light, #programmer-image-dark {
         display: none;
     }
@@ -74,7 +74,7 @@
 //     }
 // }
 
-@media only screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
+@media screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
     #programmer-image-light, #programmer-image-dark {
         display: none;
     }
