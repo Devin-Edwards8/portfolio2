@@ -57,7 +57,7 @@
     }
 }
 
-@media only screen and (min-width: b.$small-screen) {
+@media screen and (min-width: b.$small-screen) {
     .techstack-icons figure {
         width: 75px;
         height: 125px;
@@ -73,7 +73,7 @@
     }
 }
 
-@media only screen and (min-width: b.$tablet-screen) {
+@media screen and (min-width: b.$tablet-screen) {
     .techstack {
         flex-direction: row-reverse;
         justify-content: space-around;
@@ -106,7 +106,7 @@
     }
 }
 
-@media only screen and (min-width: b.$laptop-screen) {
+@media screen and (min-width: b.$laptop-screen) {
     .techstack img {
         width: 300px;
     }
@@ -126,7 +126,7 @@
     }
 }
 
-@media only screen and (min-width: b.$large-screen) {
+@media screen and (min-width: b.$large-screen) {
     .techstack img {
         width: 375px;
     }
