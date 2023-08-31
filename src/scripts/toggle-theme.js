@@ -13,7 +13,7 @@ export default function toggleTheme() {
     var waveGap2 = document.getElementById('wave-gap-2');
     var waveGap3 = document.getElementById('wave-gap-3');
     var waveGap4 = document.getElementById('wave-gap-4');
-    var waveGap5 = document.getElementById('wave-gap-5');
+    var waveGap5 = document.getElementById('projects');
     var bottomWaves = document.getElementById('bottom-waves');
     var projectButtons = document.getElementsByClassName('project-button');
     var lightPortrait = document.getElementById('light-portrait');

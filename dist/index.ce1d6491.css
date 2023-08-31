@@ -16,6 +16,7 @@
 
 .greeting-text .big-name {
   color: var(--primary);
+  margin: 0;
   font-size: 5rem;
   font-weight: bold;
 }
@@ -98,8 +99,8 @@
 }
 
 .project button img {
+  aspect-ratio: 1;
   width: 1rem;
-  height: 1rem;
 }
 
 .project button a {
@@ -113,7 +114,23 @@
 }
 
 .project-text {
-  width: 35vw;
+  width: 50vw;
+}
+
+.project-text a {
+  color: var(--accent);
+}
+
+.project-text p {
+  margin-right: 3rem;
+}
+
+.secondary-section .project-text {
+  margin-left: 3rem;
+}
+
+.secondary-section .project-text p {
+  margin-right: 0;
 }
 
 .project .button-container {
@@ -130,9 +147,175 @@
   color: var(--text);
 }
 
-#devfit-preview, #enuts-preview {
+#devfit-preview {
   flex-shrink: 1;
   width: 40vw;
+  margin: 0 5vw;
+}
+
+#zelda-gameplay {
+  flex-shrink: 1;
+  margin: 0 5vw;
+}
+
+#enuts-preview {
+  flex-shrink: 1;
+  width: 40vw;
+  margin: 0 5vw;
+}
+
+.project-icons {
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 25px;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.project-icons figure {
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+  height: 70px;
+  margin: 0;
+  display: flex;
+  position: relative;
+}
+
+.project-icons figure img {
+  aspect-ratio: 1;
+  align-self: center;
+  width: 45px;
+  position: absolute;
+  top: 1.5rem;
+}
+
+.project-icons figure img:hover {
+  width: 50px;
+}
+
+.project-icons figure figcaption {
+  text-align: center;
+  visibility: hidden;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.project-icons figure:hover figcaption {
+  visibility: visible;
+}
+
+@media only screen and (width >= 576px) {
+  .project p {
+    font-size: 1.1rem;
+  }
+
+  .project button {
+    padding: .5rem 1rem;
+  }
+
+  .project button a {
+    font-size: 1.1rem;
+  }
+
+  .project-icons figure {
+    justify-content: flex-start;
+    min-width: 60px;
+    height: 90px;
+  }
+
+  .project-icons figure img {
+    width: 60px;
+  }
+
+  .project-icons figure img:hover {
+    width: 65px;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  .project-icons {
+    justify-content: flex-start;
+  }
+
+  .project-icons figure {
+    justify-content: flex-start;
+    min-width: 70px;
+    height: 110px;
+  }
+
+  .project-icons figure img {
+    width: 70px;
+  }
+
+  .project-icons figure img:hover {
+    width: 80px;
+  }
+}
+
+@media only screen and (width >= 1024px) {
+  .project p {
+    font-size: 1.3rem;
+  }
+
+  .project button {
+    padding: .5rem 1rem;
+  }
+
+  .project button img {
+    width: 1.2rem;
+  }
+
+  .project button a {
+    font-size: 1.3rem;
+  }
+
+  .project-icons figure {
+    justify-content: flex-start;
+    min-width: 80px;
+    height: 120px;
+  }
+
+  .project-icons figure img {
+    width: 80px;
+  }
+
+  .project-icons figure img:hover {
+    width: 90px;
+  }
+}
+
+@media only screen and (width >= 1200px) {
+  .project p {
+    font-size: 1.4rem;
+  }
+
+  .project button {
+    padding: .5rem 1rem;
+  }
+
+  .project button img {
+    width: 1.3rem;
+  }
+
+  .project button a {
+    font-size: 1.4rem;
+  }
+
+  .project-icons figure {
+    justify-content: flex-start;
+    min-width: 110px;
+    height: 150px;
+  }
+
+  .project-icons figure img {
+    width: 110px;
+  }
+
+  .project-icons figure img:hover {
+    width: 125px;
+  }
 }
 
 @media only screen and (width <= 768px) {
@@ -464,8 +647,19 @@
   }
 
   .headshot-and-socials .contact-portrait {
-    border-radius: 65px;
-    width: 130px;
+    border-radius: 55px;
+    width: 110px;
+  }
+}
+
+@media only screen and (width <= 400px) {
+  .contact-content {
+    align-items: center;
+    padding: 0;
+  }
+
+  .social-link p {
+    font-size: 10px;
   }
 }
 
@@ -544,7 +738,7 @@
 }
 
 .techstack-icons figure img:hover {
-  width: 60px;
+  width: 85px;
 }
 
 .techstack-icons figure figcaption {

@@ -190,8 +190,19 @@
     }
 
     .headshot-and-socials .contact-portrait {
-        width: 130px;
-        border-radius: 65px;
+        width: 110px;
+        border-radius: 55px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .contact-content {
+        padding: 0;
+        align-items: center;
+    }
+
+    .social-link p {
+        font-size: 10px;
     }
 }
 

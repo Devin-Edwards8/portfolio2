@@ -594,10 +594,10 @@ var _coreJsDefault = parcelHelpers.interopDefault(_coreJs);
 function typewrite() {
     var title = document.getElementById("typewrite");
     var typewriter = new (0, _coreJsDefault.default)(title, {
-        loop: false,
+        loop: true,
         delay: 75
     });
-    typewriter.pauseFor(1000).typeString('<span class="big-name">Devin Edwards</span><br>').pauseFor(300).typeString('<span class="role-title">Dedicated Student<span/>').pauseFor(500).deleteChars(17).typeString('<span class="role-title">Passionate Learner<span/>').pauseFor(500).deleteChars(18).typeString('<span class="role-title">Full-Stack Developer<span/>').start();
+    typewriter.pauseFor(1000).typeString('<span class="role-title">Dedicated Student<span/>').pauseFor(500).deleteChars(17).pauseFor(1000).typeString('<span class="role-title">Passionate Learner<span/>').pauseFor(500).deleteChars(18).pauseFor(1000).typeString('<span class="role-title">Full-Stack Developer<span/>').pauseFor(500).deleteChars(20).start();
 }
 
 },{"typewriter-effect/dist/core.js":"gppl0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gppl0":[function(require,module,exports) {
@@ -1252,7 +1252,7 @@ function toggleTheme() {
     var waveGap2 = document.getElementById("wave-gap-2");
     var waveGap3 = document.getElementById("wave-gap-3");
     var waveGap4 = document.getElementById("wave-gap-4");
-    var waveGap5 = document.getElementById("wave-gap-5");
+    var waveGap5 = document.getElementById("projects");
     var bottomWaves = document.getElementById("bottom-waves");
     var projectButtons = document.getElementsByClassName("project-button");
     var lightPortrait = document.getElementById("light-portrait");
