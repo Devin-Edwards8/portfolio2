@@ -1,15 +1,13 @@
 .greeting {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 0 3vw;
   display: flex;
 }
 
 .greeting-text {
   justify-content: center;
-  max-width: 45vw;
   min-height: 50vh;
   display: block;
 }
@@ -26,7 +24,7 @@
   font-size: 2.5rem;
 }
 
-.greeting-text p {
+.greeting-text p, .greeting-text a {
   color: var(--text);
   font-size: 1.5rem;
 }
@@ -38,36 +36,28 @@
 }
 
 #programmer-image-light, #programmer-image-dark {
+  aspect-ratio: 1;
   flex-shrink: 1;
-  width: 35vw;
-  height: 35vw;
+  width: 0;
 }
 
-@media only screen and (width <= 576px) {
-  #programmer-image-light, #programmer-image-dark {
-    display: none;
-  }
-
-  .greeting-text {
-    max-width: 100vw;
-  }
-
-  .greeting {
-    padding: 1rem;
+@media screen and (width >= 576px) {
+  .greeting-text p {
+    width: 70%;
   }
 }
 
-@media only screen and (width >= 576px) and (width <= 768px) {
+@media screen and (width >= 768px) {
   #programmer-image-light, #programmer-image-dark {
-    display: none;
+    width: 35vw;
   }
 
   .greeting-text {
-    max-width: 100%;
+    max-width: 50vw;
   }
 
-  .greeting {
-    padding: 1rem;
+  .greeting-text p {
+    width: 100%;
   }
 }
 
@@ -206,7 +196,7 @@
   visibility: visible;
 }
 
-@media only screen and (width >= 576px) {
+@media screen and (width >= 576px) {
   .project p {
     font-size: 1.1rem;
   }
@@ -234,7 +224,7 @@
   }
 }
 
-@media only screen and (width >= 768px) {
+@media screen and (width >= 768px) {
   .project-icons {
     justify-content: flex-start;
   }
@@ -254,7 +244,7 @@
   }
 }
 
-@media only screen and (width >= 1024px) {
+@media screen and (width >= 1024px) {
   .project p {
     font-size: 1.3rem;
   }
@@ -286,7 +276,7 @@
   }
 }
 
-@media only screen and (width >= 1200px) {
+@media screen and (width >= 1200px) {
   .project p {
     font-size: 1.4rem;
   }
@@ -318,7 +308,7 @@
   }
 }
 
-@media only screen and (width <= 768px) {
+@media screen and (width <= 768px) {
   .project {
     flex-direction: column;
     justify-content: flex-start;
@@ -460,7 +450,7 @@
   position: absolute;
 }
 
-@media only screen and (width <= 768px) {
+@media screen and (width <= 768px) {
   .navbar .section-links a {
     display: none;
   }
@@ -629,7 +619,7 @@
   transition: all .5s;
 }
 
-@media only screen and (width <= 1024px) {
+@media screen and (width <= 1024px) {
   .contact-header {
     text-align: center;
     margin: 0 0 1rem;
@@ -652,7 +642,7 @@
   }
 }
 
-@media only screen and (width <= 400px) {
+@media screen and (width <= 400px) {
   .contact-content {
     align-items: center;
     padding: 0;
@@ -663,28 +653,28 @@
   }
 }
 
-@media only screen and (width >= 576px) and (width <= 768px) {
+@media screen and (width >= 576px) and (width <= 768px) {
   .headshot-and-socials .contact-portrait {
     border-radius: 125px;
     width: 250px;
   }
 }
 
-@media only screen and (width >= 768px) {
+@media screen and (width >= 768px) {
   .headshot-and-socials .contact-portrait {
     border-radius: 175px;
     width: 350px;
   }
 }
 
-@media only screen and (width >= 1024px) {
+@media screen and (width >= 1024px) {
   .headshot-and-socials .contact-portrait {
     border-radius: 175px;
     width: 300px;
   }
 }
 
-@media only screen and (width >= 1200px) {
+@media screen and (width >= 1200px) {
   .headshot-and-socials .contact-portrait {
     border-radius: 200px;
     width: 400px;
@@ -747,7 +737,7 @@
   line-height: 1.5rem;
 }
 
-@media only screen and (width >= 576px) {
+@media screen and (width >= 576px) {
   .techstack-icons figure {
     width: 75px;
     height: 125px;
@@ -763,7 +753,7 @@
   }
 }
 
-@media only screen and (width >= 768px) {
+@media screen and (width >= 768px) {
   .techstack {
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -796,7 +786,7 @@
   }
 }
 
-@media only screen and (width >= 1024px) {
+@media screen and (width >= 1024px) {
   .techstack img {
     width: 300px;
   }
@@ -816,7 +806,7 @@
   }
 }
 
-@media only screen and (width >= 1200px) {
+@media screen and (width >= 1200px) {
   .techstack img {
     width: 375px;
   }
@@ -859,13 +849,13 @@ body input, body textarea, body button, html input, html textarea, html button, 
   font-family: Raleway, Arial, sans-serif;
 }
 
-@media only screen and (width <= 576px) {
+@media screen and (width <= 576px) {
   body, html, :root {
     font-size: 12px;
   }
 }
 
-@media only screen and (width <= 768px) {
+@media screen and (width <= 768px) {
   body, html, :root {
     font-size: 14px;
   }
