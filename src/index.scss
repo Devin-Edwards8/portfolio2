@@ -5,6 +5,7 @@
 @use './sass/sections/navbar';
 @use './sass/sections/contact';
 @use './sass/shared/breakpoints' as b;
+@use './sass/sections/techstack';
 
 body, html, :root {
   --background: #d5e6fb;
@@ -38,11 +39,10 @@ body, html, :root {
   }
 }
 
-#project-header {
-  background-color: c.$secondary;
+.section-header {
   margin: 0;
-  padding: 0 0 6rem 2rem;
-  font-size: 4.5rem;
+  padding: 2rem 0 0 1rem;
+  font-size: 3rem;
   font-family: 'ADLaM Display', cursive;
   color: c.$accent;
 }
@@ -70,7 +70,12 @@ body, html, :root {
 $gap-height: calc(100vw / 9);
 
 .section {
-  height: calc(100vh - $gap-height);
+  min-height: calc(100vh - $gap-height);
+}
+
+.project-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .secondary-section {
@@ -86,27 +91,27 @@ $gap-height: calc(100vw / 9);
 }
 
 .light-wave-1 {
-  background-image: url('./assets/images/light-wave-1.svg');
+  background-image: url('./assets/images/waves/light-wave-1.svg');
 }
 
 .light-wave-2 {
-  background-image: url('./assets/images/light-wave-2.svg');
+  background-image: url('./assets/images/waves/light-wave-2.svg');
 }
 
 .light-page-bottom {
-  background-image: url('./assets/images/light-layered-waves.svg');
+  background-image: url('./assets/images/waves/light-layered-waves.svg');
 }
 
 .dark-wave-2 {
-  background-image: url('./assets/images/dark-wave-1.svg');
+  background-image: url('./assets/images/waves/dark-wave-1.svg');
 }
 
 .dark-wave-1 {
-  background-image: url('./assets/images/dark-wave-2.svg');
+  background-image: url('./assets/images/waves/dark-wave-2.svg');
 }
 
 .dark-page-bottom {
-  background-image: url('./assets/images/dark-layered-waves.svg');
+  background-image: url('./assets/images/waves/dark-layered-waves.svg');
 }
 
 .invisible {

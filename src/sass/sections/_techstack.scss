@@ -1,0 +1,151 @@
+@use '../shared/breakpoints' as b;
+
+.techstack {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 0 1rem 4rem 1rem;
+    }
+
+    img {
+        width: 200px;
+        height: auto;
+        align-self: center;
+    }
+}
+
+.techstack-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.techstack-icons figure {
+    width: 50px;
+    height: 100px;
+    margin: 0 25px;
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+    img {
+        position: absolute;
+        top: 1.5rem;
+        width: 75px;
+        aspect-ratio: 1 / 1;
+    }
+
+    img:hover {
+        width: 85px;
+    }
+    
+    figcaption {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: b.$small-screen) {
+    .techstack-icons figure {
+        width: 75px;
+        height: 125px;
+        margin: 0 25px;
+
+        img {
+            width: 75px;
+        }
+
+        img:hover {
+            width: 80px;
+        }
+    }
+}
+
+@media only screen and (min-width: b.$tablet-screen) {
+    .techstack {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 240px;
+        }
+    }
+
+    .techstack-icons {
+        width: 60vw;
+    }
+
+    .techstack-icons figure {
+        width: 100px;
+        height: 150px;
+        margin: 0 25px;
+
+        img {
+            width: 100px;
+        }
+
+        img:hover {
+            width: 108px;
+        }
+    }
+}
+
+@media only screen and (min-width: b.$laptop-screen) {
+    .techstack img {
+        width: 300px;
+    }
+
+    .techstack-icons figure {
+        width: 125px;
+        height: 175px;
+        margin: 0 25px;
+
+        img {
+            width: 125px;
+        }
+
+        img:hover {
+            width: 135px;
+        }
+    }
+}
+
+@media only screen and (min-width: b.$large-screen) {
+    .techstack img {
+        width: 375px;
+    }
+
+    .techstack-icons {
+        width: 50vw;
+    }
+
+    .techstack-icons figure {
+        width: 150px;
+        height: 210px;
+        margin: 0 25px;
+
+        img {
+            width: 150px;
+        }
+
+        img:hover {
+            width: 165px;
+        }
+    }
+}
