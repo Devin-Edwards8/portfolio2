@@ -140,7 +140,7 @@
     }
 }
 
-@media only screen and (min-width: b.$small-screen) {
+@media screen and (min-width: b.$small-screen) {
     .project p {
         font-size: 1.1rem;
     }
@@ -168,7 +168,7 @@
     }
 }
 
-@media only screen and (min-width: b.$tablet-screen) {
+@media screen and (min-width: b.$tablet-screen) {
     .project-icons {
         justify-content: flex-start;
     }
@@ -188,7 +188,7 @@
     }
 }
 
-@media only screen and (min-width: b.$laptop-screen) {
+@media screen and (min-width: b.$laptop-screen) {
     .project p {
         font-size: 1.3rem;
     }
@@ -220,7 +220,7 @@
     }
 }
 
-@media only screen and (min-width: b.$large-screen) {
+@media screen and (min-width: b.$large-screen) {
     .project p {
         font-size: 1.4rem;
     }
@@ -252,7 +252,7 @@
     }
 }
 
-@media only screen and (max-width: b.$tablet-screen) {
+@media screen and (max-width: b.$tablet-screen) {
     .project {
         flex-direction: column;
         justify-content: flex-start;
