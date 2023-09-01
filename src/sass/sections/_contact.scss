@@ -7,23 +7,23 @@
 
 .contact-header {
     font-size: 3rem;
-    margin: 0 0 0 5rem;
+    margin: 0 0 2vh 2vw;
 }
 
 .contact-content {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0 5rem 5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 2vw;
 }
 
 .headshot-and-socials {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 
     .social-link {
@@ -42,9 +42,10 @@
     }
 
     .contact-portrait {
-        width: 250px;
+        align-self: center;
+        width: 200px;
         aspect-ratio: 1/1;
-        border-radius: 125px;
+        border-radius: 100px;
         border: .5rem solid c.$primary;
         flex-shrink: 1;
     }
@@ -139,6 +140,8 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
 
     input, textarea {
         background-color: c.$background;
@@ -147,7 +150,7 @@
         border: 1px solid c.$accent;
         border-radius: .3rem;
         padding: .5rem;
-        width: 30vw;
+        width: calc(100% - 1rem);
     }
 
     input::placeholder, textarea::placeholder {
@@ -172,64 +175,60 @@
     }
 }
 
-@media screen and (max-width: b.$laptop-screen) {
-    .contact-header {
-        margin: 0 0 1rem 0;
-        text-align: center;
-    }
-
-    .contact-content {
-        flex-direction: column;
-        padding: 1rem;
-        align-items: flex-start;
-        gap: 5rem;
-    }
-
-    .contact-content form input, .contact-content form textarea {
-        width: 90vw;
-    }
-
-    .headshot-and-socials .contact-portrait {
-        width: 110px;
-        border-radius: 55px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .contact-content {
-        padding: 0;
+@media only screen and (min-width: b.$small-screen) {
+    .headshot-and-socials {
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
-    }
 
-    .social-link p {
-        font-size: 10px;
-    }
-}
-
-@media screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
-    .headshot-and-socials .contact-portrait {
-        width: 250px;
-        border-radius: 125px;
+        .contact-portrait {
+            width: 250px;
+            border-radius: 125px;
+        }
     }
 }
 
-@media screen and (min-width: b.$tablet-screen) {
-    .headshot-and-socials .contact-portrait {
-        width: 350px;
-        border-radius: 175px;
+@media only screen and (min-width: b.$tablet-screen) {
+    .contact-content {
+        flex-direction: row;
+        align-items: center;
+
+        .contact-portrait {
+            width: 200px;
+            border-radius: 100px;
+        }
+
+        form {
+            width: 40vw;
+        }
     }
 }
 
-@media screen and (min-width: b.$laptop-screen) {
+@media only screen and (min-width: b.$laptop-screen) {
+    .contact-header {
+        font-size: 4rem;
+    }
+
+    .contact-content p, .contact-content form textarea, .contact-content form input {
+        font-size: 1.4rem;
+    }
+
+    .contact-content form {
+        width: 50vw;
+    }
+
+    .headshot-and-socials {
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: b.$large-screen) {
+    .contact-content form {
+        width: 70vw;
+    }
+
     .headshot-and-socials .contact-portrait {
         width: 300px;
-        border-radius: 175px;
-    }
-}
-
-@media screen and (min-width: b.$large-screen) {
-    .headshot-and-socials .contact-portrait {
-        width: 400px;
-        border-radius: 200px;
+        border-radius: 150px;
     }
 }
