@@ -4,22 +4,24 @@
 .greeting {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding: 0 3vw;
 }
 
 .greeting-text {
     display: block;
     justify-content: center;
     min-height: 50vh;
-    max-width: 45vw;
+
+    b {
+        color: c.$accent;
+    }
 }
 
 .greeting-text .big-name {
     color: c.$primary;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: bold;
     margin: 0;
 }
@@ -34,10 +36,11 @@
     font-size: 2.5rem;
 }
 
-.greeting-text p {
+.greeting-text p, .greeting-text a {
     color: c.$text;
     font-size: 1.5rem;
 }
+
 
 .greeting .button-container {
     display: flex;
@@ -47,43 +50,31 @@
 
 #programmer-image-light, #programmer-image-dark {
     flex-shrink: 1;
-    width: 35vw;
-    height: 35vw;
+    width: 0;
+    aspect-ratio: 1 / 1;
 }
 
-@media screen and (max-width: b.$small-screen) {
-    #programmer-image-light, #programmer-image-dark {
-        display: none;
-    }
-
+@media screen and (min-width: b.$small-screen) {
     .greeting-text {
-        max-width: 100vw;
-    }
-
-    .greeting {
-        padding: 1rem;
+        p {
+            width: 70%;
+        }
+        .big-name {
+            font-size: 5rem;
+        }
     }
 }
 
-// @media only screen and (max-width: b.$tablet-screen) {
-//     .greeting-text {
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-around;
-//         height: 80vh;
-//     }
-// }
-
-@media screen and (min-width: b.$small-screen) and (max-width: b.$tablet-screen) {
+@media screen and (min-width: b.$tablet-screen) {
     #programmer-image-light, #programmer-image-dark {
-        display: none;
+        width: 35vw;
     }
 
     .greeting-text {
-        max-width: 100%;
-    }
+        max-width: 50vw;
 
-    .greeting {
-        padding: 1rem;
+        p {
+            width: 100%;
+        }
     }
 }

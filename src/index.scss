@@ -27,18 +27,6 @@ body, html, :root {
   }
 }
 
-@media screen and (max-width: b.$small-screen) {
-  body, html, :root {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: b.$tablet-screen) {
-  body, html, :root {
-    font-size: 14px;
-  }
-}
-
 .section-header {
   margin: 0;
   padding: 2rem 0 0 1rem;

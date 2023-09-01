@@ -1,23 +1,25 @@
 .greeting {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding: 0 3vw;
   display: flex;
 }
 
 .greeting-text {
   justify-content: center;
-  max-width: 45vw;
   min-height: 50vh;
   display: block;
+}
+
+.greeting-text b {
+  color: var(--accent);
 }
 
 .greeting-text .big-name {
   color: var(--primary);
   margin: 0;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 
@@ -26,7 +28,7 @@
   font-size: 2.5rem;
 }
 
-.greeting-text p {
+.greeting-text p, .greeting-text a {
   color: var(--text);
   font-size: 1.5rem;
 }
@@ -38,50 +40,82 @@
 }
 
 #programmer-image-light, #programmer-image-dark {
+  aspect-ratio: 1;
   flex-shrink: 1;
-  width: 35vw;
-  height: 35vw;
+  width: 0;
 }
 
-@media only screen and (width <= 576px) {
-  #programmer-image-light, #programmer-image-dark {
-    display: none;
+@media screen and (width >= 576px) {
+  .greeting-text p {
+    width: 70%;
   }
 
-  .greeting-text {
-    max-width: 100vw;
-  }
-
-  .greeting {
-    padding: 1rem;
+  .greeting-text .big-name {
+    font-size: 5rem;
   }
 }
 
-@media only screen and (width >= 576px) and (width <= 768px) {
+@media screen and (width >= 768px) {
   #programmer-image-light, #programmer-image-dark {
-    display: none;
+    width: 35vw;
   }
 
   .greeting-text {
-    max-width: 100%;
+    max-width: 50vw;
   }
 
-  .greeting {
-    padding: 1rem;
+  .greeting-text p {
+    width: 100%;
   }
+}
+
+.project {
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: flex;
+}
+
+.project-section {
+  padding: 0 2vw;
 }
 
 .project-title {
   color: var(--primary);
-  text-align: center;
+  text-align: left;
   margin: 0 0 2rem;
   font-size: 3rem;
 }
 
-.project {
+.project-text a {
+  color: var(--accent);
+}
+
+.project-text p {
+  color: var(--text);
+}
+
+.project-text h1 {
+  color: var(--primary);
+}
+
+.reverse-project {
+  flex-direction: column-reverse;
+}
+
+#zelda-gameplay {
+  flex-shrink: 1;
+  margin: 0;
+}
+
+#enuts-preview, #devfit-preview {
+  flex-shrink: 1;
+  width: 90vw;
+  margin: 0;
+}
+
+.project .button-container {
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  gap: 2vw;
   display: flex;
 }
 
@@ -113,63 +147,12 @@
   color: var(--background);
 }
 
-.project-text {
-  width: 50vw;
-}
-
-.project-text a {
-  color: var(--accent);
-}
-
-.project-text p {
-  margin-right: 3rem;
-}
-
-.secondary-section .project-text {
-  margin-left: 3rem;
-}
-
-.secondary-section .project-text p {
-  margin-right: 0;
-}
-
-.project .button-container {
-  flex-direction: row;
-  gap: 2vw;
-  display: flex;
-}
-
-.project h1 {
-  color: var(--primary);
-}
-
-.project p {
-  color: var(--text);
-}
-
-#devfit-preview {
-  flex-shrink: 1;
-  width: 40vw;
-  margin: 0 5vw;
-}
-
-#zelda-gameplay {
-  flex-shrink: 1;
-  margin: 0 5vw;
-}
-
-#enuts-preview {
-  flex-shrink: 1;
-  width: 40vw;
-  margin: 0 5vw;
-}
-
 .project-icons {
   flex-flow: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 25px;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
 }
 
@@ -206,41 +189,26 @@
   visibility: visible;
 }
 
-@media only screen and (width >= 576px) {
-  .project p {
-    font-size: 1.1rem;
+@media only screen and (width >= 576px) and (width <= 768px) {
+  .project-text p {
+    text-align: center;
+    width: 75vw;
+    font-size: 1.2rem;
   }
 
-  .project button {
-    padding: .5rem 1rem;
+  .project-title {
+    text-align: center;
   }
 
-  .project button a {
-    font-size: 1.1rem;
+  .project {
+    align-items: center;
   }
 
-  .project-icons figure {
-    justify-content: flex-start;
-    min-width: 60px;
-    height: 90px;
-  }
-
-  .project-icons figure img {
-    width: 60px;
-  }
-
-  .project-icons figure img:hover {
-    width: 65px;
-  }
-}
-
-@media only screen and (width >= 768px) {
-  .project-icons {
-    justify-content: flex-start;
+  .project .button-container, .project-icons {
+    justify-content: center;
   }
 
   .project-icons figure {
-    justify-content: flex-start;
     min-width: 70px;
     height: 110px;
   }
@@ -254,25 +222,28 @@
   }
 }
 
-@media only screen and (width >= 1024px) {
-  .project p {
-    font-size: 1.3rem;
+@media only screen and (width >= 768px) {
+  .project {
+    flex-direction: row;
+    align-items: center;
   }
 
-  .project button {
-    padding: .5rem 1rem;
+  .project-text {
+    width: 50vw;
   }
 
-  .project button img {
-    width: 1.2rem;
+  .project-title {
+    text-align: center;
   }
 
-  .project button a {
-    font-size: 1.3rem;
+  #devfit-preview, #zelda-gameplay, #enuts-preview {
+    width: 40vw;
+    margin: 0 5vw;
   }
+}
 
+@media only screen and (width >= 1200px) {
   .project-icons figure {
-    justify-content: flex-start;
     min-width: 80px;
     height: 120px;
   }
@@ -284,62 +255,17 @@
   .project-icons figure img:hover {
     width: 90px;
   }
-}
 
-@media only screen and (width >= 1200px) {
   .project p {
     font-size: 1.4rem;
   }
 
-  .project button {
-    padding: .5rem 1rem;
-  }
-
   .project button img {
-    width: 1.3rem;
+    width: 1.2rem;
   }
 
   .project button a {
-    font-size: 1.4rem;
-  }
-
-  .project-icons figure {
-    justify-content: flex-start;
-    min-width: 110px;
-    height: 150px;
-  }
-
-  .project-icons figure img {
-    width: 110px;
-  }
-
-  .project-icons figure img:hover {
-    width: 125px;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  .project {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .project .button-container {
-    justify-content: center;
-  }
-
-  .reverse-project {
-    flex-direction: column-reverse;
-  }
-
-  .project-text {
-    text-align: center;
-    width: 80vw;
-  }
-
-  #devfit-preview, #zelda-gameplay, #enuts-preview {
-    width: 90vw;
+    font-size: 1.3rem;
   }
 }
 
@@ -417,7 +343,7 @@
 .navbar .navbar-name {
   color: var(--accent);
   font-family: ADLaM Display, cursive;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .navbar .section-links {
@@ -425,6 +351,10 @@
   align-items: center;
   gap: 5vw;
   display: flex;
+}
+
+.navbar .section-links a {
+  display: none;
 }
 
 .navbar .section-links a:hover {
@@ -460,13 +390,13 @@
   position: absolute;
 }
 
-@media only screen and (width <= 768px) {
+@media screen and (width >= 768px) {
   .navbar .section-links a {
-    display: none;
+    display: block;
   }
 
   .navbar .navbar-name {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 
@@ -475,22 +405,22 @@
 }
 
 .contact-header {
-  margin: 0 0 0 5rem;
+  margin: 0 0 2vh 2vw;
   font-size: 3rem;
 }
 
 .contact-content {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0 5rem 5rem;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 2vw;
   display: flex;
 }
 
 .headshot-and-socials {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 2rem;
   width: 100%;
   display: flex;
@@ -514,9 +444,10 @@
 .headshot-and-socials .contact-portrait {
   aspect-ratio: 1;
   border: .5rem solid var(--primary);
-  border-radius: 125px;
+  border-radius: 100px;
   flex-shrink: 1;
-  width: 250px;
+  align-self: center;
+  width: 200px;
 }
 
 .headshot-and-socials #dark-github-social:hover p {
@@ -595,6 +526,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
   display: flex;
 }
 
@@ -603,7 +536,7 @@
   color: var(--text);
   border: 1px solid var(--accent);
   border-radius: .3rem;
-  width: 30vw;
+  width: calc(100% - 1rem);
   padding: .5rem;
   font-size: 1rem;
 }
@@ -629,41 +562,13 @@
   transition: all .5s;
 }
 
-@media only screen and (width <= 1024px) {
-  .contact-header {
-    text-align: center;
-    margin: 0 0 1rem;
-  }
-
-  .contact-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5rem;
-    padding: 1rem;
-  }
-
-  .contact-content form input, .contact-content form textarea {
-    width: 90vw;
-  }
-
-  .headshot-and-socials .contact-portrait {
-    border-radius: 55px;
-    width: 110px;
-  }
-}
-
-@media only screen and (width <= 400px) {
-  .contact-content {
+@media only screen and (width >= 576px) {
+  .headshot-and-socials {
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    padding: 0;
   }
 
-  .social-link p {
-    font-size: 10px;
-  }
-}
-
-@media only screen and (width >= 576px) and (width <= 768px) {
   .headshot-and-socials .contact-portrait {
     border-radius: 125px;
     width: 250px;
@@ -671,23 +576,47 @@
 }
 
 @media only screen and (width >= 768px) {
-  .headshot-and-socials .contact-portrait {
-    border-radius: 175px;
-    width: 350px;
+  .contact-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-content .contact-portrait {
+    border-radius: 100px;
+    width: 200px;
+  }
+
+  .contact-content form {
+    width: 40vw;
   }
 }
 
 @media only screen and (width >= 1024px) {
-  .headshot-and-socials .contact-portrait {
-    border-radius: 175px;
-    width: 300px;
+  .contact-header {
+    font-size: 4rem;
+  }
+
+  .contact-content p, .contact-content form textarea, .contact-content form input {
+    font-size: 1.4rem;
+  }
+
+  .contact-content form {
+    width: 50vw;
+  }
+
+  .headshot-and-socials {
+    justify-content: center;
   }
 }
 
 @media only screen and (width >= 1200px) {
+  .contact-content form {
+    width: 70vw;
+  }
+
   .headshot-and-socials .contact-portrait {
-    border-radius: 200px;
-    width: 400px;
+    border-radius: 150px;
+    width: 300px;
   }
 }
 
@@ -747,7 +676,7 @@
   line-height: 1.5rem;
 }
 
-@media only screen and (width >= 576px) {
+@media screen and (width >= 576px) {
   .techstack-icons figure {
     width: 75px;
     height: 125px;
@@ -763,7 +692,7 @@
   }
 }
 
-@media only screen and (width >= 768px) {
+@media screen and (width >= 768px) {
   .techstack {
     flex-direction: row-reverse;
     justify-content: space-around;
@@ -796,7 +725,7 @@
   }
 }
 
-@media only screen and (width >= 1024px) {
+@media screen and (width >= 1024px) {
   .techstack img {
     width: 300px;
   }
@@ -816,7 +745,7 @@
   }
 }
 
-@media only screen and (width >= 1200px) {
+@media screen and (width >= 1200px) {
   .techstack img {
     width: 375px;
   }
@@ -857,18 +786,6 @@ body, html, :root {
 body input, body textarea, body button, html input, html textarea, html button, :root input, :root textarea, :root button {
   color: var(--text);
   font-family: Raleway, Arial, sans-serif;
-}
-
-@media only screen and (width <= 576px) {
-  body, html, :root {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (width <= 768px) {
-  body, html, :root {
-    font-size: 14px;
-  }
 }
 
 .section-header {

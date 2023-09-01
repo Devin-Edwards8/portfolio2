@@ -33,7 +33,7 @@
 
     .navbar-name {
         font-family: 'ADLaM Display', cursive;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: c.$accent;
     }
 }
@@ -43,6 +43,10 @@
     flex-direction: row;
     align-items: center;
     gap: 5vw;
+
+    a {
+        display: none;
+    }
 
     a:hover {
         text-decoration: solid underline 1px;
@@ -77,12 +81,12 @@
     background-color: c.$accent;
 }
 
-@media screen and (max-width: b.$tablet-screen) {
+@media screen and (min-width: b.$tablet-screen) {
     .navbar .section-links a {
-        display: none;
+        display: block;
     }
 
     .navbar .navbar-name {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 }
