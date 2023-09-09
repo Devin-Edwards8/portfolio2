@@ -402,6 +402,7 @@
 
 .contact {
   padding-top: 11.1111vw;
+  position: relative;
 }
 
 .contact-header {
@@ -506,20 +507,12 @@
   display: none;
 }
 
-.headshot-and-socials #dark-email-social:hover #email-icon-dark-accent {
-  display: block;
-}
-
 .headshot-and-socials #light-email-social:hover p {
   color: var(--primary);
 }
 
 .headshot-and-socials #light-email-social:hover #email-icon-light {
   display: none;
-}
-
-.headshot-and-socials #light-email-social:hover #email-icon-light-accent {
-  display: block;
 }
 
 .contact-content form {
@@ -529,6 +522,7 @@
   width: 100%;
   margin-bottom: 1rem;
   display: flex;
+  position: relative;
 }
 
 .contact-content form input, .contact-content form textarea {
@@ -554,12 +548,34 @@
   width: 6rem;
   height: 3rem;
   font-size: 1.2rem;
-  transition: all .5s;
 }
 
 .contact-content form #email-message:hover {
   background-color: var(--background);
   transition: all .5s;
+}
+
+.popup {
+  background: var(--background);
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  padding: .5rem;
+  animation: .2s forwards slide;
+  position: absolute;
+  bottom: .5rem;
+  right: -300px;
+}
+
+.popup p {
+  color: var(--accent);
+  margin: 0;
+  font-size: .9rem;
+}
+
+@keyframes slide {
+  100% {
+    right: 2vw;
+  }
 }
 
 @media only screen and (width >= 576px) {
@@ -588,6 +604,11 @@
 
   .contact-content form {
     width: 40vw;
+    position: static;
+  }
+
+  .contact-content .popup {
+    bottom: 2rem;
   }
 }
 
