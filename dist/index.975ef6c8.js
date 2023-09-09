@@ -581,11 +581,14 @@ var _toggleTheme = require("./scripts/toggle-theme");
 var _toggleThemeDefault = parcelHelpers.interopDefault(_toggleTheme);
 var _copyEmail = require("./scripts/copy-email");
 var _copyEmailDefault = parcelHelpers.interopDefault(_copyEmail);
+var _sendMessage = require("./scripts/send-message");
+var _sendMessageDefault = parcelHelpers.interopDefault(_sendMessage);
 (0, _typewriterDefault.default)();
 (0, _toggleThemeDefault.default)();
 (0, _copyEmailDefault.default)();
+(0, _sendMessageDefault.default)();
 
-},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR","./scripts/copy-email":"htHpk"}],"cZMBF":[function(require,module,exports) {
+},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR","./scripts/copy-email":"htHpk","./scripts/send-message":"Hjgbf"}],"cZMBF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>typewrite);
@@ -1333,6 +1336,24 @@ function copyEmail() {
         await new Promise((r)=>setTimeout(r, 2000));
         copyPopup.classList.toggle("invisible");
         document.getElementById("light-email-social").style.pointerEvents = "auto";
+    });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Hjgbf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>sendMessage);
+function sendMessage() {
+    const messagePopup = document.getElementById("message-popup");
+    document.getElementById("message-form").addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const message = document.getElementById("message");
+        document.getElementById("message-form").reset();
+        messagePopup.classList.toggle("invisible");
+        await new Promise((r)=>setTimeout(r, 2000));
+        messagePopup.classList.toggle("invisible");
     });
 }
 

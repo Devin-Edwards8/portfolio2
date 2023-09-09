@@ -178,6 +178,7 @@
     padding: 0.5rem;
     -webkit-animation: slide 0.2s forwards;
     animation: slide 0.2s forwards;
+    z-index: 1;
 
     p {
         color: c.$accent;
@@ -224,6 +225,9 @@
 
         .popup {
             bottom: 2rem;
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }

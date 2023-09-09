@@ -558,6 +558,7 @@
 .popup {
   background: var(--background);
   border: 1px solid var(--accent);
+  z-index: 1;
   border-radius: 5px;
   padding: .5rem;
   animation: .2s forwards slide;
@@ -609,6 +610,10 @@
 
   .contact-content .popup {
     bottom: 2rem;
+  }
+
+  .contact-content .popup p {
+    font-size: 1rem;
   }
 }
 
