@@ -581,11 +581,14 @@ var _toggleTheme = require("./scripts/toggle-theme");
 var _toggleThemeDefault = parcelHelpers.interopDefault(_toggleTheme);
 var _copyEmail = require("./scripts/copy-email");
 var _copyEmailDefault = parcelHelpers.interopDefault(_copyEmail);
+var _sendMessage = require("./scripts/send-message");
+var _sendMessageDefault = parcelHelpers.interopDefault(_sendMessage);
 (0, _typewriterDefault.default)();
 (0, _toggleThemeDefault.default)();
 (0, _copyEmailDefault.default)();
+(0, _sendMessageDefault.default)();
 
-},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR","./scripts/copy-email":"htHpk"}],"cZMBF":[function(require,module,exports) {
+},{"./scripts/typewriter":"cZMBF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./scripts/toggle-theme":"c7UWR","./scripts/copy-email":"htHpk","./scripts/send-message":"Hjgbf"}],"cZMBF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>typewrite);
@@ -1301,12 +1304,71 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>copyEmail);
 function copyEmail() {
-    document.getElementById("dark-email-social").addEventListener("click", function() {
-        navigator.clipboard.writeText("edwards.1779@osu.edu");
+    const emailLight = document.getElementById("email-icon-light-accent");
+    const emailLightFull = document.getElementById("email-icon-light-accent-full");
+    const emailDark = document.getElementById("email-icon-dark-accent");
+    const emailDarkFull = document.getElementById("email-icon-dark-accent-full");
+    const copyPopup = document.getElementById("copy-popup");
+    document.getElementById("dark-email-social").addEventListener("mouseenter", function() {
+        emailDark.classList.toggle("invisible");
     });
-    document.getElementById("light-email-social").addEventListener("click", function() {
-        navigator.clipboard.writeText("edwards.1779@osu.edu");
+    document.getElementById("dark-email-social").addEventListener("mouseleave", function() {
+        emailDark.classList.toggle("invisible");
     });
+    document.getElementById("dark-email-social").addEventListener("click", async function() {
+        document.getElementById("dark-email-social").style.pointerEvents = "none";
+        navigator.clipboard.writeText("edwards.1779@osu.edu");
+        copyPopup.classList.toggle("invisible");
+        await new Promise((r)=>setTimeout(r, 2000));
+        copyPopup.classList.toggle("invisible");
+        document.getElementById("dark-email-social").style.pointerEvents = "auto";
+    });
+    document.getElementById("light-email-social").addEventListener("mouseenter", function() {
+        emailLight.classList.toggle("invisible");
+    });
+    document.getElementById("light-email-social").addEventListener("mouseleave", function() {
+        emailLight.classList.toggle("invisible");
+    });
+    document.getElementById("light-email-social").addEventListener("click", async function() {
+        document.getElementById("light-email-social").style.pointerEvents = "none";
+        navigator.clipboard.writeText("edwards.1779@osu.edu");
+        copyPopup.classList.toggle("invisible");
+        await new Promise((r)=>setTimeout(r, 2000));
+        copyPopup.classList.toggle("invisible");
+        document.getElementById("light-email-social").style.pointerEvents = "auto";
+    });
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Hjgbf":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>sendMessage);
+function sendMessage() {
+    const messagePopup = document.getElementById("message-popup");
+    document.getElementById("message-form").addEventListener("submit", async function(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+        document.getElementById("message-form").reset();
+        messagePopup.classList.toggle("invisible");
+        messageRequest(name, email, message);
+        await new Promise((r)=>setTimeout(r, 2000));
+        messagePopup.classList.toggle("invisible");
+    });
+}
+function messageRequest(name, email, message) {
+    fetch("http://ec2-3-139-70-43.us-east-2.compute.amazonaws.com:3000/mail", {
+        method: "POST",
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    }).then((response)=>response.json()).then((json)=>console.log(json)).catch((err)=>console.error(err));
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["igKGj","8lqZg"], "8lqZg", "parcelRequire2041")

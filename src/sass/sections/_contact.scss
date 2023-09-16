@@ -3,6 +3,7 @@
 
 .contact {
     padding-top: calc(100vw / 9);
+    position: relative;
 }
 
 .contact-header {
@@ -114,10 +115,6 @@
         #email-icon-dark {
             display: none;
         }
-
-        #email-icon-dark-accent {
-            display: block;
-        }
     }
 
     #light-email-social:hover {
@@ -127,10 +124,6 @@
 
         #email-icon-light {
             display: none;
-        }
-
-        #email-icon-light-accent {
-            display: block;
         }
     }
 }
@@ -142,6 +135,7 @@
     gap: 1.5rem;
     width: 100%;
     margin-bottom: 1rem;
+    position: relative;
 
     input, textarea {
         background-color: c.$background;
@@ -166,13 +160,39 @@
         background-color: c.$secondary;
         font-size: 1.2rem;
         cursor: pointer;
-        transition: 0.5s;
     }
 
     #email-message:hover {
         background-color: c.$background;
         transition: 0.5s;
     }
+}
+
+.popup {
+    position: absolute;
+    bottom: 0.5rem;
+    right: -300px;
+    background: c.$background;
+    border: 1px solid c.$accent;
+    border-radius: 5px;
+    padding: 0.5rem;
+    -webkit-animation: slide 0.2s forwards;
+    animation: slide 0.2s forwards;
+    z-index: 1;
+
+    p {
+        color: c.$accent;
+        margin: 0;
+        font-size: .9rem;
+    }
+}
+
+@-webkit-keyframes slide {
+    100% { right: 2vw; }
+}
+
+@keyframes slide {
+    100% { right: 2vw; }
 }
 
 @media only screen and (min-width: b.$small-screen) {
@@ -200,6 +220,14 @@
 
         form {
             width: 40vw;
+            position: static;
+        }
+
+        .popup {
+            bottom: 2rem;
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }
