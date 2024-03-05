@@ -1,10 +1,8 @@
 # Developer Portfolio
 
-![portfolio preview](./images/portfolio-preview.png "Portfolio Preview")
-
 [**Live Demo**](https://devin-edwards.netlify.app/)
 
-My portfolio website to showcase my project work. Built using html, scss, javascript and bundled with parcel. Feel free to repurpose it for your own work!
+My portfolio website to showcase my project work and writing. Built using html, scss, javascript and bundled with parcel. Feel free to repurpose it for your own work!
 
 ## Getting Started
 

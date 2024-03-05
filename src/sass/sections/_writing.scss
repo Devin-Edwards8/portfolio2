@@ -1,0 +1,49 @@
+@use '../shared/colors' as c;
+@use '../shared/breakpoints' as b;
+
+.writing {
+    background-color: c.$secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#writing-feature-text {
+    width: 60vw;
+    margin: 12vh 0 14vh 0;
+
+    p {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}
+
+#writing-portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.writing-block {
+    width: 50%;
+    text-align: center;
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.grid-image {
+    filter: grayscale(100%);
+    aspect-ratio: 4032/3024;
+    width: 82%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.grid-image:hover {
+    filter: grayscale(0%);
+    transition: 1s;
+}

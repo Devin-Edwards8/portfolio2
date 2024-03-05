@@ -1,29 +1,34 @@
 @use './sass/sections/greeting.scss';
-@use './sass/sections/project.scss';
+@use './sass/sections/projects.scss';
 @use './sass/shared/colors' as c;
 @use './sass/shared/elements';
 @use './sass/sections/navbar';
 @use './sass/sections/contact';
 @use './sass/shared/breakpoints' as b;
-@use './sass/sections/techstack';
+@use './sass/sections/about';
+@use './sass/sections/writing';
 
 body, html, :root {
-  --background: #d5e6fb;
-  --primary: #f3be7c;
-  --secondary: #c3dafa;
-  --accent: #4f2f07;
-  --text: #020c17;
-  --theme: "light-theme";
+  --background: #EFF1F3;
+  --primary: #E7D1C5;
+  --secondary: #DBD3D8;
+  --accent: #D77A61;
+  --dark: #223843;
 
   font-size: 16px;
   margin: 0;
   scroll-behavior: smooth;
-  color: c.$text;
-  font-family: "Raleway", Arial, sans-serif;
+  color: c.$dark;
+  font-family: "Montserrat", sans-serif;
 
-  input, textarea, button {
-    color: c.$text;
-    font-family: "Raleway", Arial, sans-serif;
+  input, textarea {
+    color: c.$dark;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
   }
 }
 
@@ -35,30 +40,9 @@ body, html, :root {
   color: c.$accent;
 }
 
-.light-theme {
-  background-color: #d5e6fb;
-  --theme: "light-theme";
-  --background: #d5e6fb;
-  --primary: #f3be7c;
-  --secondary: #c3dafa;
-  --accent: #4f2f07;
-  --text: #020c17;
-}
-
-.dark-theme {
-  background-color: #020c17;
-  --theme: "dark-theme";
-  --background: #020c17;
-  --primary: #f3be7c;
-  --secondary: #031022;
-  --accent: #dc8213;
-  --text: #d5e6fb;
-}
-
-$gap-height: calc(100vw / 9);
-
 .section {
-  min-height: calc(100vh - $gap-height);
+  min-height: 91vh;
+  margin-top: 9vh;
 }
 
 .project-section {
@@ -70,75 +54,6 @@ $gap-height: calc(100vw / 9);
   background-color: c.$secondary;
 }
 
-.section-gap {
-  width: 100%;
-  height: $gap-height;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.light-wave-1 {
-  background-image: url('./assets/images/waves/light-wave-1.svg');
-}
-
-.light-wave-2 {
-  background-image: url('./assets/images/waves/light-wave-2.svg');
-}
-
-.light-page-bottom {
-  background-image: url('./assets/images/waves/light-layered-waves.svg');
-}
-
-.dark-wave-2 {
-  background-image: url('./assets/images/waves/dark-wave-1.svg');
-}
-
-.dark-wave-1 {
-  background-image: url('./assets/images/waves/dark-wave-2.svg');
-}
-
-.dark-page-bottom {
-  background-image: url('./assets/images/waves/dark-layered-waves.svg');
-}
-
 .invisible {
   display: none;
 }
-
-// other schemes
-// pink
-
-// light
-
-// --background: #eef7ed;
-// --primary: #d5a6d8;
-// --secondary: #cce8ca;
-// --accent: #9a46a0;
-// --text: #0a1509;
-
-// dark
-
-// --background: #0a1509;
-// --primary: #d5a6d8;
-// --secondary: #091208;
-// --accent: #d5a7d8;
-// --text: #eef7ed;
-
-// red
-
-//light
-
-  // --background: #ffffff;
-  // --primary: #8d1157;
-  // --secondary: #f8c9cc;
-  // --accent: #db1a27;
-  // --text: #260529;
-
-//dark
-
-  // --background: #260529;
-  // --primary: #8d1157;
-  // --secondary: #240507;
-  // --accent: #f39ba1;
-  // --text: #ffffff;

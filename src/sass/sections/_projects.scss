@@ -1,20 +1,18 @@
 @use '../shared/colors' as c;
 @use '../shared/breakpoints' as b;
 
-.project {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.projects {
+    background-color: c.$primary;
 }
 
-.project-section {
-    padding: 0 2vw;
+#software-header {
+    margin: 12vh 0 14vh 5vw;
+    font-size: 1.2rem;
 }
 
 .project-title {
     margin: 0;
     margin-bottom: 2rem;
-    color: c.$primary;
     text-align: left;
     font-size: 3rem;
 }
@@ -24,12 +22,8 @@
         color: c.$accent;
     }
 
-    p {
-        color: c.$text;
-    }
-
-    h1 {
-        color: c.$primary;
+    p, h1 {
+        color: c.$dark;
     }
 }
 
@@ -74,7 +68,7 @@
     a {
         font-size: 1rem;
         text-decoration: none;
-        color: c.$text;
+        color: c.$dark;
     }
 }
 
@@ -166,8 +160,13 @@
 
 @media only screen and (min-width: b.$tablet-screen) {
     .project {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
+    }
+
+    .project-section {
+        display: flex;
+        flex-direction: row;
     }
 
     .project-text {
@@ -212,148 +211,3 @@
         }
     }
 }
-
-// @media screen and (min-width: b.$small-screen) {
-//     .project p {
-//         font-size: 1.1rem;
-//     }
-
-//     .project button {
-//         padding: .5rem 1rem;
-        
-//         a {
-//             font-size: 1.1rem;
-//         }
-//     }
-
-//     .project-icons figure {
-//         min-width: 60px;
-//         height: 90px;
-//         justify-content: flex-start;
-
-//         img {
-//             width: 60px;
-//         }
-
-//         img:hover {
-//             width: 65px;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: b.$tablet-screen) {
-//     .project-icons {
-//         justify-content: flex-start;
-//     }
-
-//     .project-icons figure {
-//         min-width: 70px;
-//         height: 110px;
-//         justify-content: flex-start;
-
-//         img {
-//             width: 70px;
-//         }
-
-//         img:hover {
-//             width: 80px;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: b.$laptop-screen) {
-//     .project p {
-//         font-size: 1.3rem;
-//     }
-
-//     .project button {
-//         padding: .5rem 1rem;
-
-//         img {
-//             width: 1.2rem;
-//         }
-        
-//         a {
-//             font-size: 1.3rem;
-//         }
-//     }
-
-//     .project-icons figure {
-//         min-width: 80px;
-//         height: 120px;
-//         justify-content: flex-start;
-
-//         img {
-//             width: 80px;
-//         }
-
-//         img:hover {
-//             width: 90px;
-//         }
-//     }
-// }
-
-// @media screen and (min-width: b.$large-screen) {
-//     .project p {
-//         font-size: 1.4rem;
-//     }
-
-//     .project button {
-//         padding: .5rem 1rem;
-
-//         img {
-//             width: 1.3rem;
-//         }
-        
-//         a {
-//             font-size: 1.4rem;
-//         }
-//     }
-
-//     .project-icons figure {
-//         min-width: 110px;
-//         height: 150px;
-//         justify-content: flex-start;
-
-//         img {
-//             width: 110px;
-//         }
-
-//         img:hover {
-//             width: 125px;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: b.$tablet-screen) {
-//     .project {
-//         flex-direction: column;
-//         justify-content: flex-start;
-//         align-items: center;
-
-//         .button-container {
-//             justify-content: center;
-//         }
-//     }
-
-//     .reverse-project {
-//         flex-direction: column-reverse;
-//     }
-
-//     .project-text {
-//         width: 80vw;
-//         text-align: center;
-//     }
-
-//     #devfit-preview {
-//         width: 90vw;
-//     }
-
-//     #zelda-gameplay {
-//         width: 90vw;
-//     }
-
-//     #enuts-preview {
-//         width: 90vw;
-//     }
-// }

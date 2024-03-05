@@ -34,7 +34,7 @@
         gap: 1rem;
         cursor: pointer;
         text-decoration: none;
-        color: c.$text;
+        color: c.$dark;
     }
 
     .social-icon {
@@ -139,7 +139,7 @@
 
     input, textarea {
         background-color: c.$background;
-        color: c.$text;
+        color: c.$dark;
         font-size: 1rem;
         border: 1px solid c.$accent;
         border-radius: .3rem;

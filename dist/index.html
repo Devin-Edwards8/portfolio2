@@ -7,7 +7,7 @@
     <meta name="description" content="A developer project portfolio for Devin Edwards, a CSE major at Ohio State.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Raleway:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.ce1d6491.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ee9adb65.png">
 
@@ -15,261 +15,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer="" src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </head>
-  <body class="light-theme">
+  <body>
     <script src="/index.975ef6c8.js" defer=""></script>
-    <nav class="navbar">
-      <a href="#top" class="navbar-name">Devin Edwards</a>
+    <nav class="navbar dark-light-navbar">
+      <a href="" class="navbar-name">Devin Edwards</a>
       <div class="section-links">
-        <a href="#top">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <div id="toggle-color-scheme">
-          <div id="toggle-shaft"></div>
-          <div id="toggle-knob"></div>
-        </div>
+        <a href="/pages/writing.html">Writing</a>
+        <a href="/pages/projects.html">Projects</a>
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/contact.html"><button class="dark-button small-button">Get in Touch</button></a>
       </div>
     </nav>
 
-    <div class="section-gap" id="top"></div>
     <div class="greeting section">
       <div class="greeting-text">
-        <h1 class="big-name">Devin Edwards</h1>
-        <div id="typewrite"></div>
+        <h1>Hi, I'm Devin!</h1>
         <p>
-          <b>Hello!</b> I'm a fourth-year CSE major at Ohio State. Check out some of my work! 
-        </p>
-        <p>
-          I enjoy using technology to solve problems relevant to me.
-        </p>
-        <p>
-          My projects serve to hone my skills while accomplishing something meaningful!
+          A software developer and freelance writer. 
         </p>
         <div class="button-container">
-          <div class="button primary-button"><a href="#contact">Contact Me</a></div>
-          <div class="button accent-button"><a href="/assets/Resume.pdf" target="_blank" rel="noreferrer">See Resume</a></div>
+          <a href="#contact"><button class="dark-button medium-button">Learn More</button></a>
+          <a href="/assets/Resume.pdf" target="_blank" rel="noreferrer"><button class="light-button medium-button">See Resume</button></a>
         </div>
       </div>
-      <img src="/programmer.a1c1c23e.png" id="programmer-image-light" alt="programmer">
-      <img src="/programmer-dark.39325b7f.png" id="programmer-image-dark" alt="programmer" class="invisible">
+      <img src="/clock.b45a31b0.jpg" id="cover-portrait" alt="Devin with friends">
     </div>
-
-    <div class="section-gap light-wave-1" id="wave-gap-4"></div>
-    <div class="techstack secondary-section">
-      <div>
-        <h1 class="section-header">My Tech</h1>
-        <div class="techstack-icons">
-          <figure>
-            <img src="/react-icon.3c858edf.png" alt="react icon">
-            <figcaption>React</figcaption>
-          </figure>
-          <figure>
-            <img src="/node-logo.0a9ac12e.png" alt="node js icon">
-            <figcaption>Node.js</figcaption>
-          </figure>
-          <figure>
-            <img src="/css-logo.d561911d.png" alt="css icon">
-            <figcaption>CSS</figcaption>
-          </figure>
-          <figure>
-            <img src="/html-logo.345c1e41.avif" alt="html icon">
-            <figcaption>HTML</figcaption>
-          </figure>
-          <figure>
-            <img src="/js-logo.eed0c99d.png" alt="javascript icon">
-            <figcaption>JavaScript</figcaption>
-          </figure>
-          <figure>
-            <img src="/ts-logo.563af653.png" alt="typescript icon">
-            <figcaption>TypeScript</figcaption>
-          </figure>
-          <figure>
-            <img src="/mongodb-logo.804cf158.png" alt="mongo db icon">
-            <figcaption>MongoDB</figcaption>
-          </figure>
-          <figure>
-            <img src="/dotnet-logo.d07e6071.png" alt="dotnet icon">
-            <figcaption>.NET</figcaption>
-          </figure>
-          <figure>
-            <img src="/monogame-logo.cbc4f8a1.png" alt="mongogame icon">
-            <figcaption>MonoGame</figcaption>
-          </figure>
-          <figure>
-            <img src="/kube_logo.31240170.png" alt="kubernetes icon">
-            <figcaption>Kubernetes</figcaption>
-          </figure>
-          <figure>
-            <img src="/docker-logo.2ea533dc.png" alt="docker icon">
-            <figcaption>Docker</figcaption>
-          </figure>
-        </div>
-      </div>
-      <img src="/tech-icon.efd8ca9d.png" alt="tech icon" id="light-tech-icon">
-    </div>
-
-    <div class="section-gap light-wave-2" id="projects"></div>
-    <h1 class="section-header" id="projects">Featured Projects</h1>
-    <div class="project-section">
-      <h1 class="project-title">eNuts (in dev)</h1>
-      <div class="project">
-        <img src="/enuts-preview.a00c50cd.png" alt="e nuts preview" id="enuts-preview">
-        <div class="project-text">
-          <p>A mock ecommerce platform for selling nuts.</p>
-          <p>This project combines skills I've been learning in database, API, and UI development.</p>
-          <p>My goal is to use the MERN stack for a complex business application.</p>
-          <div class="button-container">
-            <button class="project-button">
-              <a href="https://github.com/Devin-Edwards8/eNuts" target="_blank" rel="noreferrer">Source Code</a>
-              <img src="/github-icon.0598608f.png" alt="github icon">
-            </button>
-            <button class="project-button">
-              <a href="http://enuts.devinedwards.xyz" target="_blank" rel="noreferrer">Live Demo</a>
-              <img src="/new-tab.15e4d66b.png" alt="new tab">
-            </button>
-          </div>
-          <div class="project-icons">
-            <figure>
-              <img src="/react-icon.3c858edf.png" alt="react icon">
-              <figcaption>React</figcaption>
-            </figure>
-            <figure>
-              <img src="/node-logo.0a9ac12e.png" alt="node js icon">
-              <figcaption>Node.js</figcaption>
-            </figure>
-            <figure>
-              <img src="/css-logo.d561911d.png" alt="css icon">
-              <figcaption>CSS</figcaption>
-            </figure>
-            <figure>
-              <img src="/ts-logo.563af653.png" alt="typescript icon">
-              <figcaption>TypeScript</figcaption>
-            </figure>
-            <figure>
-              <img src="/mongodb-logo.804cf158.png" alt="mongo db icon">
-              <figcaption>MongoDB</figcaption>
-            </figure>
-          </div>
-      </div>
-      </div>
-    </div>
-
-    <div class="section-gap light-wave-1" id="wave-gap-1"></div>
-    <div id="devfit" class="project-section secondary-section">
-      <h1 class="project-title">DevFit</h1>
-      <div class="project reverse-project">
-        <div class="project-text">
-          <p>A fitness app built to help me achieve my health goals!</p>
-          <p>Customizable cards store my workout routines and help me track progress.</p>
-          <p>A simple interface connected to an 
-            <a href="https://rapidapi.com/apininjas/api/nutrition-by-api-ninjas" target="_blank" rel="noreferrer">API</a>
-             for nutritional information allows for convenient diet tracking functionality.</p>
-          <div class="button-container">
-            <button class="project-button">
-              <a href="https://github.com/Devin-Edwards8/DevFit" target="_blank" rel="noreferrer">Source Code</a>
-              <img src="/github-icon.0598608f.png" alt="github icon">
-            </button>
-            <button class="project-button">
-              <a href="https://devfit-demo.netlify.app/" target="_blank" rel="noreferrer">Live Demo</a>
-              <img src="/new-tab.15e4d66b.png" alt="new tab">
-            </button>
-          </div>
-          <div class="project-icons">
-            <figure>
-              <img src="/react-icon.3c858edf.png" alt="react icon">
-              <figcaption>React Native</figcaption>
-            </figure>
-            <figure>
-              <img src="/js-logo.eed0c99d.png" alt="javascript icon">
-              <figcaption>JavaScript</figcaption>
-          </figure></div>
-        </div>
-        <img src="/devfit-preview.2229b31e.png" alt="DevFit preview" id="devfit-preview">
-      </div>
-    </div>
-
-    <div class="section-gap light-wave-2" id="wave-gap-2"></div>
-    <div class="project-section">
-      <h1 class="project-title">The Legend of Zelda</h1>
-      <div class="project">
-        <video width="90%" height="auto" loop="" autoplay="" muted="" id="zelda-gameplay">
-          <source src="/gameplay.d7d0621d.mov" type="video/mov">
-          <source src="/gameplay.e90eb497.mp4" type="video/mp4">
-        </video>
-        <div class="project-text">
-          <p>A semester-long group project  was the purpose of one my Junior year courses. Our task? To recreate the dungeon level of
-          the Legend of Zelda (NES) in a series of two/three week sprints. </p>
-          <p>The class promoted good code-quality and teamwork,
-          as we continually expanded on our product.</p>
-          <p>Huge thanks to my teammates: Eugene Kim, Linran Wu, David-Benoit Tano, and 
-          Rand Singer!</p>
-          <div class="project-icons">
-            <figure>
-              <img src="/dotnet-logo.d07e6071.png" alt="dotnet icon">
-              <figcaption>.NET</figcaption>
-            </figure>
-            <figure>
-              <img src="/monogame-logo.cbc4f8a1.png" alt="monogame icon">
-              <figcaption>MonoGame</figcaption>
-          </figure></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-gap light-wave-1" id="wave-gap-3"></div>
-    <div class="contact secondary-section" id="contact">
-      <h1 class="contact-header">Reach Out!</h1>
-      <div class="contact-content">
-        <form id="message-form">
-          <input placeholder="Name *" type="text" name="name" id="name" required="">
-          <input placeholder="Email *" type="text" name="email" id="email" required="">
-          <textarea placeholder="Message *" rows="5" type="text" name="message" id="message" required=""></textarea>
-          <input id="email-message" type="submit" value="Send ➤">
-          <div class="popup invisible" id="copy-popup">
-            <p>Copied to clipboard</p>
-          </div>
-          <div class="popup invisible" id="message-popup">
-            <p>Your message was sent</p>
-          </div>
-        </form>
-        <div class="headshot-and-socials">
-          <img id="light-portrait" src="/light-portrait.4bd0ee5a.png" alt="Carlos Lawler" class="contact-portrait">
-          <img id="dark-portrait" src="/dark-portrait.e622e76d.png" alt="Carlos Lawler" class="contact-portrait invisible">
-          <div>
-            <a id="light-github-social" class="social-link" href="https://github.com/Devin-Edwards8" target="_blank">
-              <img id="github-icon-light" src="/github-icon.0598608f.png" alt="GitHub icon" class="social-icon">
-              <img id="github-icon-light-accent" src="/github-icon-accent.29f520b8.png" alt="GitHub icon" class="social-icon invisible">
-              <p>GitHub</p>
-            </a>
-            <a id="dark-github-social" class="invisible" href="https://github.com/Devin-Edwards8" target="_blank">
-              <img id="github-icon-dark" src="/github-icon-dark.e5f11431.png" alt="GitHub icon" class="social-icon">
-              <img id="github-icon-dark-accent" src="/github-icon-dark-accent.6e452e8a.png" alt="GitHub icon" class="social-icon invisible">
-              <p>GitHub</p>
-            </a>
-            <a id="light-linkedin-social" class="social-link" href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
-              <img id="linkedin-icon-light" src="/linkedin-icon.42f78615.png" alt="LinkedIn icon" class="social-icon">
-              <img id="linkedin-icon-light-accent" src="/linkedin-icon-accent.f1c5e66b.png" alt="LinkedIn icon" class="social-icon invisible">
-              <p>LinkedIn</p>
-            </a>
-            <a id="dark-linkedin-social" class="invisible" href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
-              <img id="linkedin-icon-dark" src="/linkedin-icon-dark.428161b3.png" alt="LinkedIn icon" class="social-icon">
-              <img id="linkedin-icon-dark-accent" src="/linkedin-icon-dark-accent.d61099a6.png" alt="LinkedIn icon" class="social-icon invisible">
-              <p>LinkedIn</p>
-            </a>
-            <div id="light-email-social" class="social-link">
-              <img id="email-icon-light" src="/copy-icon.33e18230.png" alt="Email icon" class="social-icon">
-              <img id="email-icon-light-accent" src="/copy-icon-accent.9a0d4219.png" alt="Email icon" class="social-icon invisible">
-              <p>edwards.1779@osu.edu</p>
-            </div>
-            <div id="dark-email-social" class="invisible">
-              <img id="email-icon-dark" src="/copy-icon-dark.723755ec.png" alt="Email icon" class="social-icon">
-              <img id="email-icon-dark-accent" src="/copy-icon-dark-accent.bd649b88.png" alt="Email icon" class="social-icon invisible">
-              <p>edwards.1779@osu.edu</p>
-            </div>
-        </div>
-        </div>
-      </div>
-    </div>
-    <div id="bottom-waves" class="section-gap light-page-bottom"></div>
-
   </body>
 </html>

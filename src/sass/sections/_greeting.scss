@@ -2,6 +2,7 @@
 @use '../shared/breakpoints' as b;
 
 .greeting {
+    background-color: c.$background;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -12,32 +13,19 @@
 .greeting-text {
     display: block;
     justify-content: center;
-    min-height: 50vh;
 
     b {
         color: c.$accent;
     }
 }
 
-.greeting-text .big-name {
-    color: c.$primary;
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 0;
-}
-
 .greeting-text .role-title {
-    color: c.$text;
-    font-size: 2.5rem;
-}
-
-#typewrite {
-    color: c.$text;
+    color: c.$dark;
     font-size: 2.5rem;
 }
 
 .greeting-text p, .greeting-text a {
-    color: c.$text;
+    color: c.$dark;
     font-size: 1.5rem;
 }
 
@@ -48,10 +36,10 @@
     gap: 3vw;
 }
 
-#programmer-image-light, #programmer-image-dark {
+#cover-portrait {
     flex-shrink: 1;
-    width: 0;
-    aspect-ratio: 1 / 1;
+    max-width: 30%;
+    aspect-ratio: 26 / 39;
 }
 
 @media screen and (min-width: b.$small-screen) {

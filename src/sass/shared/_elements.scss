@@ -1,51 +1,43 @@
 @use './colors' as c;
 
-.button {
-    border-radius: .3rem;
-    padding: .5rem 1rem;
+button {
+    font-weight: 500;
+    border-radius: 2rem;
     cursor: pointer;
-    
-    p {
-        text-align: center;
-        font-size: 1.5rem;
-        margin: 0;
-    }
-    
-    a {
-        text-decoration: none;
-        color: c.$background;
-        margin: 0;
-    }
+    border: none;
+    padding: 1.2rem 2rem;
 }
 
 .small-button {
-    padding: .3rem .6rem;
-    border-radius: .75rem;
+    font-size: 1rem;
+}
 
-    p {
-        font-size: 1.2rem;
-    }
+.medium-button {
+    font-size: 1.2rem;
 }
 
 .primary-button {
     background-color: c.$primary;
-
-    a {
-        color: #020c17;
-       
-    }
 }
 
 .secondary-button {
     background-color: c.$secondary;
+}
 
-    a {
-        color: c.$text;
-    }
+.dark-button {
+    background-color: c.$dark;
+    color: c.$background;
+}
+
+.light-button {
+    background-color: c.$background;
+    outline: 2px solid c.$dark;
+    color: c.$dark;
 }
 
 .accent-button {
-    background-color: c.$accent;
+    background-color: c.$background;
+    color: c.$accent;
 }
 
 

@@ -7,34 +7,28 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: c.$secondary;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
-    box-shadow: 0 1px 3px -3px c.$text;
     z-index: 1;
 
     a {
-        color: c.$text;
         cursor: pointer;
         text-decoration: none;
         margin: 0;
     }
 
     p {
-        color: c.$text;
         cursor: pointer;
         text-decoration: none;
         margin: 0;
     }
 
     .navbar-name {
-        font-family: 'ADLaM Display', cursive;
-        font-size: 1.5rem;
-        color: c.$accent;
+        font-weight: 500;
     }
 }
 
@@ -54,31 +48,32 @@
     }
 }
 
-#toggle-color-scheme {
-    cursor: pointer;
-    position: relative;
-    width: 4rem;
-    height: 2rem;
-}
-
-#toggle-shaft {
-    position: absolute;
-    height: 2rem;
-    width: 4rem;
-    border-radius: 1rem;
+.dark-light-navbar {
     background-color: c.$background;
+    a, p, .navbar-name {
+        color: c.$dark;
+    }
 }
 
-.toggle-knob-forward {
-    right: 0;
-}
-
-#toggle-knob {
-    position: absolute;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 1rem;
+.accent-navbar {
     background-color: c.$accent;
+    a, p, .navbar-name {
+        color: c.$background;
+    }
+}
+
+.primary-navbar {
+    background-color: c.$primary;
+    a, p, .navbar-name {
+        color: c.$dark;
+    }
+}
+
+.secondary-navbar {
+    background-color: c.$secondary;
+    a, p, .navbar-name {
+        color: c.$dark;
+    }
 }
 
 @media screen and (min-width: b.$tablet-screen) {
