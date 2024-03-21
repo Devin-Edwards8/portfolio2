@@ -21,7 +21,7 @@
         </div>
     </nav>
     <div class="projects section">
-        <p id="software-header">Software Projects</p>
+        <h1 id="software-header">Software Projects</h1>
         <div class="project-section">
             <div class="project">
                 <div class="project-text">
@@ -30,16 +30,14 @@
                     <p>This project combines skills I've been learning in database, API, and UI development.</p>
                     <p>My goal is to use the MERN stack for a complex business application.</p>
                     <div class="button-container">
-                        <button class="project-button">
                         <a href="https://github.com/Devin-Edwards8/eNuts" 
-                        target="_blank" rel="noreferrer">Source Code</a>
-                        <img src="../assets/images/social-icons/github-icon.png" alt="github icon">
-                        </button>
-                        <button class="project-button">
+                        target="_blank" rel="noreferrer">
+                        <button class="button dark-button">Source Code</button>
+                        </a>
                         <a href="http://enuts.devinedwards.xyz" target="_blank" 
-                        rel="noreferrer">Live Demo</a>
-                        <img src="../assets/images/new-tab.png" alt="new tab">
-                        </button>
+                        rel="noreferrer">
+                        <button class="button dark-button">Live Demo</button>
+                        </a>
                     </div>
                 <div class="project-icons">
                     <figure>
@@ -65,11 +63,16 @@
                 </div>
             </div>
             </div>
-            <img src="../assets/images/enuts-preview.png" alt="e nuts preview" id="enuts-preview">
+            <div class="project-image">
+                <img src="../assets/images/enuts-preview.png" alt="e nuts preview" id="enuts-preview">
+            </div>
         </div>
         <div id="devfit" class="project-section">
-            <h1 class="project-title">DevFit</h1>
+            <div class="project-image">
+                <img src='../assets/images/devfit-preview.png' alt="DevFit preview" id="devfit-preview">
+            </div>
             <div class="project reverse-project">
+                <h1 class="project-title">DevFit</h1>
                 <div class="project-text">
                 <p>A fitness app built to help me achieve my health goals!</p>
                 <p>Customizable cards store my workout routines and help me track progress.</p>
@@ -77,16 +80,18 @@
                     <a  href="https://rapidapi.com/apininjas/api/nutrition-by-api-ninjas" target="_blank" rel="noreferrer">API</a>
                     for nutritional information allows for convenient diet tracking functionality.</p>
                 <div class="button-container">
-                    <button class="project-button">
                     <a href="https://github.com/Devin-Edwards8/DevFit" target="_blank" 
-                    rel="noreferrer">Source Code</a>
-                    <img src="../assets/images/social-icons/github-icon.png" alt="github icon">
+                    rel="noreferrer">
+                    <button class="button dark-button">
+                        Source Code
                     </button>
-                    <button class="project-button">
+                    </a>
                     <a href="https://devfit-demo.netlify.app/" target="_blank" 
-                    rel="noreferrer">Live Demo</a>
-                    <img src="../assets/images/new-tab.png" alt="new tab">
+                    rel="noreferrer">
+                    <button class="button dark-button">
+                        Live Demo
                     </button>
+                    </a>
                 </div>
                 <div class="project-icons">
                     <figure>
@@ -98,16 +103,11 @@
                     <figcaption>JavaScript</figcaption>
                 </div>
                 </div>
-                <img src='../assets/images/devfit-preview.png' alt="DevFit preview" id="devfit-preview">
             </div>
         </div>
 
         <div class="project-section">
             <div class="project">
-                <video width="90%" height="auto" loop autoPlay muted id="zelda-gameplay">
-                <source src='../assets/videos/gameplay.mov' type="video/mov" />
-                <source src='../assets/videos/gameplay.mp4' type="video/mp4" />
-                </video>
                 <div class="project-text">
                     <h1 class="project-title">The Legend of Zelda</h1>
                     <p>A semester-long group project  was the purpose of one my Junior year courses. Our task? To recreate the dungeon level of
@@ -127,6 +127,10 @@
                     </div>
                 </div>
             </div>
+            <video width="90%" height="auto" loop autoPlay muted id="zelda-gameplay">
+                <source src='../assets/videos/gameplay.mov' type="video/mov" />
+                <source src='../assets/videos/gameplay.mp4' type="video/mp4" />
+            </video>
         </div>
     </div>
 </body>

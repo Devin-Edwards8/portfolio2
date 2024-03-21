@@ -12,8 +12,18 @@ body, html, :root {
   --background: #EFF1F3;
   --primary: #E7D1C5;
   --secondary: #DBD3D8;
-  --accent: #D77A61;
+  --accent: #A34329;
   --dark: #223843;
+  
+  --dark-hover: #1B2E36;
+
+  // --background: #F6E4E0;
+  // --primary: #E8DAB2;
+  // --secondary: #C0D6DF;
+  // --accent: #9C1C20;
+  // --dark: #202C32;
+  
+  // --dark-hover: #1B2E36;
 
   font-size: 16px;
   margin: 0;
@@ -36,7 +46,7 @@ body, html, :root {
   margin: 0;
   padding: 2rem 0 0 1rem;
   font-size: 3rem;
-  font-family: 'ADLaM Display', cursive;
+  font-family: "Montserrat", sans-serif;
   color: c.$accent;
 }
 
@@ -46,8 +56,8 @@ body, html, :root {
 }
 
 .project-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 
 .secondary-section {

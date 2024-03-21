@@ -3,11 +3,14 @@
 
 .projects {
     background-color: c.$primary;
+    padding-top: 10vh;
 }
 
 #software-header {
-    margin: 12vh 0 14vh 5vw;
-    font-size: 1.2rem;
+    margin-bottom: 5vh;
+    text-align: center;
+    font-size: 3rem;
+    color: c.$accent;
 }
 
 .project-title {
@@ -18,10 +21,6 @@
 }
 
 .project-text {
-    a {
-        color: c.$accent;
-    }
-
     p, h1 {
         color: c.$dark;
     }
@@ -38,46 +37,30 @@
 
 #enuts-preview, #devfit-preview {
     width: 90vw;
+    height: auto;
     margin: 0;
-    flex-shrink: 1;
 }
 
 .project .button-container {
     display: flex;
     flex-direction: row;
     gap: 2vw;
-}
-
-.project button {
-    padding: .3rem .6rem;
-    border-radius: .75rem;
-    background-color: c.$primary;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: .4rem;
-    cursor: pointer;
-    
-    img {
-        width: 1rem;
-        aspect-ratio: 1 / 1;
-    }
-
-    a {
-        font-size: 1rem;
-        text-decoration: none;
-        color: c.$dark;
-    }
+    margin: 4vh 0;
 }
 
 .project .dark-project-button a {
     color: c.$background;
 }
 
+.project button {
+    font-size: 0.9rem;
+}
+
+.project button:hover {
+    background-color: c.$dark-hover;
+}
+
 .project-icons {
-    margin-top: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -90,14 +73,14 @@
         height: 70px;
         margin: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         position: relative;
 
         img {
             position: absolute;
+            top: 0;
             align-self: center;
-            top: 1.5rem;
             width: 45px;
             aspect-ratio: 1 / 1;
         }
@@ -167,10 +150,11 @@
     .project-section {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
 
     .project-text {
-        width: 50vw;
+        width: 40vw;
     }
 
     .project-title {
@@ -179,7 +163,12 @@
 
     #devfit-preview, #zelda-gameplay, #enuts-preview {
         width: 40vw;
-        margin: 0 5vw;
+    }
+
+    .project-image {
+        width: 40vw;
+        display: flex;
+        align-items: center;
     }
 }
 

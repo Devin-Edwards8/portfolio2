@@ -64,21 +64,20 @@
 
 .projects {
   background-color: var(--primary);
+  padding-top: 10vh;
 }
 
 #software-header {
-  margin: 12vh 0 14vh 5vw;
-  font-size: 1.2rem;
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 5vh;
+  font-size: 3rem;
 }
 
 .project-title {
   text-align: left;
   margin: 0 0 2rem;
   font-size: 3rem;
-}
-
-.project-text a {
-  color: var(--accent);
 }
 
 .project-text p, .project-text h1 {
@@ -95,43 +94,28 @@
 }
 
 #enuts-preview, #devfit-preview {
-  flex-shrink: 1;
   width: 90vw;
+  height: auto;
   margin: 0;
 }
 
 .project .button-container {
   flex-direction: row;
   gap: 2vw;
+  margin: 4vh 0;
   display: flex;
-}
-
-.project button {
-  background-color: var(--primary);
-  cursor: pointer;
-  border: none;
-  border-radius: .75rem;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: .4rem;
-  padding: .3rem .6rem;
-  display: flex;
-}
-
-.project button img {
-  aspect-ratio: 1;
-  width: 1rem;
-}
-
-.project button a {
-  color: var(--dark);
-  font-size: 1rem;
-  text-decoration: none;
 }
 
 .project .dark-project-button a {
   color: var(--background);
+}
+
+.project button {
+  font-size: .9rem;
+}
+
+.project button:hover {
+  background-color: var(--dark-hover);
 }
 
 .project-icons {
@@ -139,12 +123,11 @@
   justify-content: flex-start;
   gap: 25px;
   width: 100%;
-  margin-top: 1rem;
   display: flex;
 }
 
 .project-icons figure {
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   min-width: 45px;
   height: 70px;
@@ -158,7 +141,7 @@
   align-self: center;
   width: 45px;
   position: absolute;
-  top: 1.5rem;
+  top: 0;
 }
 
 .project-icons figure img:hover {
@@ -217,11 +200,12 @@
 
   .project-section {
     flex-direction: row;
+    justify-content: space-around;
     display: flex;
   }
 
   .project-text {
-    width: 50vw;
+    width: 40vw;
   }
 
   .project-title {
@@ -230,7 +214,12 @@
 
   #devfit-preview, #zelda-gameplay, #enuts-preview {
     width: 40vw;
-    margin: 0 5vw;
+  }
+
+  .project-image {
+    align-items: center;
+    width: 40vw;
+    display: flex;
   }
 }
 
@@ -385,249 +374,7 @@ button {
 }
 
 .contact {
-  padding-top: 11.1111vw;
-  position: relative;
-}
-
-.contact-header {
-  margin: 0 0 2vh 2vw;
-  font-size: 3rem;
-}
-
-.contact-content {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 0 2vw;
-  display: flex;
-}
-
-.headshot-and-socials {
-  flex-direction: column-reverse;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-  width: 100%;
-  display: flex;
-}
-
-.headshot-and-socials .social-link {
-  cursor: pointer;
-  color: var(--dark);
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  text-decoration: none;
-  display: flex;
-}
-
-.headshot-and-socials .social-icon {
-  aspect-ratio: 1;
-  width: 2rem;
-}
-
-.headshot-and-socials .contact-portrait {
-  aspect-ratio: 1;
-  border: .5rem solid var(--primary);
-  border-radius: 100px;
-  flex-shrink: 1;
-  align-self: center;
-  width: 200px;
-}
-
-.headshot-and-socials #dark-github-social:hover p {
-  color: var(--accent);
-}
-
-.headshot-and-socials #dark-github-social:hover #github-icon-dark {
-  display: none;
-}
-
-.headshot-and-socials #dark-github-social:hover #github-icon-dark-accent {
-  display: block;
-}
-
-.headshot-and-socials #light-github-social:hover p {
-  color: var(--primary);
-}
-
-.headshot-and-socials #light-github-social:hover #github-icon-light {
-  display: none;
-}
-
-.headshot-and-socials #light-github-social:hover #github-icon-light-accent {
-  display: block;
-}
-
-.headshot-and-socials #dark-linkedin-social:hover p {
-  color: var(--accent);
-}
-
-.headshot-and-socials #dark-linkedin-social:hover #linkedin-icon-dark {
-  display: none;
-}
-
-.headshot-and-socials #dark-linkedin-social:hover #linkedin-icon-dark-accent {
-  display: block;
-}
-
-.headshot-and-socials #light-linkedin-social:hover p {
-  color: var(--primary);
-}
-
-.headshot-and-socials #light-linkedin-social:hover #linkedin-icon-light {
-  display: none;
-}
-
-.headshot-and-socials #light-linkedin-social:hover #linkedin-icon-light-accent {
-  display: block;
-}
-
-.headshot-and-socials #dark-email-social:hover p {
-  color: var(--accent);
-}
-
-.headshot-and-socials #dark-email-social:hover #email-icon-dark {
-  display: none;
-}
-
-.headshot-and-socials #light-email-social:hover p {
-  color: var(--primary);
-}
-
-.headshot-and-socials #light-email-social:hover #email-icon-light {
-  display: none;
-}
-
-.contact-content form {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  width: 100%;
-  margin-bottom: 1rem;
-  display: flex;
-  position: relative;
-}
-
-.contact-content form input, .contact-content form textarea {
   background-color: var(--background);
-  color: var(--dark);
-  border: 1px solid var(--accent);
-  border-radius: .3rem;
-  width: calc(100% - 1rem);
-  padding: .5rem;
-  font-size: 1rem;
-}
-
-.contact-content form input::placeholder, .contact-content form textarea::placeholder {
-  color: var(--accent);
-}
-
-.contact-content form #email-message {
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  background-color: var(--secondary);
-  cursor: pointer;
-  border-radius: .6rem;
-  width: 6rem;
-  height: 3rem;
-  font-size: 1.2rem;
-}
-
-.contact-content form #email-message:hover {
-  background-color: var(--background);
-  transition: all .5s;
-}
-
-.popup {
-  background: var(--background);
-  border: 1px solid var(--accent);
-  z-index: 1;
-  border-radius: 5px;
-  padding: .5rem;
-  animation: .2s forwards slide;
-  position: absolute;
-  bottom: .5rem;
-  right: -300px;
-}
-
-.popup p {
-  color: var(--accent);
-  margin: 0;
-  font-size: .9rem;
-}
-
-@keyframes slide {
-  100% {
-    right: 2vw;
-  }
-}
-
-@media only screen and (width >= 576px) {
-  .headshot-and-socials {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .headshot-and-socials .contact-portrait {
-    border-radius: 125px;
-    width: 250px;
-  }
-}
-
-@media only screen and (width >= 768px) {
-  .contact-content {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .contact-content .contact-portrait {
-    border-radius: 100px;
-    width: 200px;
-  }
-
-  .contact-content form {
-    width: 40vw;
-    position: static;
-  }
-
-  .contact-content .popup {
-    bottom: 2rem;
-  }
-
-  .contact-content .popup p {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (width >= 1024px) {
-  .contact-header {
-    font-size: 4rem;
-  }
-
-  .contact-content p, .contact-content form textarea, .contact-content form input {
-    font-size: 1.4rem;
-  }
-
-  .contact-content form {
-    width: 50vw;
-  }
-
-  .headshot-and-socials {
-    justify-content: center;
-  }
-}
-
-@media only screen and (width >= 1200px) {
-  .contact-content form {
-    width: 70vw;
-  }
-
-  .headshot-and-socials .contact-portrait {
-    border-radius: 150px;
-    width: 300px;
-  }
 }
 
 .about {
@@ -699,8 +446,9 @@ body, html, :root {
   --background: #eff1f3;
   --primary: #e7d1c5;
   --secondary: #dbd3d8;
-  --accent: #d77a61;
+  --accent: #a34329;
   --dark: #223843;
+  --dark-hover: #1b2e36;
   scroll-behavior: smooth;
   color: var(--dark);
   margin: 0;
@@ -722,7 +470,7 @@ body h1, html h1, :root h1 {
   color: var(--accent);
   margin: 0;
   padding: 2rem 0 0 1rem;
-  font-family: ADLaM Display, cursive;
+  font-family: Montserrat, sans-serif;
   font-size: 3rem;
 }
 
@@ -732,8 +480,8 @@ body h1, html h1, :root h1 {
 }
 
 .project-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
 }
 
 .secondary-section {
