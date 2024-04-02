@@ -11,33 +11,36 @@
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 </head>
 <body>
+    <script src="../index.js" type="module" defer></script>
     <nav class="navbar secondary-navbar">
         <a href="../index.html" class="navbar-name">Devin Edwards</a>
-        <div class="section-links">
+        <div id="section-links" class="secondary-b invisible">
+          <img src="../assets/images/exit-icon.png" id="exit-icon" alt="close navbar">
+          <img src="../assets/images/favicon.png" id="personal-icon" alt="personal logo">
           <a href="">Writing</a>
           <a href="./projects.html">Projects</a>
           <a href="./about.html">About</a>
-          <a href="./contact.html"><button class="dark-button small-button">Get in Touch</button></a>
+          <a href="./contact.html" id="contact-link">Contact</a>
+          <a href="./contact.html" id="contact-button"><button class="dark-button small-button">Get in Touch</button></a>
+          <div id="contact-nav">
+            <h1>Get In Touch!</h1>
+            <p>513-478-3005</p>
+            <p>edwards.1779@osu.edu</p>
+          </div>
         </div>
+        <img src="../assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
     </nav>
     <div class="writing section">
         <div id="writing-feature-text">
-            <p>It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. 
-                Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.</p>
+            <p>"You don't need to see the whole staircase, just take the first step." ~Martin Luther King Jr.</p>
         </div>
         <div id="writing-portfolio">
-            <div class="writing-block">
-                <img src="../assets/images/cousins.jpg" class="grid-image" alt="Affinity Consulting Group Logo">
-                <p>Affinity Consulting Group</p>
-            </div>
-            <div class="writing-block">
-                <img src="../assets/images/cousins.jpg" class="grid-image" alt="Ohio State Logo">
-                <p>Ohio State University</p>
-            </div>
-            <div class="writing-block">
-                <img src="../assets/images/cousins.jpg" class="grid-image" alt="Ohio State Logo">
-                <p>Ohio State University</p>
-            </div>
+            <a class="writing-block" href="./writing/affinity.html">
+                <img src="../assets/images/affinity_logo.png" id="affinity-logo" class="grid-image" alt="Affinity Consulting Group Logo">
+            </a>
+            <a class="writing-block" href="./writing/osu.html">
+                <img src="../assets/images/osu_logo.png" id="osu-logo" class="grid-image" alt="Ohio State Logo">
+            </a>
         </div>
     </div>
 </body>

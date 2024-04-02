@@ -11,17 +11,48 @@
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 </head>
 <body>
+    <script src="../index.js" type="module" defer></script>
     <nav class="navbar dark-light-navbar">
         <a href="../index.html" class="navbar-name">Devin Edwards</a>
-        <div class="section-links">
+        <div id="section-links" class="light-b invisible">
+          <img src="../assets/images/exit-icon.png" id="exit-icon" alt="close navbar">
+          <img src="../assets/images/favicon.png" id="personal-icon" alt="personal logo">
           <a href="./writing.html">Writing</a>
           <a href="./projects.html">Projects</a>
           <a href="./about.html">About</a>
-          <a href=""><button class="dark-button small-button">Get in Touch</button></a>
+          <a href="./contact.html" id="contact-link">Contact</a>
+          <a href="" id="contact-button"><button class="dark-button small-button">Get in Touch</button></a>
+          <div id="contact-nav">
+            <h1>Get In Touch!</h1>
+            <p>513-478-3005</p>
+            <p>edwards.1779@osu.edu</p>
+          </div>
         </div>
+        <img src="../assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
     </nav>
     <div class="contact section">
-
+        <form>
+            <h2 id="contact-title">Let's Work Together!</h2>
+            <div class="form-name-container">
+                <div class="input-container form-name">
+                    <label for="name">First</label><br>
+                    <input type="text" id="first" name="first" required>
+                </div>
+                <div class="input-container form-name">
+                    <label for="name">Last</label><br>
+                    <input type="text" id="last" name="last" required>
+                </div>
+            </div>
+            <div class="input-container">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="input-container">
+                <label for="message">Message</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+            </div>
+            <input id="submit-form" type="submit" value="Submit" class="button dark-button">
+        </form>
     </div>
 </body>
 </html>

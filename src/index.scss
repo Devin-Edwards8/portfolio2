@@ -7,6 +7,8 @@
 @use './sass/shared/breakpoints' as b;
 @use './sass/sections/about';
 @use './sass/sections/writing';
+@use './sass/sections/writing/affinity';
+@use './sass/sections/writing/osu';
 
 body, html, :root {
   --background: #EFF1F3;
@@ -16,14 +18,7 @@ body, html, :root {
   --dark: #223843;
   
   --dark-hover: #1B2E36;
-
-  // --background: #F6E4E0;
-  // --primary: #E8DAB2;
-  // --secondary: #C0D6DF;
-  // --accent: #9C1C20;
-  // --dark: #202C32;
-  
-  // --dark-hover: #1B2E36;
+  --light-hover: #e8ebed;
 
   font-size: 16px;
   margin: 0;
@@ -34,11 +29,6 @@ body, html, :root {
   input, textarea {
     color: c.$dark;
     font-family: "Montserrat", sans-serif;
-  }
-
-  h1 {
-    font-weight: 600;
-    font-size: 2.5rem;
   }
 }
 
@@ -66,4 +56,8 @@ body, html, :root {
 
 .invisible {
   display: none;
+}
+
+.flex {
+  display: flex;
 }

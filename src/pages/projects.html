@@ -11,34 +11,43 @@
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 </head>
 <body>
+    <script src="../index.js" type="module" defer></script>
     <nav class="navbar primary-navbar">
         <a href="../index.html" class="navbar-name">Devin Edwards</a>
-        <div class="section-links">
+        <div id="section-links" class="primary-b invisible">
+          <img src="../assets/images/exit-icon.png" id="exit-icon" alt="close navbar">
+          <img src="../assets/images/favicon.png" id="personal-icon" alt="personal logo">
           <a href="./writing.html">Writing</a>
-          <a href="./projects.html">Projects</a>
+          <a href="">Projects</a>
           <a href="./about.html">About</a>
-          <a href=""><button class="dark-button small-button">Get in Touch</button></a>
+          <a href="./contact.html" id="contact-link">Contact</a>
+          <a href="./contact.html" id="contact-button"><button class="dark-button small-button">Get in Touch</button></a>
+          <div id="contact-nav">
+            <h1>Get In Touch!</h1>
+            <p>513-478-3005</p>
+            <p>edwards.1779@osu.edu</p>
+          </div>
         </div>
+        <img src="../assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
     </nav>
     <div class="projects section">
         <h1 id="software-header">Software Projects</h1>
-        <div class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h1 class="project-title">eNuts (in dev)</h1>
-                    <p>A mock ecommerce platform for selling nuts.</p>
-                    <p>This project combines skills I've been learning in database, API, and UI development.</p>
-                    <p>My goal is to use the MERN stack for a complex business application.</p>
-                    <div class="button-container">
-                        <a href="https://github.com/Devin-Edwards8/eNuts" 
-                        target="_blank" rel="noreferrer">
-                        <button class="button dark-button">Source Code</button>
-                        </a>
-                        <a href="http://enuts.devinedwards.xyz" target="_blank" 
-                        rel="noreferrer">
-                        <button class="button dark-button">Live Demo</button>
-                        </a>
-                    </div>
+        <div class="project">
+            <div class="project-text">
+                <h1 class="project-title">eNuts</h1>
+                <p>A mock ecommerce platform for selling nuts.</p>
+                <p>This project combines skills I've been learning in database, API, and UI development.</p>
+                <p>My goal is to use the MERN stack for a complex business application.</p>
+                <div class="button-container">
+                    <a href="https://github.com/Devin-Edwards8/eNuts" 
+                    target="_blank" rel="noreferrer">
+                    <button class="button dark-button">Source Code</button>
+                    </a>
+                    <a href="http://enuts.devinedwards.xyz" target="_blank" 
+                    rel="noreferrer">
+                    <button class="button dark-button">Live Demo</button>
+                    </a>
+                </div>
                 <div class="project-icons">
                     <figure>
                     <img src="../assets/images/tech-icons/react-icon.png" alt="react icon">
@@ -62,18 +71,16 @@
                     </figure>
                 </div>
             </div>
-            </div>
             <div class="project-image">
                 <img src="../assets/images/enuts-preview.png" alt="e nuts preview" id="enuts-preview">
             </div>
         </div>
-        <div id="devfit" class="project-section">
+        <div id="devfit" class="project reverse-project">
             <div class="project-image">
                 <img src='../assets/images/devfit-preview.png' alt="DevFit preview" id="devfit-preview">
             </div>
-            <div class="project reverse-project">
+            <div class="project-text">
                 <h1 class="project-title">DevFit</h1>
-                <div class="project-text">
                 <p>A fitness app built to help me achieve my health goals!</p>
                 <p>Customizable cards store my workout routines and help me track progress.</p>
                 <p>A simple interface connected to an 
@@ -102,35 +109,34 @@
                     <img src="../assets/images/tech-icons/js-logo.png" alt="javascript icon">
                     <figcaption>JavaScript</figcaption>
                 </div>
-                </div>
             </div>
         </div>
 
-        <div class="project-section">
-            <div class="project">
-                <div class="project-text">
-                    <h1 class="project-title">The Legend of Zelda</h1>
-                    <p>A semester-long group project  was the purpose of one my Junior year courses. Our task? To recreate the dungeon level of
-                    the Legend of Zelda (NES) in a series of two/three week sprints. </p>
-                    <p>The class promoted good code-quality and teamwork,
-                    as we continually expanded on our product.</p>
-                    <p>Huge thanks to my teammates: Eugene Kim, Linran Wu, David-Benoit Tano, and 
-                    Rand Singer!</p>
-                    <div class="project-icons">
-                        <figure>
-                        <img src="../assets/images/tech-icons/dotnet-logo.png" alt="dotnet icon">
-                        <figcaption>.NET</figcaption>
-                        </figure>
-                        <figure>
-                        <img src="../assets/images/tech-icons/monogame-logo.png" alt="monogame icon">
-                        <figcaption>MonoGame</figcaption>
-                    </div>
+        <div class="project">
+            <div class="project-text">
+                <h1 class="project-title">The Legend of Zelda</h1>
+                <p>A semester-long group project  was the purpose of one my Junior year courses. Our task? To recreate the dungeon level of
+                the Legend of Zelda (NES) in a series of two/three week sprints. </p>
+                <p>The class promoted good code-quality and teamwork,
+                as we continually expanded on our product.</p>
+                <p>Huge thanks to my teammates: Eugene Kim, Linran Wu, David-Benoit Tano, and 
+                Rand Singer!</p>
+                <div class="project-icons">
+                    <figure>
+                    <img src="../assets/images/tech-icons/dotnet-logo.png" alt="dotnet icon">
+                    <figcaption>.NET</figcaption>
+                    </figure>
+                    <figure>
+                    <img src="../assets/images/tech-icons/monogame-logo.png" alt="monogame icon">
+                    <figcaption>MonoGame</figcaption>
                 </div>
             </div>
-            <video width="90%" height="auto" loop autoPlay muted id="zelda-gameplay">
-                <source src='../assets/videos/gameplay.mov' type="video/mov" />
-                <source src='../assets/videos/gameplay.mp4' type="video/mp4" />
-            </video>
+            <div class="project-image">
+                <video width="90%" height="auto" loop autoPlay muted id="zelda-gameplay">
+                    <source src='../assets/videos/gameplay.mov' type="video/mov" />
+                    <source src='../assets/videos/gameplay.mp4' type="video/mp4" />
+                </video>
+            </div>
         </div>
     </div>
 </body>

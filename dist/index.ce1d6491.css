@@ -1,3 +1,23 @@
+.light-b {
+  background-color: var(--background);
+}
+
+.dark-b {
+  background-color: var(--dark);
+}
+
+.secondary-b {
+  background-color: var(--secondary);
+}
+
+.accent-b {
+  background-color: var(--accent);
+}
+
+.primary-b {
+  background-color: var(--primary);
+}
+
 .greeting {
   background-color: var(--background);
   flex-direction: row;
@@ -33,32 +53,29 @@
 }
 
 #cover-portrait {
-  aspect-ratio: 26 / 39;
+  aspect-ratio: 3024 / 4032;
   flex-shrink: 1;
   max-width: 30%;
+  display: none;
 }
 
 @media screen and (width >= 576px) {
   .greeting-text p {
     width: 70%;
   }
-
-  .greeting-text .big-name {
-    font-size: 5rem;
-  }
 }
 
 @media screen and (width >= 768px) {
-  #programmer-image-light, #programmer-image-dark {
-    width: 35vw;
-  }
-
   .greeting-text {
     max-width: 50vw;
   }
 
   .greeting-text p {
     width: 100%;
+  }
+
+  #cover-portrait {
+    display: block;
   }
 }
 
@@ -71,13 +88,26 @@
   text-align: center;
   color: var(--accent);
   margin-bottom: 5vh;
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.project {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10vh;
+  padding: .2rem;
+  display: flex;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+  padding-bottom: 10vh;
 }
 
 .project-title {
   text-align: left;
   margin: 0 0 2rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .project-text p, .project-text h1 {
@@ -104,18 +134,6 @@
   gap: 2vw;
   margin: 4vh 0;
   display: flex;
-}
-
-.project .dark-project-button a {
-  color: var(--background);
-}
-
-.project button {
-  font-size: .9rem;
-}
-
-.project button:hover {
-  background-color: var(--dark-hover);
 }
 
 .project-icons {
@@ -159,71 +177,50 @@
   visibility: visible;
 }
 
-@media only screen and (width >= 576px) and (width <= 768px) {
-  .project-text p {
-    text-align: center;
-    width: 75vw;
-    font-size: 1.2rem;
-  }
-
-  .project-title {
-    text-align: center;
-  }
-
-  .project {
-    align-items: center;
-  }
-
-  .project .button-container, .project-icons {
-    justify-content: center;
-  }
-
-  .project-icons figure {
-    min-width: 70px;
-    height: 110px;
-  }
-
-  .project-icons figure img {
-    width: 70px;
-  }
-
-  .project-icons figure img:hover {
-    width: 80px;
-  }
+.project-image {
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  display: flex;
 }
 
 @media only screen and (width >= 768px) {
-  .project {
-    flex-direction: column;
-    align-items: center;
+  .project-icons figure {
+    min-width: 65px;
+    height: 100px;
   }
 
-  .project-section {
+  .project-icons figure img {
+    width: 65px;
+  }
+
+  .project-icons figure img:hover {
+    width: 75px;
+  }
+}
+
+@media only screen and (width >= 1024px) {
+  .project {
     flex-direction: row;
     justify-content: space-around;
-    display: flex;
+    align-items: center;
   }
 
   .project-text {
     width: 40vw;
   }
 
-  .project-title {
+  .project-title, #software-header {
     text-align: center;
+    font-size: 2.5rem;
   }
 
-  #devfit-preview, #zelda-gameplay, #enuts-preview {
+  #devfit-preview, #zelda-gameplay, #enuts-preview, .project-image {
     width: 40vw;
-  }
-
-  .project-image {
-    align-items: center;
-    width: 40vw;
-    display: flex;
   }
 }
 
-@media only screen and (width >= 1200px) {
+@media only screen and (width >= 1400px) {
   .project-icons figure {
     min-width: 80px;
     height: 120px;
@@ -240,21 +237,13 @@
   .project p {
     font-size: 1.4rem;
   }
-
-  .project button img {
-    width: 1.2rem;
-  }
-
-  .project button a {
-    font-size: 1.3rem;
-  }
 }
 
 button {
   cursor: pointer;
   border: none;
-  border-radius: 2rem;
-  padding: 1.2rem 2rem;
+  border-radius: 1.5rem;
+  padding: .6rem 1rem;
   font-weight: 500;
 }
 
@@ -279,15 +268,39 @@ button {
   color: var(--background);
 }
 
+.dark-button:hover {
+  background-color: var(--dark-hover);
+}
+
 .light-button {
   background-color: var(--background);
   outline: 2px solid var(--dark);
   color: var(--dark);
 }
 
+.light-button:hover {
+  background-color: var(--light-hover);
+}
+
 .accent-button {
   background-color: var(--background);
   color: var(--accent);
+}
+
+@media screen and (width >= 768px) {
+  button {
+    border-radius: 1.75rem;
+    padding: 1rem 1.6rem;
+    font-size: .8rem;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  button {
+    border-radius: 2rem;
+    padding: 1.2rem 2rem;
+    font-size: 1.2rem;
+  }
 }
 
 .navbar {
@@ -315,20 +328,69 @@ button {
   font-weight: 500;
 }
 
-.navbar .section-links {
-  flex-direction: row;
-  align-items: center;
-  gap: 5vw;
-  display: flex;
+.navbar #section-links {
+  text-align: left;
+  border-bottom: 1px solid var(--dark);
+  flex-direction: column;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.navbar .section-links a {
+.navbar #section-links a {
+  margin-left: 1rem;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-size: 1.2rem;
+}
+
+.navbar #section-links a:first-of-type {
+  margin-top: 8vh;
+}
+
+.navbar #section-links a:hover {
+  text-underline-offset: 2px;
+  text-decoration: underline 1px;
+}
+
+.navbar #section-links #exit-icon, .navbar #section-links #personal-icon {
+  aspect-ratio: 1;
+  height: 4vh;
+  position: absolute;
+}
+
+.navbar #section-links #exit-icon {
+  cursor: pointer;
+  top: 2vh;
+  right: 5vw;
+}
+
+.navbar #section-links #personal-icon {
+  top: 2vh;
+  left: 5vw;
+}
+
+.navbar #section-links #contact-button {
   display: none;
 }
 
-.navbar .section-links a:hover {
-  text-underline-offset: 2px;
-  text-decoration: underline 1px;
+.navbar #section-links #contact-nav {
+  padding: 1rem;
+}
+
+.navbar #section-links #contact-nav h1, .navbar #section-links #contact-nav p {
+  font-size: 1rem;
+}
+
+.navbar #section-links #contact-nav p {
+  line-height: 1.5rem;
+}
+
+#menu-icon {
+  aspect-ratio: 1;
+  cursor: pointer;
+  height: 4vh;
 }
 
 .dark-light-navbar {
@@ -364,24 +426,150 @@ button {
 }
 
 @media screen and (width >= 768px) {
-  .navbar .section-links a {
+  .navbar #section-links {
+    border: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+    width: auto;
+    display: flex;
+    position: relative;
+  }
+
+  .navbar #section-links a {
+    font-size: .8rem;
+  }
+
+  .navbar #section-links a:first-of-type {
+    margin: 0;
+  }
+
+  .navbar #section-links #exit-icon {
+    display: none;
+  }
+
+  .navbar #section-links #contact-button {
     display: block;
+  }
+
+  .navbar #section-links #contact-link {
+    display: none;
   }
 
   .navbar .navbar-name {
     font-size: 2rem;
   }
+
+  #menu-icon, #exit-icon, #personal-icon, #contact-nav {
+    display: none;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .navbar #section-links a {
+    font-size: 1rem;
+  }
 }
 
 .contact {
   background-color: var(--background);
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#contact-title {
+  align-self: flex-start;
+  margin: 15vh 0 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+form {
+  text-align: center;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2vh;
+  width: 95%;
+  display: flex;
+}
+
+form input, form textarea {
+  resize: none;
+  border: 1px solid var(--dark);
+  border-radius: 1.5rem;
+  padding: .75rem;
+  font-size: 1.2rem;
+}
+
+form .input-container {
+  flex-direction: column;
+  align-items: stretch;
+  display: flex;
+}
+
+form .input-container label {
+  align-self: flex-start;
+  margin-bottom: .1rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.form-name-container {
+  flex-direction: column;
+  gap: 2vh;
+  width: 100%;
+  display: flex;
+}
+
+.form-name {
+  width: 100%;
+}
+
+#submit-form {
+  color: var(--background);
+  cursor: pointer;
+  border: none;
+  align-self: flex-start;
+  padding: .5rem 1rem;
+}
+
+@media screen and (width >= 768px) {
+  form {
+    gap: 4vh;
+    width: 60%;
+  }
+
+  .form-name-container {
+    flex-direction: row;
+    column-gap: 1rem;
+  }
+
+  .form-name {
+    width: calc(50% - .5rem);
+  }
+}
+
+@media screen and (width >= 1024px) {
+  form {
+    gap: 5vh;
+    width: 50%;
+  }
+}
+
+@media screen and (width >= 1400px) {
+  form {
+    gap: 6vh;
+    width: 40%;
+  }
 }
 
 .about {
   background-color: var(--accent);
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  gap: 5vw;
   padding: 0 3vw;
   display: flex;
 }
@@ -390,10 +578,87 @@ button {
   color: var(--background);
 }
 
+.about-text {
+  width: 90%;
+}
+
+.about-text h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.about-text p, .about-text a {
+  font-size: 1.2rem;
+}
+
+#about-footer {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 2rem;
+  display: flex;
+}
+
+#about-footer h3 {
+  color: var(--background);
+}
+
 #family-portrait {
-  aspect-ratio: 2452 / 3179;
+  aspect-ratio: 1170 / 1638;
   flex-shrink: 1;
-  max-width: 30%;
+  max-width: 60%;
+}
+
+.social-icon {
+  aspect-ratio: 1;
+  height: 5vh;
+}
+
+@media screen and (width >= 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+    display: flex;
+  }
+
+  #family-portrait {
+    max-width: 40%;
+    height: auto;
+  }
+
+  .about-text p, .about-text a {
+    font-size: 1.3rem;
+  }
+
+  .about-text h1 {
+    font-size: 1.6rem;
+  }
+
+  #about-footer {
+    justify-content: center;
+    gap: 4vw;
+  }
+}
+
+@media screen and (width >= 1400px) {
+  .about-text {
+    width: 50%;
+  }
+
+  #family-portrait {
+    max-width: 30%;
+    max-height: 70vh;
+  }
+
+  .about-text p, .about-text a {
+    font-size: 1.5rem;
+  }
+
+  .about-text h1 {
+    font-size: 2rem;
+  }
 }
 
 .writing {
@@ -405,7 +670,7 @@ button {
 }
 
 #writing-feature-text {
-  width: 60vw;
+  width: 90vw;
   margin: 12vh 0 14vh;
 }
 
@@ -421,25 +686,108 @@ button {
 }
 
 .writing-block {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+#affinity-logo {
+  width: 60%;
+}
+
+#osu-logo {
+  width: 85%;
+}
+
+@media screen and (width >= 768px) {
+  #writing-feature-text {
+    width: 60vw;
+    margin: 12vh 0 14vh;
+    font-size: 1.5rem;
+    line-height: 3.4rem;
+  }
+
+  .writing-block {
+    width: 50%;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .grid-image {
+    filter: grayscale();
+    cursor: pointer;
+    transition: all 1s;
+  }
+
+  .grid-image:hover {
+    filter: grayscale(0%);
+    transition: all 1s;
+  }
+
+  #writing-feature-text p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (width >= 1400px) {
+  #writing-feature-text p {
+    font-size: 1.46em;
+  }
+}
+
+.affinity {
+  background-color: var(--secondary);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+  display: flex;
+}
+
+#affinity-title {
   text-align: center;
-  width: 50%;
+  color: var(--dark);
+  margin-bottom: 5vh;
+  font-size: 2rem;
 }
 
-.writing-block p {
-  font-size: 1.2rem;
+#affinity-nav {
+  align-self: flex-start;
+  margin-left: 2vw;
 }
 
-.grid-image {
-  filter: grayscale();
-  aspect-ratio: 4032 / 3024;
-  cursor: pointer;
-  width: 82%;
-  transition: all 1s;
+.writing-sample {
+  width: 95vw;
+  padding-top: 10vh;
 }
 
-.grid-image:hover {
-  filter: grayscale(0%);
-  transition: all 1s;
+.writing-sample:last-of-type {
+  padding-bottom: 10vh;
+}
+
+h2 a {
+  color: var(--dark);
+}
+
+@media only screen and (width >= 1024px) {
+  .writing-sample {
+    width: 800px;
+  }
+}
+
+.osu {
+  background-color: var(--secondary);
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+  display: flex;
+}
+
+#osu-title {
+  text-align: center;
+  color: var(--dark);
+  margin-bottom: 5vh;
+  font-size: 2rem;
 }
 
 body, html, :root {
@@ -449,6 +797,7 @@ body, html, :root {
   --accent: #a34329;
   --dark: #223843;
   --dark-hover: #1b2e36;
+  --light-hover: #e8ebed;
   scroll-behavior: smooth;
   color: var(--dark);
   margin: 0;
@@ -459,11 +808,6 @@ body, html, :root {
 body input, body textarea, html input, html textarea, :root input, :root textarea {
   color: var(--dark);
   font-family: Montserrat, sans-serif;
-}
-
-body h1, html h1, :root h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
 }
 
 .section-header {
@@ -490,5 +834,9 @@ body h1, html h1, :root h1 {
 
 .invisible {
   display: none;
+}
+
+.flex {
+  display: flex;
 }
 /*# sourceMappingURL=index.ce1d6491.css.map */

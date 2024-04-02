@@ -6,4 +6,25 @@ $secondary: var(--secondary);
 $accent: var(--accent);
 $dark: var(--dark);
 
-$dark-hover: var(--dark-hover)
+$dark-hover: var(--dark-hover);
+$light-hover: var(--light-hover);
+
+.light-b {
+    background-color: $background;
+}
+
+.dark-b {
+    background-color: $dark;
+}
+
+.secondary-b {
+    background-color: $secondary;
+}
+
+.accent-b {
+    background-color: $accent;
+}
+
+.primary-b {
+    background-color: $primary;
+}

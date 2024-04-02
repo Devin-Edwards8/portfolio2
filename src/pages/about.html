@@ -11,29 +11,50 @@
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 </head>
 <body>
+    <script src="../index.js" type="module" defer></script>
     <nav class="navbar accent-navbar">
         <a href="../index.html" class="navbar-name">Devin Edwards</a>
-        <div class="section-links">
+        <div id="section-links" class="accent-b invisible">
+          <img src="../assets/images/exit-icon-light.png" id="exit-icon" alt="close navbar">
+          <img src="../assets/images/favicon-light.png" id="personal-icon" alt="personal logo">
           <a href="./writing.html">Writing</a>
           <a href="./projects.html">Projects</a>
           <a href="">About</a>
-          <a href="./contact.html"><button class="accent-button small-button">Get in Touch</button></a>
+          <a href="./contact.html" id="contact-link">Contact</a>
+          <a href="./contact.html" id="contact-button"><button class="accent-button small-button">Get in Touch</button></a>
+          <div id="contact-nav">
+            <h1 style="color: var(--background)">Get In Touch!</h1>
+            <p>513-478-3005</p>
+            <p>edwards.1779@osu.edu</p>
+          </div>
         </div>
+        <img src="../assets/images/menu-icon-light.png" id="menu-icon" alt="menu icon">
     </nav>
     <div class="about section">
-        <img src="../assets/images/family.jpg" id="family-portrait" alt="Devin with friends">
-        <div class="greeting-text">
-          <h1>About Me</h1>
+      <div class="about-content">
+        <img src="../assets/images/family2.jpeg" id="family-portrait" alt="Devin with family">
+        <div class="about-text">
+          <h1>Hi! I'm a software developer and a part-time freelance technical writer. Here's a little bit of my my story!</h1>
           <p>
-            I'm a fourth-year CSE major at Ohio State. Check out some of my work! 
+            When COVID sent me home in 2020, I pretty much took a break from high school. But I spent some of that free time diving into the comp sci rabbit hole,
+            cloning Pong for an exam. That final project turned into a passion for me, and I've been having fun with my own projects ever since. 
           </p>
           <p>
-            I enjoy using technology to solve problems relevant to me.
+            In my time at Ohio State, I picked up professional writing as a minor. With the help of great professors and mentors, writing went from a dislike to second
+            career!
           </p>
           <p>
-            My projects serve to hone my skills while accomplishing something meaningful!
+            In my free time, I love to watch sports and spend a lot of time in the gym. I'm living in Cincinnati, where I work as a software engineer for Siemens. 
+            <b>Who Dey!</b>
           </p>
         </div>
       </div>
+      <div id="about-footer">
+        <a href="https://github.com/Devin-Edwards8" target="_blank">
+          <img src="../assets/images/social-icons/github-icon.png" class="social-icon" alt="github logo"></a>
+        <a href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+          <img src="../assets/images/social-icons/linkedin-icon.png" class="social-icon" alt="github logo"></a>
+      </div>
+    </div>
 </body>
 </html>

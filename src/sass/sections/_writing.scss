@@ -10,7 +10,7 @@
 }
 
 #writing-feature-text {
-    width: 60vw;
+    width: 90vw;
     margin: 12vh 0 14vh 0;
 
     p {
@@ -27,23 +27,52 @@
 }
 
 .writing-block {
-    width: 50%;
-    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    p {
-        font-size: 1.2rem;
+#affinity-logo {
+    width: 60%;
+}
+
+#osu-logo {
+    width: 85%;
+}
+
+@media screen and (min-width: b.$tablet-screen) {
+    #writing-feature-text {
+        font-size: 1.5rem;
+        line-height: 3.4rem;
+        width: 60vw;
+        margin: 12vh 0 14vh 0;
+    }
+
+    .writing-block {
+        width: 50%;
     }
 }
 
-.grid-image {
-    filter: grayscale(100%);
-    aspect-ratio: 4032/3024;
-    width: 82%;
-    transition: 1s;
-    cursor: pointer;
+@media screen and (min-width: b.$laptop-screen) {
+    .grid-image {
+        filter: grayscale(100%);
+        transition: 1s;
+        cursor: pointer;
+    }
+
+    .grid-image:hover {
+        filter: grayscale(0%);
+        transition: 1s;
+    }
+
+    #writing-feature-text p {
+        font-size: 1.4rem;
+    }
 }
 
-.grid-image:hover {
-    filter: grayscale(0%);
-    transition: 1s;
+@media screen and (min-width: b.$large-screen) {
+    #writing-feature-text p {
+        font-size: 1.46em;
+    }
 }

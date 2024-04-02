@@ -10,21 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.scss"/>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-
-    <!--Let's look into these tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script defer src="https://unpkg.com/typewriter-effect@latest/dist/core.js" type="module"></script>
   </head>
   <body>
     <script src="index.js" type="module" defer></script>
     <nav class="navbar dark-light-navbar">
       <a href="" class="navbar-name">Devin Edwards</a>
-      <div class="section-links">
+      <div id="section-links" class="light-b invisible">
+        <img src="./assets/images/exit-icon.png" id="exit-icon" alt="close navbar">
+        <img src="./assets/images/favicon.png" id="personal-icon" alt="personal logo">
         <a href="./pages/writing.html">Writing</a>
         <a href="./pages/projects.html">Projects</a>
         <a href="./pages/about.html">About</a>
-        <a href="./pages/contact.html"><button class="dark-button small-button">Get in Touch</button></a>
+        <a href="./pages/contact.html" id="contact-link">Contact</a>
+        <a href="./pages/contact.html" id="contact-button"><button class="dark-button small-button">Get in Touch</button></a>
+        <div id="contact-nav">
+          <h1>Get In Touch!</h1>
+          <p>513-478-3005</p>
+          <p>edwards.1779@osu.edu</p>
+        </div>
       </div>
+      <img src="./assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
     </nav>
 
     <div class="greeting section">
@@ -38,7 +44,7 @@
           <a href="./assets/Resume.pdf" target="_blank" rel="noreferrer"><button class="light-button medium-button">See Resume</button></a>
         </div>
       </div>
-      <img src="./assets/images/clock.jpg" id="cover-portrait" alt="Devin with friends">
+      <img src="./assets/images/portrait2.jpg" id="cover-portrait" alt="Devin with friends">
     </div>
   </body>
 </html>

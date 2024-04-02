@@ -39,7 +39,8 @@
 #cover-portrait {
     flex-shrink: 1;
     max-width: 30%;
-    aspect-ratio: 26 / 39;
+    aspect-ratio: 3024 / 4032;
+    display: none;
 }
 
 @media screen and (min-width: b.$small-screen) {
@@ -47,22 +48,19 @@
         p {
             width: 70%;
         }
-        .big-name {
-            font-size: 5rem;
-        }
     }
 }
 
 @media screen and (min-width: b.$tablet-screen) {
-    #programmer-image-light, #programmer-image-dark {
-        width: 35vw;
-    }
-
     .greeting-text {
         max-width: 50vw;
 
         p {
             width: 100%;
         }
+    }
+
+    #cover-portrait {
+        display: block;
     }
 }

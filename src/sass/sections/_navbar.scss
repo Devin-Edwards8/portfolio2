@@ -32,20 +32,69 @@
     }
 }
 
-.navbar .section-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5vw;
+.navbar #section-links {
+    flex-direction: column;
+    text-align: left;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 1px solid c.$dark;
 
     a {
-        display: none;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        font-size: 1.2rem;
+        margin-left: 1rem;
+    }
+    
+    a:first-of-type {
+        margin-top: 8vh;
     }
 
     a:hover {
         text-decoration: solid underline 1px;
         text-underline-offset: 2px;
     }
+
+    #exit-icon, #personal-icon {
+        height: 4vh;
+        aspect-ratio: 1/1;
+        position: absolute;
+    }
+
+    #exit-icon {
+        top: 2vh;
+        right: 5vw;
+        cursor: pointer;
+    }
+
+    #personal-icon {
+        top: 2vh;
+        left: 5vw;
+    }
+
+    #contact-button { 
+        display: none;
+    }
+
+    #contact-nav {
+        padding: 1rem;
+
+        h1, p {
+            font-size: 1rem;
+        }
+
+        p {
+            line-height: 1.5rem;
+        }
+    }
+}
+
+#menu-icon {
+    height: 4vh;
+    aspect-ratio: 1/1;
+    cursor: pointer;
 }
 
 .dark-light-navbar {
@@ -77,11 +126,47 @@
 }
 
 @media screen and (min-width: b.$tablet-screen) {
-    .navbar .section-links a {
-        display: block;
+    .navbar #section-links {
+        flex-direction: row;
+        align-items: center;
+        gap: 5vw;
+        width: auto;
+        position: relative;
+        border: none;
+        display: flex;
+
+        a {
+            font-size: 0.8rem;
+        }
+
+        a:first-of-type {
+            margin: 0;
+        }
+
+        #exit-icon {
+            display: none;
+        }
+
+        #contact-button {
+            display: block;
+        }
+
+        #contact-link {
+            display: none;
+        }
     }
 
     .navbar .navbar-name {
         font-size: 2rem;
+    }
+
+    #menu-icon, #exit-icon, #personal-icon, #contact-nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: b.$laptop-screen) {
+    .navbar #section-links a {
+        font-size: 1rem;
     }
 }

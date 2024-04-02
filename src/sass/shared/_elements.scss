@@ -1,11 +1,12 @@
 @use './colors' as c;
+@use '../shared/breakpoints' as b;
 
 button {
     font-weight: 500;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     cursor: pointer;
     border: none;
-    padding: 1.2rem 2rem;
+    padding: 0.6rem 1rem;
 }
 
 .small-button {
@@ -29,10 +30,18 @@ button {
     color: c.$background;
 }
 
+.dark-button:hover {
+    background-color: c.$dark-hover;
+}
+
 .light-button {
     background-color: c.$background;
     outline: 2px solid c.$dark;
     color: c.$dark;
+}
+
+.light-button:hover {
+    background-color: c.$light-hover;
 }
 
 .accent-button {
@@ -40,4 +49,19 @@ button {
     color: c.$accent;
 }
 
+@media screen and (min-width: b.$tablet-screen) {
+    button {
+        border-radius: 1.75rem;
+        padding: 1rem 1.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: b.$laptop-screen) {
+    button {
+        border-radius: 2rem;
+        padding: 1.2rem 2rem;
+        font-size: 1.2rem;
+    }
+}
 

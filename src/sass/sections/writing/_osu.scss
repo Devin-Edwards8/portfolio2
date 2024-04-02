@@ -1,0 +1,17 @@
+@use '../../shared/colors' as c;
+@use '../../shared/breakpoints' as b;
+
+.osu {
+    background-color: c.$secondary;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#osu-title {
+    margin-bottom: 5vh;
+    text-align: center;
+    font-size: 2rem;
+    color: c.$dark;
+}
