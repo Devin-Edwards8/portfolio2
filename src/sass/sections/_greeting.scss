@@ -39,8 +39,9 @@
 #cover-portrait {
     flex-shrink: 1;
     max-width: 30%;
-    aspect-ratio: 3024 / 4032;
+    aspect-ratio: 4032 / 3024;
     display: none;
+    transform: rotate(90deg);
 }
 
 @media screen and (min-width: b.$small-screen) {
