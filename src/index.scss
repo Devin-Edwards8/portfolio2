@@ -7,8 +7,7 @@
 @use './sass/shared/breakpoints' as b;
 @use './sass/sections/about';
 @use './sass/sections/writing';
-@use './sass/sections/writing/affinity';
-@use './sass/sections/writing/osu';
+@use './sass/sections/writing_experience';
 
 body, html, :root {
   --background: #EFF1F3;
