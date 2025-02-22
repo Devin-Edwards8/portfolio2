@@ -23,7 +23,7 @@ export default function openCloseNav() {
         }
         navLinks.classList.add('flex');
     });
-    menu.addEventListener("touchstart", function() {
+    menu.addEventListener("touchend", function() {
         if(navLinks.classList.contains('hidden')) {
             navLinks.classList.toggle('hidden');
         }
@@ -35,7 +35,7 @@ export default function openCloseNav() {
             navLinks.classList.toggle('flex');
         }
     });
-    exit.addEventListener("touchstart", function() {
+    exit.addEventListener("touchend", function() {
         navLinks.classList.add('hidden');
         if(navLinks.classList.contains('flex')) {
             navLinks.classList.toggle('flex');
