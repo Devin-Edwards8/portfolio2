@@ -43,12 +43,7 @@ export default function spotlightSwitcher() {
     });
 
     for(let i = 0; i < 4; i++) {
-        indices[i].addEventListener("click", function() {
-            let previousProj = currentProj;
-        currentProj = Number(indices[i].innerHTML) - 1;
-        updateSpotlight(currentProj, previousProj);
-        })
-        indices[i].addEventListener("touchend", function() {
+        indices[i].addEventListener("pointerdown", function() {
             let previousProj = currentProj;
         currentProj = Number(indices[i].innerHTML) - 1;
         updateSpotlight(currentProj, previousProj);

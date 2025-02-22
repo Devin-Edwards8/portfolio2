@@ -17,25 +17,13 @@ export default function openCloseNav() {
     const menu = document.getElementById("menu-icon");
     const exit = document.getElementById("exit-icon");
 
-    menu.addEventListener("click", function() {
+    menu.addEventListener("pointerdown", function() {
         if(navLinks.classList.contains('hidden')) {
             navLinks.classList.toggle('hidden');
         }
         navLinks.classList.add('flex');
     });
-    menu.addEventListener("touchend", function() {
-        if(navLinks.classList.contains('hidden')) {
-            navLinks.classList.toggle('hidden');
-        }
-        navLinks.classList.add('flex');
-    });
-    exit.addEventListener("click", function() {
-        navLinks.classList.add('hidden');
-        if(navLinks.classList.contains('flex')) {
-            navLinks.classList.toggle('flex');
-        }
-    });
-    exit.addEventListener("touchend", function() {
+    exit.addEventListener("pointerdown", function() {
         navLinks.classList.add('hidden');
         if(navLinks.classList.contains('flex')) {
             navLinks.classList.toggle('flex');
