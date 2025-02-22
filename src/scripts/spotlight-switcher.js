@@ -42,11 +42,18 @@ export default function spotlightSwitcher() {
         updateSpotlight(currentProj, previousProj);
     });
 
+    function switchToIndex() {
+        let previousProj = currentProj;
+        currentProj = Number(indices[i].innerHTML) - 1;
+        updateSpotlight(currentProj, previousProj);
+    }
+
     for(let i = 0; i < 4; i++) {
         indices[i].addEventListener("click", function() {
-            let previousProj = currentProj;
-            currentProj = Number(indices[i].innerHTML) - 1;
-            updateSpotlight(currentProj, previousProj);
+            switchToIndex();
+        })
+        indices[i].addEventListener("touchstart", function() {
+            switchToIndex();
         })
     }
 }

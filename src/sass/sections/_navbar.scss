@@ -4,7 +4,7 @@
 .navbar {
     width: 90%;
     height: 9vh;
-    background-color: white;
+    background-color: c.$background;
     position: fixed;
     top: 0;
     left: 0;
@@ -14,20 +14,20 @@
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
-    z-index: 1;
+    z-index: 2;
 
     a {
         cursor: pointer;
         text-decoration: none;
         margin: 0;
-        color: c.$dark;
+        color: c.$text;
     }
 
     p {
         cursor: pointer;
         text-decoration: none;
         margin: 0;
-        color: c.$dark;
+        color: c.$text;
     }
 
     .navbar-name {
@@ -49,7 +49,7 @@
         padding-bottom: 2vh;
         font-size: 2rem;
         padding-left: 1rem;
-        border-bottom: 1px solid c.$dark;
+        border-bottom: 1px solid c.$text;
     }
 
     a:hover {
@@ -68,10 +68,6 @@
         right: 5vw;
         cursor: pointer;
     }
-
-    #contact-button { 
-        display: none;
-    }
 }
 
 #greeting-nav {
@@ -87,9 +83,13 @@
     cursor: pointer;
 }
 
-#my-icon {
+#my-icon-dark, #my-icon-light {
     height: 3rem;
     aspect-ratio: 1/1;
+}
+
+#light-toggle, #dark-toggle {
+    display: none;
 }
 
 @media screen and (min-width: b.$tablet-screen) {
@@ -107,7 +107,7 @@
         display: flex;
 
         a {
-            font-size: 0.8rem;
+            font-size: 1.1rem;
             border-bottom: none;
         }
 
@@ -118,18 +118,10 @@
         #exit-icon {
             display: none;
         }
-
-        #contact-button {
-            display: block;
-        }
-
-        #contact-link {
-            display: none;
-        }
     }
 
-    .navbar .navbar-name {
-        font-size: 2rem;
+    .navbar-name {
+        font-size: 1.5rem;
         display: block;
     }
 
@@ -146,5 +138,20 @@
 @media screen and (min-width: b.$laptop-screen) {
     .navbar #section-links a {
         font-size: 1.25rem;
+    }
+
+    #light-toggle, #dark-toggle {
+        display: block;
+        height: 8vh;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+    }
+
+    #section-links .hidden {
+        display: none;
+    }
+
+    .navbar-name {
+        font-size: 2rem;
     }
 }

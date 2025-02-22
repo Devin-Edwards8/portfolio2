@@ -24,14 +24,6 @@
     width: 80vw;
     padding-bottom: 5vh;
 
-    h1, p {
-        color: c.$dark;
-    }
-
-    a {
-        color: c.$dark-hover;
-    }
-
     p {
         width: 65%;
         height: 28%;
@@ -49,6 +41,7 @@
 
 .card-button {
     width: 175px;
+    color: c.$text;
 }
 
 .card1 {
@@ -56,7 +49,7 @@
 
     button {
         background-color: c.$primary;
-        outline: 1px solid #FDB4C1;
+        outline: 1px solid c.$offPrimary;
     }
 }
 
@@ -65,7 +58,7 @@
 
     button {
         background-color: c.$secondary;
-        outline: 1px solid #AEC6B3;
+        outline: 1px solid c.$offSecondary;
     }
 }
 
@@ -74,7 +67,7 @@
 
     button {
         background-color: c.$accent;
-        outline: 1px solid #ADBBCF;
+        outline: 1px solid c.$offAccent;
     }
 }
 
@@ -84,7 +77,7 @@
     margin-top: 15vh;
 
     p, h1, a {
-        color: c.$dark;
+        color: c.$text;
     }
 
     li {
@@ -114,7 +107,7 @@
 
     #sample-container {
         width:650px;
-        margin: 20vh 0;
+        margin: 20vh 0 5vh 0;
         padding: 50px;
         background-color: c.$accent;
     }

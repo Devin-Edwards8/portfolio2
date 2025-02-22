@@ -8,23 +8,56 @@
 @use './sass/sections/contact';
 
 body, html, :root {
-  --background: white;
-  --primary: #fde2e4;
-  --secondary: #e2ece9;
-  --accent: #dfe7fd;
-  --dark: #143642;
-  --dark-hover: #1B2E36;
-  --light-hover: #e8ebed;
-
   font-size: 16px;
   margin: 0;
   scroll-behavior: smooth;
   font-family: "Montserrat", sans-serif;
+  background-color: c.$background;
 
-  input, textarea {
-    color: c.$dark;
-    font-family: "Montserrat", sans-serif;
+  p, h1, a {
+    color: c.$text;
   }
+}
+
+:root {
+  --background: white;
+  --primary: #fde2e4;
+  --off-primary: #FDB4C1;
+  --secondary: #e2ece9;
+  --off-secondary: #AEC6B3;
+  --accent: #dfe7fd;
+  --off-accent: #ADBBCF;
+  --text: #143642;
+  --text-hover: #1B2E36;
+  --contact: #1B2E36;
+}
+
+[data-theme="dark"] {
+  --background: #000e14;
+  --primary: #1f2742;
+  --off-primary: #575d72;
+  --secondary: #2f1e1e;
+  --off-secondary: #635757;
+  --accent: #081c15;
+  --off-accent: #465550;
+  --text: #F1F2F2;
+  --text-hover: white;
+  --contact: #a98467;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: c.$background;
+  z-index: 9999;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
 }
 
 #greeting {
@@ -34,6 +67,8 @@ body, html, :root {
   align-items: center;
   margin: 12vh 0;
   padding: 0 3vw;
+  position: relative;
+  z-index: 1;
 }
 
 section {
@@ -42,7 +77,7 @@ section {
 
 .section-header {
   font-size: 2rem;
-  color: c.$dark;
+  color: c.$text;
   text-align: center;
   margin-top: 5vh;
 }
@@ -66,7 +101,7 @@ section {
   }
 
   p {
-    color: c.$dark;
+    color: c.$text;
     font-size: 1.5rem;
     width: 60vw;
   }
@@ -80,10 +115,8 @@ section {
   flex-shrink: 1;
   margin-top: 12vh;
   height: 60vh;
-  // aspect-ratio: 4032 / 3024;
   aspect-ratio: 3024 / 4032;
   display: none;
-  transform: rotate(0deg);
 }
 
 #mobile-pic {
@@ -116,11 +149,11 @@ section {
   .accent-background-strip {
     width: 100%;
     height: 60vh;
-    background-color: var(--primary);
+    background-color: c.$primary;
     position: absolute;
     top: 15vh;
     left: 0;
-    z-index: -1;
+    z-index: 0;
   }
 
   .greeting-text {

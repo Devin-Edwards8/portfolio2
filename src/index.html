@@ -9,17 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="index.js" type="module" defer></script>
     <link rel="stylesheet" href="index.scss"/>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
 
-  <body>
-    <script src="index.js" type="module" defer></script>
+  <body style="display: none;">
+    <div id="preloader"></div>
     <nav class="navbar dark-light-navbar">
       <a href="#greeting" id="greeting-nav">
-        <img src="./assets/images/personal-icon.png" id="my-icon" alt="Devin's Icon">
+        <img src="./assets/images/personal-icon.png" class="themed-image" id="my-icon-light" alt="Devin's Icon">
+        <img src="./assets/images/personal-icon-light.png" class="hidden themed-image" id="my-icon-dark" alt="Devin's Icon">
         <h1 class="navbar-name">Devin Edwards</h1>
       </a>
       
@@ -28,15 +30,15 @@
         <a href="#about">About</a>
         <a href="#projects">Coding</a>
         <a href="#writing">Writing</a>
-        <a href="#contact" id="contact-link">Contact</a>
-        <a href="#contact" id="contact-button"><button class="dark-button medium-button rounded-button">Get in Touch</button></a>
+        <a href="#contact">Contact</a>
+        <img src="./assets/images/sun.png" class="themed-image" id="light-toggle" alt="smiling sun">
+        <img src="./assets/images/moon.png" class="hidden themed-image" id="dark-toggle" alt="smiling moon">
       </div>
       <img src="./assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
     </nav>
 
-
+    <div class="accent-background-strip"></div>
     <section id="greeting">
-      <div class="accent-background-strip"></div>
       <div class="greeting-text">
         <h1>Hi, I'm Devin!</h1>
         <p>
@@ -248,7 +250,8 @@
       <div class="card-container">
 
         <div class="card card1">
-          <img src="./assets/images/blog-icon.png" class="card-icon" alt="blog writing icon">
+          <img src="./assets/images/icon-blog.png" class="card-icon themed-image" alt="blog writing icon">
+          <img src="./assets/images/icon-blog-dark.png" class="hidden card-icon themed-image" alt="blog writing icon">
           <h1 class="card-title">Blogs</h1>
           <p>My blogs share new tech and projects with others. I use Medium to post about my experiences.</p>
           <a href="https://medium.com/@edwards.devin50" target="_blank">
@@ -257,7 +260,8 @@
         </div>
 
         <div class="card card2">
-          <img src="./assets/images/icon-white-paper.png" class="card-icon" alt="white paper icon">
+          <img src="./assets/images/icon-wp.png" class="card-icon themed-image" alt="white paper icon">
+          <img src="./assets/images/icon-wp-dark.png" class="hidden card-icon themed-image" alt="white paper icon">
           <h1 class="card-title">Whitepapers</h1>
           <p>An in-depth reports with extensive research. Here's a sample I made for <a href="https://www.linkedin.com/company/affinityconsulting/posts/?feedView=all" target="_blank">
             Affinity Consulting Group</a>.</p>
@@ -267,7 +271,8 @@
         </div>
 
         <div class="card card3">
-          <img src="./assets/images/tech-doc-icon.png" class="card-icon" alt="technical writing icon">
+          <img src="./assets/images/icon-tecdoc.png" class="card-icon themed-image" alt="technical writing icon">
+          <img src="./assets/images/icon-tecdoc-dark.png" class="hidden card-icon themed-image" alt="technical writing icon">
           <h1 class="card-title">Technical Writing</h1>
           <p>I'm open to other technical writing projects too. Check out my full library of writing samples!</p>
           <a href="./pages/writing.html">
@@ -289,13 +294,21 @@
       <div id="contact-info">
         <p>edwards.devin816@gmail.com | 513-478-3005</p>
       
-        <div id="socials">
+        <div id="socials" class="themed-image">
           <a href="https://github.com/Devin-Edwards8" target="_blank">
             <img src="./assets/images/social-icons/github-icon.png" class="social-icon" alt="github logo"></a>
           <a href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
             <img src="./assets/images/social-icons/linkedin-icon.png" class="social-icon" alt="github logo"></a>
           <a href="https://medium.com/@edwards.devin50" target="_blank">
             <img src="./assets/images/social-icons/medium-icon.png" class="social-icon" alt="medium logo"></a>
+        </div>
+        <div id="socials-dark" class="hidden themed-image">
+          <a href="https://github.com/Devin-Edwards8" target="_blank">
+            <img src="./assets/images/social-icons/github-icon-dark.png" class="social-icon" alt="github logo"></a>
+          <a href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+            <img src="./assets/images/social-icons/linkedin-icon-dark.png" class="social-icon" alt="github logo"></a>
+          <a href="https://medium.com/@edwards.devin50" target="_blank">
+            <img src="./assets/images/social-icons/medium-icon-dark.png" class="social-icon" alt="medium logo"></a>
         </div>
       </div>
     </section>

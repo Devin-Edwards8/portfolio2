@@ -2,29 +2,10 @@
 
 $background: var(--background);
 $primary: var(--primary);
+$offPrimary: var(--off-primary);
 $secondary: var(--secondary);
+$offSecondary: var(--off-secondary);
 $accent: var(--accent);
-$dark: var(--dark);
-
-$dark-hover: var(--dark-hover);
-$light-hover: var(--light-hover);
-
-.light-b {
-    background-color: $background;
-}
-
-.dark-b {
-    background-color: $dark;
-}
-
-.secondary-b {
-    background-color: $secondary;
-}
-
-.accent-b {
-    background-color: $accent;
-}
-
-.primary-b {
-    background-color: $primary;
-}
+$offAccent: var(--off-accent);
+$text: var(--text);
+$text-hover: var(--text-hover);

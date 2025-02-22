@@ -8,11 +8,6 @@ button {
     padding: 0.6rem 1rem;
 }
 
-.rounded-button {
-    border-radius: 1.5rem;
-    padding: 0.6rem 1.2rem;
-}
-
 .small-button {
     font-size: 1rem;
 }
@@ -21,36 +16,19 @@ button {
     font-size: 1.2rem;
 }
 
-.primary-button {
-    background-color: c.$primary;
-}
-
-.secondary-button {
-    background-color: c.$secondary;
-}
-
 .dark-button {
-    background-color: c.$dark;
+    background-color: c.$text;
     color: c.$background;
 }
 
 .dark-button:hover {
-    background-color: c.$dark-hover;
+    background-color: c.$text-hover;
 }
 
 .light-button {
-    background-color: c.$background;
-    outline: 2px solid c.$dark;
-    color: c.$dark;
-}
-
-.light-button:hover {
-    background-color: c.$light-hover;
-}
-
-.accent-button {
-    background-color: c.$background;
-    color: c.$accent;
+    background-color: c.$primary;
+    outline: 2px solid c.$text;
+    color: c.$text;
 }
 
 @media screen and (min-width: b.$tablet-screen) {
@@ -58,21 +36,12 @@ button {
         padding: 1rem 1.6rem;
         font-size: 0.8rem;
     }
-
-    .rounded-button {
-        border-radius: 1.75rem;
-    }
 }
 
 @media screen and (min-width: b.$laptop-screen) {
     button {
         padding: 1rem 1rem;
         font-size: 1.2rem;
-    }
-
-    .rounded-button {
-        padding: 1rem 1.6rem;
-        border-radius: 2rem;
     }
 }
 

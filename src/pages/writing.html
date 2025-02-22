@@ -7,14 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="../index.js" type="module" defer></script>
     <link rel="stylesheet" href="../index.scss"/>
     <link rel="icon" type="image/x-icon" href="../assets/images/favicon.png">
 </head>
-<body>
-    <script src="../index.js" type="module" defer></script>
+<body style="display: none">
+    <div id="preloader"></div>
     <nav class="navbar dark-light-navbar">
         <a href="../index.html#greeting" id="greeting-nav">
-          <img src="../assets/images/personal-icon.png" id="my-icon" alt="Devin's Icon">
+          <img src="../assets/images/personal-icon.png" class="themed-image" id="my-icon-light" alt="Devin's Icon">
+          <img src="../assets/images/personal-icon-light.png" class="hidden themed-image" id="my-icon-dark" alt="Devin's Icon">
           <h1 class="navbar-name">Devin Edwards</h1>
         </a>
         
@@ -23,8 +25,9 @@
           <a href="../index.html#about">About</a>
           <a href="../index.html#projects">Coding</a>
           <a href="../index.html#writing">Writing</a>
-          <a href="../index.html#contact" id="contact-link">Contact</a>
-          <a href="../index.html#contact" id="contact-button"><button class="dark-button medium-button rounded-button">Get in Touch</button></a>
+          <a href="#contact">Contact</a>
+          <img src="../assets/images/sun.png" class="themed-image" id="light-toggle" alt="smiling sun">
+          <img src="../assets/images/moon.png" class="hidden themed-image" id="dark-toggle" alt="smiling moon">
         </div>
         <img src="../assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
       </nav>
@@ -62,6 +65,34 @@
             </ul>
         </section>
     </div>
-    </div>
+
+    <section id="contact">
+        <h1 id="contact-header">Ready to connect?</h1>
+        <p id="contact-message">
+            Send me a message today! I'm always looking for new opportunities in writing, and I'd be happy to consider anything else.
+        </p>
+    
+        <div id="contact-info">
+            <p>edwards.devin816@gmail.com | 513-478-3005</p>
+        
+            <div id="socials" class="themed-image">
+            <a href="https://github.com/Devin-Edwards8" target="_blank">
+                <img src="../assets/images/social-icons/github-icon.png" class="social-icon" alt="github logo"></a>
+            <a href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+                <img src="../assets/images/social-icons/linkedin-icon.png" class="social-icon" alt="github logo"></a>
+            <a href="https://medium.com/@edwards.devin50" target="_blank">
+                <img src="../assets/images/social-icons/medium-icon.png" class="social-icon" alt="medium logo"></a>
+            </div>
+            <div id="socials-dark" class="hidden themed-image">
+            <a href="https://github.com/Devin-Edwards8" target="_blank">
+                <img src="../assets/images/social-icons/github-icon-dark.png" class="social-icon" alt="github logo"></a>
+            <a href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+                <img src="../assets/images/social-icons/linkedin-icon-dark.png" class="social-icon" alt="github logo"></a>
+            <a href="https://medium.com/@edwards.devin50" target="_blank">
+                <img src="../assets/images/social-icons/medium-icon-dark.png" class="social-icon" alt="medium logo"></a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
