@@ -1,7 +1,7 @@
 export default function openCloseNav() {
-    navLinks = document.getElementById("section-links");
-    menu = document.getElementById("menu-icon");
-    exit = document.getElementById("exit-icon");
+    const navLinks = document.getElementById("section-links");
+    const menu = document.getElementById("menu-icon");
+    const exit = document.getElementById("exit-icon");
 
     function showMenu() {
         if(navLinks.classList.contains('hidden')) {

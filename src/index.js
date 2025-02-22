@@ -11,7 +11,6 @@ window.addEventListener("load", () => {
 });
 
 openCloseNav();
-console.log(window.location.href)
 if(window.location.href == "writing.html") {
     spotlightSwitcher();
 }
