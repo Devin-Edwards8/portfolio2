@@ -1,107 +1,63 @@
 @use '../shared/colors' as c;
 @use '../shared/breakpoints' as b;
 
-.about {
-    background-color: c.$accent;
+#about {
+    padding: 2vh 0;
+    background-color: c.$secondary;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 5vw;
-    padding: 0 3vw;
-    min-height: 91vh;
-    margin-top: 9vh;
-
-    h1, p, a {
-        color: c.$background;
-    }
 }
 
-.about-text-socials {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-}
-
-.about-text {
-    width: 100%;
+.bio-text {
+    width: 95%;
 
     h1 {
+        color: c.$dark;
         font-weight: 500;
         font-size: 1.6rem;
     }
 
     p, a {
-        font-size: 1.2rem;
+        color: c.$dark;
+        font-size: 1.1rem;
+        line-height: 2rem;
     }
 }
 
-#about-socials {
-    width: 100%;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-
-    h3 {
-        color: c.$background;
-    }
-}
-
-#family-portrait {
+.bio-pic {
     flex-shrink: 1;
     max-width: 60%;
-    aspect-ratio: 1170 / 1638;
-}
-
-.social-icon {
-    height: 5vh;
     aspect-ratio: 1/1;
+    display: none;
 }
 
 @media screen and (min-width: b.$tablet-screen) {
-    .about-content {
-        display: flex;
+    #about {
+        padding: 10vh 0;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-
-    #family-portrait {
-        max-width: 40%;
-        height: auto;
-    }
-
-    .about-text p, .about-text a {
-        font-size: 1.3rem;
-    }
-
-    .about-text h1 {
-        font-size: 1.6rem;
-    }
-
-    #about-footer {
         justify-content: center;
-        gap: 4vw;
+        gap: 8vw;
+    }
+
+    .bio-text {
+        width: 80%;
     }
 }
 
-@media screen and (min-width: b.$large-screen) {
-    .about-text-socials {
-        width: 50%;
+@media screen and (min-width: b.$laptop-screen) {
+    .bio-pic {
+        height: 50vh;
+        display: block;
     }
 
-    #family-portrait {
-        max-width: 30%;
-        max-height: 70vh;
-    }
+    .bio-text {
+        width: 30%;
 
-    .about-text p, .about-text a {
-        font-size: 1.5rem;
-    }
-
-    .about-text h1{
-        font-size: 2rem;
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
     }
 }

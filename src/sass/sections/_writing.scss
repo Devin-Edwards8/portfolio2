@@ -1,78 +1,133 @@
 @use '../shared/colors' as c;
 @use '../shared/breakpoints' as b;
 
-.writing {
-    background-color: c.$secondary;
+#writing {
+    background-color: c.$accent;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    padding: 2vh 0;
 }
 
-#writing-feature-text {
-    width: 90vw;
-    margin: 12vh 0 14vh 0;
+.card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    padding-bottom: 5vh;
+
+    h1, p {
+        color: c.$dark;
+    }
+
+    a {
+        color: c.$dark-hover;
+    }
 
     p {
-        font-size: 1.3rem;
-        text-align: center;
+        width: 65%;
+        height: 28%;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        margin-top: 0;
     }
 }
 
-#writing-portfolio {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
+.card-icon {
+    width: 5rem;
+    height: 5rem;
+    margin-top: 3rem
 }
 
-.writing-block {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-button {
+    width: 175px;
 }
 
-#affinity-logo {
-    width: 60%;
+.card1 {
+    background-color: c.$primary;
+
+    button {
+        background-color: c.$primary;
+        outline: 1px solid #FDB4C1;
+    }
 }
 
-#osu-logo {
-    width: 85%;
+.card2 {
+    background-color: c.$secondary;
+
+    button {
+        background-color: c.$secondary;
+        outline: 1px solid #AEC6B3;
+    }
+}
+
+.card3 {
+    background-color: c.$accent;
+
+    button {
+        background-color: c.$accent;
+        outline: 1px solid #ADBBCF;
+    }
+}
+
+#sample-container {
+    padding: 2vw;
+    align-self: center;
+    margin-top: 15vh;
+
+    p, h1, a {
+        color: c.$dark;
+    }
+
+    li {
+        line-height: 1.8rem;
+    }
 }
 
 @media screen and (min-width: b.$tablet-screen) {
-    #writing-feature-text {
-        font-size: 1.5rem;
-        line-height: 3.4rem;
-        width: 60vw;
-        margin: 12vh 0 14vh 0;
+    #writing {
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 8vw;
+        padding: 10vh 0;
     }
 
-    .writing-block {
-        width: 50%;
+    .card {
+        width: 350px;
+        height: 450px;
+    }
+
+    .card-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2vw;
+    }
+
+    #sample-container {
+        width:650px;
+        margin: 20vh 0;
+        padding: 50px;
+        background-color: c.$accent;
     }
 }
 
 @media screen and (min-width: b.$laptop-screen) {
-    .grid-image {
-        filter: grayscale(100%);
-        transition: 1s;
-        cursor: pointer;
-    }
-
-    .grid-image:hover {
-        filter: grayscale(0%);
-        transition: 1s;
-    }
-
-    #writing-feature-text p {
-        font-size: 1.4rem;
+    #sample-container {
+        width: 900px;
     }
 }
 
 @media screen and (min-width: b.$large-screen) {
-    #writing-feature-text p {
-        font-size: 1.46em;
+    #sample-container {
+        width: 1150px;
     }
 }

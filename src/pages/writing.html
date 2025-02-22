@@ -12,36 +12,56 @@
 </head>
 <body>
     <script src="../index.js" type="module" defer></script>
-    <nav class="navbar secondary-navbar">
-        <a href="../index.html" class="navbar-name">Devin Edwards</a>
-        <div id="section-links" class="secondary-b invisible">
+    <nav class="navbar dark-light-navbar">
+        <a href="../index.html#greeting" id="greeting-nav">
+          <img src="../assets/images/personal-icon.png" id="my-icon" alt="Devin's Icon">
+          <h1 class="navbar-name">Devin Edwards</h1>
+        </a>
+        
+        <div id="section-links" class="hidden">
           <img src="../assets/images/exit-icon.png" id="exit-icon" alt="close navbar">
-          <img src="../assets/images/favicon.png" id="personal-icon" alt="personal logo">
-          <a href="">Writing</a>
-          <a href="./projects.html">Software</a>
-          <a href="./about.html">About</a>
-          <a href="./contact.html" id="contact-link">Contact</a>
-          <a href="./contact.html" id="contact-button"><button class="dark-button small-button">Get in Touch</button></a>
-          <div id="contact-nav">
-            <h1>Get In Touch!</h1>
-            <p>513-478-3005</p>
-            <p>edwards.1779@osu.edu</p>
-          </div>
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#projects">Coding</a>
+          <a href="../index.html#writing">Writing</a>
+          <a href="../index.html#contact" id="contact-link">Contact</a>
+          <a href="../index.html#contact" id="contact-button"><button class="dark-button medium-button rounded-button">Get in Touch</button></a>
         </div>
         <img src="../assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
-    </nav>
-    <div class="writing section">
-        <div id="writing-feature-text">
-            <p>"You don't need to see the whole staircase, just take the first step." ~Martin Luther King Jr.</p>
-        </div>
-        <div id="writing-portfolio">
-            <a class="writing-block" href="./writing/affinity.html">
-                <img src="../assets/images/affinity_logo.png" id="affinity-logo" class="grid-image" alt="Affinity Consulting Group Logo">
-            </a>
-            <a class="writing-block" href="./writing/osu.html">
-                <img src="../assets/images/osu_logo.png" id="osu-logo" class="grid-image" alt="Ohio State Logo">
-            </a>
-        </div>
+      </nav>
+
+    <div style="display: flex; flex-direction: column;">
+    <div id="sample-container">
+        <h1>Writing Samples</h1>
+        <section>
+            <h1>Affinity Consulting Group</h1>
+            <p>Works from my capstone internship with Affinity Consulting Group.</p>
+            <p><b>Note:</b> works appear under my mentor Jeffrey Schoenbereger's name. Shoutout to Jeff for all the help!</p>
+            <ul>
+                <li><a href="https://lawyerist.com/news/lawyerist-lab-unleashes-the-power-of-ai-with-lasso-chatbot/" target="_blank">
+                    Lawyerist Lab Unleashes the Power of AI with Lasso the Lab Coach</a></li>
+                <li><a href="https://lawyerist.com/news/dan-wade-brings-strategic-communication-expertise-to-lawyerist/" target="_blank">
+                    Dan Wade Brings Strategic Communication Expertise to Lawyerist</a></li>
+                <li><a href="https://lawyerist.com/news/coaching-for-growth/" target="_blank">
+                    Coaching for Growth: Lawyerist’s Innovative Approach to Employee Development</a></li>
+                <li><a href="../assets/writing/whitepaper.pdf" target="_blank">
+                    Technology Considerations for Remote Work</a></li>
+            </ul>
+        </section>
+    
+        <section>
+            <h1>The Ohio State University - Professional Writing Program</h1>
+            <p>Projects from my courses for my Minor in Professional Writing.</p>
+            <p><b>Awarded:</b> Chen Ya and Siuha Liu Fund for Professional Writing</p>
+            <ul>
+                <li><a href="../assets/writing/notebook.pdf" target="_blank">
+                    Introducing Google's NotebookLM</a></li>
+                <li><a href="../assets/writing/flood.pdf" target="_blank">
+                    Solution for Flooding Concerns in New Orleans</a></li>
+                <li><a href="../assets/writing/reptile.pdf" target="_blank">
+                    Assessing Usability Concerns for Arrowhead Reptile Rescue</a></li>
+            </ul>
+        </section>
+    </div>
     </div>
 </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8" />
     <title>Devin Edwards</title>
     <meta name="keywords" content="developer portfolio Devin Edwards" />
-    <meta name="description" content="A developer project portfolio for Devin Edwards, a CSE major at Ohio State." />
+    <meta name="description" content="A developer project portfolio for Devin Edwards, a software developer and freelance writer." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -12,39 +13,292 @@
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
+
+
   <body>
     <script src="index.js" type="module" defer></script>
     <nav class="navbar dark-light-navbar">
-      <a href="" class="navbar-name">Devin Edwards</a>
-      <div id="section-links" class="light-b invisible">
+      <a href="#greeting" id="greeting-nav">
+        <img src="./assets/images/personal-icon.png" id="my-icon" alt="Devin's Icon">
+        <h1 class="navbar-name">Devin Edwards</h1>
+      </a>
+      
+      <div id="section-links" class="hidden">
         <img src="./assets/images/exit-icon.png" id="exit-icon" alt="close navbar">
-        <img src="./assets/images/favicon.png" id="personal-icon" alt="personal logo">
-        <a href="./pages/writing.html">Writing</a>
-        <a href="./pages/projects.html">Software</a>
-        <a href="./pages/about.html">About</a>
-        <a href="./pages/contact.html" id="contact-link">Contact</a>
-        <a href="./pages/contact.html" id="contact-button"><button class="dark-button small-button">Get in Touch</button></a>
-        <div id="contact-nav">
-          <h1>Get In Touch!</h1>
-          <p>513-478-3005</p>
-          <p>edwards.1779@osu.edu</p>
-        </div>
+        <a href="#about">About</a>
+        <a href="#projects">Coding</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact" id="contact-link">Contact</a>
+        <a href="#contact" id="contact-button"><button class="dark-button medium-button rounded-button">Get in Touch</button></a>
       </div>
       <img src="./assets/images/menu-icon.png" id="menu-icon" alt="menu icon">
     </nav>
 
-    <div class="greeting section">
+
+    <section id="greeting">
+      <div class="accent-background-strip"></div>
       <div class="greeting-text">
         <h1>Hi, I'm Devin!</h1>
         <p>
-          A software developer and freelance writer. 
+          Software developer and freelance writer. 
         </p>
-        <div class="button-container">
-          <a href="./pages/about.html"><button class="dark-button medium-button">Learn More</button></a>
-          <a href="./assets/Resume.pdf" target="_blank" rel="noreferrer"><button class="light-button medium-button">See Resume</button></a>
+        <div class="button-container" id="greeting-buttons" style="margin-top: 1rem;">
+          <a href="#contact"><button class="dark-button small-button">
+            Collaboration start with a conversation</button></a>
+          <a href="./assets/resume.pdf" target="_blank"><button class="light-button small-button">
+            See my resume</button></a>
         </div>
       </div>
-      <img src="./assets/images/portrait2.jpg" id="cover-portrait" alt="Devin with friends">
-    </div>
+      <img src="./assets/images/portrait2.jpg" id="cover-portrait" alt="Devin in front of butterfly mural">
+      <img src="./assets/images/grad.jpeg" id="mobile-pic" alt="Devin in graduation gown">
+    </section>
+
+    <section id="quote">
+      <p id="martin-quote">"You don't need to see the whole staircase, just take the first step." ~Martin Luther King Jr.</p>
+    </section>
+
+
+    <section id="about">
+      <img src="./assets/images/portrait5.jpeg" class="bio-pic" alt="Devin with his family">
+      <div class="bio-text">
+        <h1>A Little About Me</h1>
+        <p>
+          At Siemens, I strive to enhance our services through enablement. Our team 
+          brings comprehensive training events and self-paced workshops to close the gaps in our company. 
+        </p>
+        <p>
+          I specialize in cloud solutions, bringing real-world experience to my coworkers with custom training environments. Prioritizing 
+          quality and efficiency, I seek to streamline our processes by adopting new tools for automation, security, and monitoring. 
+        </p>
+        <p>
+          I try to continually improve my skills in software development through personal projects. Check out some of my work below!
+        </p>
+      </div>
+    </section>
+
+
+    <section id="projects">
+
+      <h1 class="section-header">Coding Projects</h1>
+
+      <div id="spotlight-container">
+        <div id="spotlight-arrow-left"><p>◀</p></div>
+
+        <div class="spotlight spot4 hidden">
+
+          <img class="spotlight-image" id="devfit" src="./assets/images/devfit-preview.png"  alt="DevFit interface">
+          <div class="spotlight-text">
+            <h1 class="spotlight-label">DevFit</h1>
+            <p>A fitness app built to help me achieve my health goals!</p>
+            <p>Customizable cards store my workout routines and help me track progress.</p>
+            <p>A simple interface connected to an API for nutritional information allows for convenient diet tracking functionality.</p>
+
+            <div class="button-container">
+              <a href="https://github.com/Devin-Edwards8/DevFit" target="_blank" rel="noreferrer">
+              <button class="small-button dark-button">Source Code</button>
+              </a>
+              <a href="https://devfit-demo.netlify.app/" target="_blank" rel="noreferrer">
+              <button class="small-button dark-button">Live Demo</button>
+              </a>
+            </div>
+            <div class="project-icons">
+                <label for="react" title="React Native">
+                  <img src="./assets/images/tech-icons/react-icon.png" name="react" class="tech-icon" alt="react icon">
+                </label>
+                <label for="js" title="JavaScript">
+                  <img src="./assets/images/tech-icons/js-logo.png" name="js" class="tech-icon" alt="javascript icon">
+                </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="spotlight spot1">
+
+          <img class="spotlight-image" id="enuts" src="./assets/images/enuts-preview.png"  alt="eNuts interface">
+          <div class="spotlight-text">
+            <h1 class="spotlight-label">eNuts</h1>
+            <p>A mock ecommerce platform for selling nuts.</p>
+            <p>This project combines skills I've been learning in database, API, and UI development.</p>
+            <p>My goal is to use the MERN stack for a complex business application.</p>
+
+            <div class="button-container">
+              <a href="https://github.com/Devin-Edwards8/eNuts" 
+              target="_blank" rel="noreferrer">
+              <button class="small-button dark-button">Source Code</button>
+              </a>
+              <!-- <a href="http://enuts.devinedwards.xyz" target="_blank" 
+              rel="noreferrer">
+              <button class="button dark-button">Live Demo</button>
+              </a> -->
+            </div> 
+            <div class="project-icons">
+              <label for="react" title="React">
+                <img src="./assets/images/tech-icons/react-icon.png" name="react" alt="react icon" class="tech-icon">
+              </label>
+              <label for="mongo" title="MongoDB">
+                <img src="./assets/images/tech-icons/mongodb-logo.png" name="mongo" alt="mongo db icon" class="tech-icon">
+              </label>
+              <label for="node" title="NodeJS">
+                <img src="./assets/images/tech-icons/node-logo.png" name="node" alt="node js icon" class="tech-icon">
+              </label>
+              <label for="css" title="CSS">
+                <img src="./assets/images/tech-icons/css-logo.png" name="css" alt="css icon" class="tech-icon">
+              </label>
+              <label for="ts" title="TypeScript">
+                <img src="./assets/images/tech-icons/ts-logo.png" name="ts" alt="typescript icon" class="tech-icon">
+              </label>
+            </div>
+          </div>
+
+        </div>
+  
+
+        <div class="spotlight spot3 hidden">
+
+          <video loop autoPlay muted id="zelda">
+              <source src='./assets/videos/gameplay.mov' type="video/mov" />
+              <source src='./assets/videos/gameplay.mp4' type="video/mp4" />
+          </video>
+          <div class="spotlight-text">
+            <h1 class="spotlight-label">Zelda (Mock)</h1>
+            <p>A semester-long group project  was the purpose of one my Junior year courses. Our task? To recreate the dungeon level of
+              the Legend of Zelda (NES) in a series of two/three week sprints. </p>
+            <p>The class promoted good code-quality and teamwork,
+            as we continually expanded on our product.</p>
+            <p>Huge thanks to my teammates: Eugene Kim, Linran Wu, David-Benoit Tano, and 
+            Rand Singer!</p>
+            <div class="project-icons">
+              <label for="dotnet" title=".NET">
+                <img src="./assets/images/tech-icons/dotnet-logo.png" name="dotnet" class="tech-icon" alt="dotnet icon">
+              </label>
+              <label for="monogame" title="MonoGame">
+                <img src="./assets/images/tech-icons/monogame-logo.png" name="monogame" class="tech-icon" alt="monogame icon">
+              </label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="spotlight spot2 hidden">
+
+          <video controls muted poster="./assets/images/visionph.png" id="capstone">
+            <source src='./assets/videos/visionai.mov' type="video/mov" />
+            <source src='./assets/videos/visionai.mp4' type="video/mp4" />
+          </video>  
+          <div class="spotlight-text">
+            <h1 class="spotlight-label">LLM Vision AI</h1>
+            <p>My senior capstone project sponsored by <a href="https://www.linkedin.com/company/99p-labs/posts/?feedView=all" target="_blank">99 PLabs</a>!</p>
+            <p>We used multiple LLMs to analyze dashcam footage and detect dangerous road conditions.</p>
+            <p>I demoed our app's capabilities at the end of the semester in our final presentation. Check it out!</p>
+            <label for="flask" title="Flask">
+              <img src="./assets/images/tech-icons/flask.png" name="flask" alt="flask icon" class="tech-icon">
+            </label>
+            <label for="chat" title="ChatGPT">
+              <img src="./assets/images/tech-icons/chatgpt.png" name="chat" alt="chat gpt icon" class="tech-icon">
+            </label>
+            <label for="llama" title="LLaVA">
+              <img src="./assets/images/tech-icons/llama.png" name="llama" alt="LLaVA LLM icon" class="tech-icon">
+            </label>
+            <label for="docker" title="Docker">
+              <img src="./assets/images/tech-icons/docker-logo.png" name="docker" alt="docker icon" class="tech-icon">
+            </label>
+          </div>
+        </div>
+
+        <div id="spotlight-arrow-right"><p>▶</p></div>
+      </div>
+
+      <div id="spotlight-index">
+        <p id="spot-ind-1" style="font-weight: bold;">1</p>
+        <p id="spot-ind-2">2</p>
+        <p id="spot-ind-3">3</p>
+        <p id="spot-ind-4">4</p>
+      </div>
+
+    </section>
+
+
+    <section id="writing">
+
+      <img src="./assets/images/grad.jpeg" class="bio-pic" alt="Devin in graduation gown">
+
+      <div class="bio-text">
+        <h1>My Journey into Writing</h1>
+        <p>
+          In my second year at Ohio State, I noticed I had space to pick up a minor. On a whim, I decided to try for a Minor in Professional Writing, 
+          setting me on an unexpected path. 
+        </p>
+        <p>
+          Writing had never been a strong point for me—partially leading me to my CSE major. But after four semesters, the work paid off. I won a scholarship
+          for professional writing, awarded to one STEM student each semester. 
+        </p>
+        <p>
+          By luck, I discovered a new passion in this field and decided to continue it in my free time. If you're looking to outsource work, I'm always 
+          open to opportunities!
+        </p>
+      </div>
+
+    </section>
+
+
+    <section id="samples">
+
+      <h1 class="section-header">Writing Services</h1>
+
+      <div class="card-container">
+
+        <div class="card card1">
+          <img src="./assets/images/blog-icon.png" class="card-icon" alt="blog writing icon">
+          <h1 class="card-title">Blogs</h1>
+          <p>My blogs share new tech and projects with others. I use Medium to post about my experiences.</p>
+          <a href="https://medium.com/@edwards.devin50" target="_blank">
+            <button class="small-button card-button">Browse my blogs</button>
+          </a>
+        </div>
+
+        <div class="card card2">
+          <img src="./assets/images/icon-white-paper.png" class="card-icon" alt="white paper icon">
+          <h1 class="card-title">Whitepapers</h1>
+          <p>An in-depth reports with extensive research. Here's a sample I made for <a href="https://www.linkedin.com/company/affinityconsulting/posts/?feedView=all" target="_blank">
+            Affinity Consulting Group</a>.</p>
+          <a href="./assets/writing/whitepaper.pdf" target="_blank">
+            <button class="small-button card-button">My whitepaper</button>
+          </a>
+        </div>
+
+        <div class="card card3">
+          <img src="./assets/images/tech-doc-icon.png" class="card-icon" alt="technical writing icon">
+          <h1 class="card-title">Technical Writing</h1>
+          <p>I'm open to other technical writing projects too. Check out my full library of writing samples!</p>
+          <a href="./pages/writing.html">
+            <button class="small-button card-button">Writing samples</button>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="contact">
+      <h1 id="contact-header">Ready to connect?</h1>
+      <p id="contact-message">
+        Send me a message today! I'm always looking for new opportunities in writing, and I'd be happy to consider anything else.
+      </p>
+
+      <div id="contact-info">
+        <p>edwards.devin816@gmail.com | 513-478-3005</p>
+      
+        <div id="socials">
+          <a href="https://github.com/Devin-Edwards8" target="_blank">
+            <img src="./assets/images/social-icons/github-icon.png" class="social-icon" alt="github logo"></a>
+          <a href="https://www.linkedin.com/in/devin-edwards-77336a263/" target="_blank">
+            <img src="./assets/images/social-icons/linkedin-icon.png" class="social-icon" alt="github logo"></a>
+          <a href="https://medium.com/@edwards.devin50" target="_blank">
+            <img src="./assets/images/social-icons/medium-icon.png" class="social-icon" alt="medium logo"></a>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
