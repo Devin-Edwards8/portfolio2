@@ -11,7 +11,9 @@ window.addEventListener("load", () => {
 });
 
 openCloseNav();
-if(window.location.href == "writing.html") {
+var path = window.location.pathname;
+var page = path.split("/").pop();
+if(page !== "writing.html") {
     spotlightSwitcher();
 }
 themeHandler();
